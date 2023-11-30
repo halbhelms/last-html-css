@@ -1,0 +1,11 @@
+* {
+  font-family: Lato;
+}
+.pick-me[data-price] {
+  color: red;
+}
+
+.pick-me {
+  color: green;
+}
+

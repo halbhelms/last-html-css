@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <p>Inline styles score 1 in the thousands place.</p>
+  <p>Each ID scores 1 in the hundreds place.</p>
+  <p>Each class, pseudo-class, or attribute selector scores 1 in the tens place.</p>
+  <p>Each element or pseudo-element scores 1 in the ones place.</p>
+</body>
+
+<main class="content">
+  <div class="summary">
+    <p class="all detailed">
+      Summary
+    </p>
+  </div>
+</main>
+
+main>div>p.all.detailed {
+  color: red;
+}
+
+.all {
+  color: blue;
+}
+
+p.all.detailed {
+  color: green;
+}
+
+<style>
+  p {
+    font-family: Lato;
+  }
+
+  p::before {
+  content: '😊';
+  display: inline-block;
+  margin-right: 10px;
+}
+</style>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./quiz-01.css">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <p>Which selector will target the link to the PDF version?</p>
+    <code class="question">
+    &lt;a href="http://fto.com/cheatsheet.pdf">Cheat sheet (pdf)&lt;/a>
+      <br />
+    &lt;a href="http://fto.com/cheatsheet.html">Cheat sheet (html)&lt;/a>
+    </code>
+  </div>
+  
+  <div>A. 
+  <code>
+    a[href$=".pdf"]
+  </code>
+  </div>
+
+  <div>B. 
+  <code>
+    a[href^=".pdf"]
+  </code>
+  </div>
+
+  <div>C. 
+  <code>
+    a[href=endsWith(".pdf")]
+  </code>
+  </div>
+
+  <div>D. 
+  <code>
+    None of them will target the PDF version
+  </code>
+  </div>
+
+  <div>
+    <details>
+      <summary>And the answer is...</summary>
+      <p class="answer">Answer A</p>
+
+    </details>
+  
+  </div>
+</body>
+
+
+
+<style>
+  body {
+    margin-left: 3rem;
+    margin-top: 3rem;
+  }
+  div, p {
+    font-family: Lato;
+  }
+
+  code.question {
+    color: maroon;
+  }
+
+  .answer {
+    font-weight: bold;
+    color: green;
+  }
+
+  code {
+    padding-left: 12px;
+  }
+
+  div {
+    margin-top: 1rem;
+  }
+</style>
+</html>

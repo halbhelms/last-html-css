@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./quiz-01.css">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <p>Which selector will target this code?</p>
+    <code class="question">
+      &lt;p class="sale restricted">I'm on sale but restricted.&lt;/p>
+    </code>
+  </div>
+  
+  <div>A. 
+  <code>
+    p .sale + .restricted
+  </code>
+  </div>
+
+  <div>B. 
+  <code>
+    p.sale.restricted
+  </code>
+  </div>
+
+  <div>C. 
+  <code>
+    [class=".sale + .restricted"]
+  </code>
+  </div>
+
+  <div>D. 
+  <code>
+    p.where(.sale += .restricted)
+  </code>
+  </div>
+
+  <div>
+    <details>
+      <summary>And the answer is...</summary>
+      <p class="answer">Answer B</p>
+
+    </details>
+  
+  </div>
+</body>
+
+
+
+<style>
+  body {
+    margin-left: 3rem;
+    margin-top: 3rem;
+  }
+  div, p {
+    font-family: Lato;
+  }
+
+  p.sale.restricted {
+    color: red;
+  }
+
+  code.question {
+    color: maroon;
+  }
+
+  .answer {
+    font-weight: bold;
+    color: green;
+  }
+
+  code {
+    padding-left: 12px;
+  }
+
+  div {
+    margin-top: 1rem;
+  }
+</style>
+</html>
