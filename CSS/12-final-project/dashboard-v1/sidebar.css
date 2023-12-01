@@ -1,3 +1,52 @@
+details[open]>summary:after {
+  content: "v";
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+details[open]>summary {
+  position: relative;
+  top: 12px;
+}
+
+details>summary {
+  list-style: none;
+}
+
+details>summary:after {
+  content: ">";
+  font-weight: bold;
+  margin-left: 30px;
+  margin-top: 14px;
+}
+
+details ul {
+  list-style-type: none;
+}
+
+details ul li {
+  margin-bottom: 4px;
+  color: #A7B1C2;
+}
+
+details ul li:hover {
+  margin-bottom: 4px;
+  color: white;
+}
+
+.sidebar-list {
+  margin: 20px 0 0 40px;
+}
+
+.iconoir-share-android-solid-absolute {
+  position: absolute
+}
+
+.categories {
+  position: relative;
+  left: 28px;
+}
+
 .iconoir-profile-circle::before {
   font-size: 2rem;
   color: #DFE4ED;

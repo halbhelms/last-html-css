@@ -30,6 +30,18 @@
         <p class="sidebar-text">Logistics</p>
       </div>
       <div class="sidebar-item">
+        <i class="iconoir-paste-clipboard iconoir-share-android-solid-absolute"></i>
+        <details class="sidebar-text">
+          <summary class="categories">Categories</summary>
+          <ul class="sidebar-list">
+            <li class="collapsible-item">Products</li>
+            <li class="collapsible-item">Services</li>
+            <li class="collapsible-item">Warranties</li>
+          </ul>
+
+        </details>
+      </div>
+      <div class="sidebar-item">
         <i class="iconoir-dollar"></i>
         <p class="sidebar-text">Finance</p>
       </div>
@@ -93,15 +105,32 @@
           </div>
         </div>
       </div>
-      <div class="sales-figures">sales figures</div>
-      <div class="project-progress" id="project-progress"></div>
+      <div>
+        <div class="sales-figures" id="sales-figures">chart</div>
+        <div class="sales-numbers">
+          <div>
+            <h2>$406,100</h2>
+            <p class="sales-caption">Sales marketing report</p>
+          </div>
+          <div>
+            <h2>$150,401</h2>
+            <p class="sales-caption">Annual sales revenue</p>
+          </div>
+          <div>
+            <h2>$16,822</h2>
+            <p class="sales-caption">Half-year revenue margin</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-progress"></div>
     </div>
     <div class="details"></div>
     <footer></footer>
   </main>
 </body>
 
-<script type="module">
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script>
 
   const options = {
     series: [{
@@ -131,7 +160,6 @@
       },
     },
   };
-  import ApexCharts from 'apexcharts'
   const chart = new ApexCharts(document.querySelector("#sales-figures"), options);
   chart.render();
 </script>
