@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./sidebar.css">
+  <title>Dashboard v1</title>
+</head>
+<body>
+  <aside>
+    <i class="iconoir-profile-circle"></i>
+    <h5>Hal Helms</h5>
+    <p class="title">Programmer</p>
+    <div>
+      <div class="sidebar-item">
+        <i class="iconoir-graph-up"></i>
+        <p class="sidebar-text">Sales</p><p class="tag">SPECIAL</p>
+      </div>
+      <div class="sidebar-item">
+        <i class="iconoir-youtube"></i>
+        <p class="sidebar-text">Marketing</p>
+      </div>
+      <div class="sidebar-item">
+        <i class="iconoir-share-android-solid"></i>
+        <p class="sidebar-text">Logistics</p>
+      </div>
+      <div class="sidebar-item">
+        <i class="iconoir-dollar"></i>
+        <p class="sidebar-text">Finance</p>
+      </div>
+      <div class="sidebar-item" id="menu">
+        <i class="iconoir-cube"></i>
+        <p class="sidebar-text">IT</p><p class="tag">NEW</p>
+      </div>
+      <div class="sidebar-item">
+        <i class="iconoir-book-stack"></i>
+        <p class="sidebar-text">Legal</p>
+      </div>
+    </div>
+  </aside>
+  <main>
+    <header>
+      <div class="menu-container">
+        <img src="./hamburger-menu.png" alt="menu" class="hamburger-menu">  
+      </div>
+    <input type="text" name="search-term" class="search-term" placeholder="Search for something">
+    
+    <div class="right-icons">
+      <img src="./email-icon.png" alt="email icon" class="email-icon">
+      <div class="messages">
+        <div class="message-number">2</div>
+        <i class="iconoir-bell"></i>
+      </div>
+      <i class="iconoir-arrow-right-tag"></i>
+      <p class="logout">Log out</p>
+      <i class="iconoir-okrs"></i>
+    </div>
+    </header>
+    <div class="overview">
+      <div class="reminders">
+        <h2>Welcome</h2>
+        <h6>You have 42 messages and 6 notifications</h6>
+        <div>
+          <div class="reminder-item">
+            <div class="reminder-number one">1</div>
+            <div class="reminder-text">Please contact me</div>
+            <div class="reminder-time">09:00 pm</div>
+          </div>
+          <div class="reminder-item">
+            <div class="reminder-number two">2</div>
+            <div class="reminder-text">Sign a contract</div>
+            <div class="reminder-time">10:16 am</div>
+          </div>
+          <div class="reminder-item">
+            <div class="reminder-number three">3</div>
+            <div class="reminder-text">Open new shop</div>
+            <div class="reminder-time">08:24 am</div>
+          </div>
+          <div class="reminder-item">
+            <div class="reminder-number four">4</div>
+            <div class="reminder-text">Call back to Sylvia</div>
+            <div class="reminder-time">01:00 pm</div>
+          </div>
+          <div class="reminder-item">
+            <div class="reminder-number five">5</div>
+            <div class="reminder-text">Write letter to Bob R.</div>
+            <div class="reminder-time">11:30 am</div>
+          </div>
+        </div>
+      </div>
+      <div class="sales-figures">sales figures</div>
+      <div class="project-progress" id="project-progress"></div>
+    </div>
+    <div class="details"></div>
+    <footer></footer>
+  </main>
+</body>
+
+<script type="module">
+
+  const options = {
+    series: [{
+      name: 'series1',
+      data: [31, 40, 28, 51, 42, 109, 100]
+    }, {
+      name: 'series2',
+      data: [11, 32, 45, 32, 34, 52, 41]
+    }],
+    chart: {
+      height: 350,
+      type: 'area'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth'
+    },
+    xaxis: {
+      type: 'datetime',
+      categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+    },
+    tooltip: {
+      x: {
+        format: 'dd/MM/yy HH:mm'
+      },
+    },
+  };
+  import ApexCharts from 'apexcharts'
+  const chart = new ApexCharts(document.querySelector("#sales-figures"), options);
+  chart.render();
+</script>
+
+<style>
+  aside {
+    background-color: #253949;
+    color: #A7B1C2;
+    height: 100vh;
+  }
+  body {
+    display: grid;
+    grid-template-columns: 180px 1fr; 
+  }
+  * {
+    font-family: Lato;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+</html>
