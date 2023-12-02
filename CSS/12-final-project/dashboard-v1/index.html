@@ -122,10 +122,93 @@
           </div>
         </div>
       </div>
-      <div class="project-progress"></div>
+      <div class="project-progress">
+        <h2>Project Artemis Progress</h2>
+        <div id="artemis-progress"></div>
+        <h2>Milestones</h2>
+        <div class="milestones-container">
+          <div class="milestone">
+            <div class="first">60%</div>
+            <div class="last ontime">19 April</div>
+          </div>
+          <div class="milestone">
+            <div class="first">50%</div>
+            <div class="last ontime">11 March</div>
+          </div>
+          <div class="milestone">
+            <div class="first">40%</div>
+            <div class="last ontime">02 February</div>
+          </div>
+          <div class="milestone">
+            <div class="first">30%</div>
+            <div class="last late">12 December</div>
+          </div>
+          <div class="milestone">
+            <div class="first">20%</div>
+            <div class="last late">06 October</div>
+          </div>
+          <div class="milestone">
+            <div class="first">10%</div>
+            <div class="last ontime">27 August</div>
+          </div>
+        </div>
+        
+        
+        <div class="configuration" id="configuration">
+          <h3>CONFIGURATION</h3>
+          <div class="option-menu">
+            <div class="menu-option">
+              <h4>Collapse menu</h4>
+              <div class="on-off">
+                <div class="on"></div>
+                <div class="off">OFF</div>
+              </div>
+            </div>
+            <div class="menu-option">
+              <h4>Fixed sidebar</h4>
+              <div class="on-off">
+                <div class="on"></div>
+                <div class="off">OFF</div>
+              </div>
+            </div>
+            <div class="menu-option">
+              <h4>Top navbar</h4>
+              <div class="on-off">
+                <div class="on"></div>
+                <div class="off">OFF</div>
+              </div>
+            </div>
+            <div class="menu-option">
+              <h4>Boxed layout</h4>
+              <div class="on-off">
+                <div class="on"></div>
+                <div class="off">OFF</div>
+              </div>
+            </div>
+            <div class="menu-option">
+              <h4>Fixed footer</h4>
+              <div class="on-off">
+                <div class="on"></div>
+                <div class="off">OFF</div>
+              </div>
+              <div class="pull-bar" id="pull-bar">
+              &lt; >  
+              </div>
+            </div>
+
+            <div class="skin">SKINS
+            </div>
+            <div class="skin default">DEFAULT</div>
+            <div class="skin blue">BLUE LIGHT</div>
+            <div class="skin green">MATERIAL DESIGN</div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="details"></div>
     <footer></footer>
+
+    
   </main>
 </body>
 
@@ -162,6 +245,56 @@
   };
   const chart = new ApexCharts(document.querySelector("#sales-figures"), options);
   chart.render();
+</script>
+<script>
+  const pullBar = document.querySelector('#pull-bar')
+  pullBar.addEventListener('click', e => {
+    document.querySelector('#configuration').classList.toggle('active')
+  })
+</script>
+<script>
+  const progressOptions = {
+      chart: {
+        height: 280,
+        type: "radialBar"
+      },
+
+      series: [67],
+
+      plotOptions: {
+        radialBar: {
+          hollow: {
+            margin: 15,
+            size: "70%"
+          },
+
+          dataLabels: {
+            showOn: "always",
+            name: {
+              offsetY: -10,
+              show: true,
+              color: "#888",
+              fontSize: "13px"
+            },
+            value: {
+              color: "#111",
+              fontSize: "30px",
+              show: true
+            }
+          }
+        }
+      },
+
+      stroke: {
+        lineCap: "round",
+      },
+      labels: ["Progress"]
+    };
+
+    const progressChart = new ApexCharts(document.querySelector("#artemis-progress"), progressOptions);
+
+    progressChart.render();
+
 </script>
 
 <style>

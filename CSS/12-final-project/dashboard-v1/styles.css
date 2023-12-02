@@ -85,7 +85,7 @@ header {
 /* overview section */
 .overview {
   display: grid;
-  grid-template-columns: 1fr 1.75fr 1fr;
+  grid-template-columns: 1fr 1.75fr 1fr 14px;
   gap: 30px;
   margin: 30px 0 0 30px;
   color: #676A6C;
@@ -161,8 +161,141 @@ header {
   font-size: .5rem;
 }
 
-.sales-numbers h2 {
-  font-size: .85rem;
+.sales-numbers h2, .project-progress h2 {
+  font-size: .7rem;
+  text-align: center;
+}
+
+.configuration {
+  background-color: #F3F3F4;
+  color: #66696B;
+  width: 400px;
+  position: fixed;
+  right: -400px;
+  top: 100px;
+  transition: right 0.5s;
+}
+
+.configuration h3 {
+  font-size: .6rem;
+  text-align: center;
+  padding-top: 14px;
+}
+
+.configuration.active {
+  right: 0px;
+}
+
+.option-menu {
+  margin: 14px 0 0 22px;
+  font-size: .7rem;
+}
+
+.milestone {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: .4rem;
+  display: relative;
+  height: .4rem;
+}
+
+.milestone .first {
+  font-weight: bold;
+  font-size: .7rem;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.milestone .last {
+  text-align: left;
+  font-weight: lighter;
+  font-size: .6rem;
+  padding-left: 8px;
+}
+
+.last.late {
+  color: red;
+}
+
+.last.ontime {
+  color: green
+}
+
+div.on-off {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.on, div.off {
+  display: inline-block;
+  height: .6rem;
+  width: .6rem;
+  border: 2px solid #19B394;
+  border-radius: 3px;
+  margin: 0 0 0 0;
+  position: relative;
+}
+
+div.off {
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .6rem;
+  left: -3px;
+  
+}
+
+.menu-option {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 20px 14px 20px 14px;
+  width: 280px;
+  position: relative;
+}
+
+.skin {
+  text-align: center;
+  color: white;
+  background-color: #EFEFEF;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 24px;
+}
+
+.skin.default {
+  background-color: black;
+  margin-top: -50px;
+}
+
+.skin.blue {
+  background-color: #1689CE;
+}
+
+.skin.green {
+  background-color: #19C0A0;
+}
+
+.pull-bar {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 20px 0 0 20px;
+  background-color: #19C0A0;
+  position: absolute;
+  left: -70px;
+  top: -180px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pull-bar:hover {
+  cursor: pointer;
 }
 
 @keyframes fadeInSlideLeft {
