@@ -1,0 +1,16 @@
+/* widgets */
+.label {
+  display: inline-block;
+  border-radius: 2px;
+  width: fit-content;
+  position: relative;
+  padding: 4px 2px;
+  border: 0 !important;
+  outline: 0 !important;
+}
+
+.small-heading {
+  display: inline-block;
+  width: fit-content;
+  padding:
+}

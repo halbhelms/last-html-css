@@ -1,0 +1,52 @@
+/* .new-data::before {
+  content: '.new-data';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-size: 20px;
+  color: pink;
+  pointer-events: none;
+}
+.comments::before {
+  content: '.comments';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-size: 20px;
+  color: pink;
+  pointer-events: none;
+} */
+
+/* .details .left, .details .comments, .details .center, .details .right {
+  position: relative;
+} */
+
+ /* [data-css]:has(div.left), [data-css]:has(div.details) {
+  position: relative;
+} */
+
+
+.details *, footer {
+  position: relative;
+}
+
+.overlay {
+  position: relative;
+}
+
+[data-dev]::before{
+  content: attr(class);
+  color: red;
+  font-size: 0.7rem;
+  position: absolute;
+  top: -0.7rem;
+  left: 0.5rem;
+  border: 2px dashed green;
+  pointer-events: none;
+  z-index: 101;
+}
+
+
+

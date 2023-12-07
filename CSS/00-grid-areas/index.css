@@ -1,0 +1,53 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px auto 1fr;
+  grid-template-areas:
+    'title title'
+    'list list-detail'
+    'footer footer';
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.customers {
+  grid-area: list;
+}
+
+.customer-detail {
+  grid-area: list-detail;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.customer {
+  display: grid;
+  width: 500px;
+  grid-template-columns: 1fr 1fr .75fr .75fr;
+  border-bottom: 1px solid silver; 
+  font-size: 0.75rem;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 150px 200px;
+}
+
+
+.text-large {
+  font-size: 2rem;
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-green {
+  background-color: green;
+}

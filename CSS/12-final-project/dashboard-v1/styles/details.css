@@ -1,0 +1,21 @@
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--section-gap);
+  padding: var(--section-gap);
+  background-color: var(--details-bg);
+}
+
+
+
+.details .left {
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  background-color: var(--details-bg);
+  gap: var(--section-gap);
+}
+
+.details * {
+  outline: 2px solid pink;
+  background-color: white;
+}

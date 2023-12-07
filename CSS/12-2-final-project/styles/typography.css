@@ -1,0 +1,98 @@
+/* text alignment */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-center-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* font sizes */
+.text-large{
+  font-size: var(--size-large);
+}
+
+.text-base {
+  font-size: var(--size-default);
+}
+
+.text-small {
+  font-size: var(--size-small);
+}
+
+.text-tiny {
+  font-size: var(--size-tiny);
+}
+
+/* font weights */
+.font-bold {
+  font-weight: var(--weight-heavy);
+}
+
+.font-base {
+  font-weight: var(--weight-base);
+}
+
+.font-light {
+  font-weight: var(--weight-light);
+}
+
+.text-default {
+  font-size: var(--size-default);
+  font-weight: var(--weight-default);
+}
+
+.text-color-1 {
+  color: var(--color-text-1);
+}
+
+.text-color-2 {
+  color: var(--color-text-2);
+}
+
+.text-color-3 {
+  color: var(--color-text-3);
+}
+
+.text-color-4 {
+  color: var(--color-text-4);
+}
+
+.text-color-5 {
+  color: var(--color-text-5);
+}
+
+.text-color-6 {
+  color: var(--color-text-6);
+}
+
+.text-color-7 {
+  color: var(--color-text-7);
+}
+
+.text-color-8 {
+  color: var(--color-text-8);
+}
+
+.text-color-9 {
+  color: var(--color-text-9);
+}
+
+.text-color-10 {
+  color: var(--color-text-10);
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
+}

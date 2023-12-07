@@ -7,20 +7,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./sidebar.css">
-  <link rel="stylesheet" href="./details.css">
+  <link rel="stylesheet" href="./styles/root.css">
+  <link rel="stylesheet" href="./styles/aside.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/overview.css">
+  <link rel="stylesheet" href="./styles/details.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/utils.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="./styles/widgets.css">
+  <link rel="stylesheet" href="./styles/dev.css">
   <title>Dashboard v1</title>
 </head>
 <body>
   <aside>
-    <i class="iconoir-profile-circle"></i>
-    <h5>Hal Helms</h5>
-    <p class="title">Programmer</p>
-    <div>
+    <div class="top">
+      <i class="iconoir-profile-circle"></i>
+      <h5>Hal Helms</h5>
+      <p class="title">Programmer</p>
+    </div>
+    <div class="bottom">
       <div class="sidebar-item">
         <i class="iconoir-graph-up"></i>
-        <p class="sidebar-text">Sales</p><p class="tag">SPECIAL</p>
+        <p class="sidebar-text">Sales</p>
+        <p class="tag">SPECIAL</p>
       </div>
       <div class="sidebar-item">
         <i class="iconoir-youtube"></i>
@@ -39,7 +50,7 @@
             <li class="collapsible-item">Services</li>
             <li class="collapsible-item">Warranties</li>
           </ul>
-
+      
         </details>
       </div>
       <div class="sidebar-item">
@@ -48,7 +59,8 @@
       </div>
       <div class="sidebar-item" id="menu">
         <i class="iconoir-cube"></i>
-        <p class="sidebar-text">IT</p><p class="tag">NEW</p>
+        <p class="sidebar-text">IT</p>
+        <p class="tag">NEW</p>
       </div>
       <div class="sidebar-item">
         <i class="iconoir-book-stack"></i>
@@ -58,103 +70,104 @@
   </aside>
   <main>
     <header>
-      <div class="menu-container left">
-        <img src="./hamburger-menu.png" alt="menu" class="hamburger-menu">  
+      <div class="left">
+        <img src="./hamburger-menu.png" alt="menu" class="hamburger-menu">
+        <input type="text" name="search-term" class="search-term" placeholder="Search for something">
       </div>
-    <input type="text" name="search-term" class="search-term" placeholder="Search for something">
-    
-    <div class="right-icons right">
-      <img src="./email-icon.png" alt="email icon" class="email-icon">
-      <div class="messages">
-        <div class="message-number">2</div>
-        <i class="iconoir-bell"></i>
+      <div class="right">
+        <img src="./email-icon.png" alt="email icon" class="email-icon">
+        <div class="messages">
+          <div class="message-number">2</div>
+          <i class="iconoir-bell"></i>
+        </div>
+        <i class="iconoir-arrow-right-tag"></i>
+        <p class="logout">Log out</p>
+        <i class="iconoir-okrs"></i>
+        </div>
       </div>
-      <i class="iconoir-arrow-right-tag"></i>
-      <p class="logout">Log out</p>
-      <i class="iconoir-okrs"></i>
-    </div>
     </header>
-    <!-- overview section -->
     <div class="overview">
-      <div class="reminders">
-        <h2>Welcome</h2>
-        <h6>You have 42 messages and 6 notifications</h6>
-        <div>
-          <div class="reminder-item">
-            <div class="reminder-number one">1</div>
-            <div class="reminder-text">Please contact me</div>
-            <div class="reminder-time">09:00 pm</div>
-          </div>
-          <div class="reminder-item">
-            <div class="reminder-number two">2</div>
-            <div class="reminder-text">Sign a contract</div>
-            <div class="reminder-time">10:16 am</div>
-          </div>
-          <div class="reminder-item">
-            <div class="reminder-number three">3</div>
-            <div class="reminder-text">Open new shop</div>
-            <div class="reminder-time">08:24 am</div>
-          </div>
-          <div class="reminder-item">
-            <div class="reminder-number four">4</div>
-            <div class="reminder-text">Call back to Sylvia</div>
-            <div class="reminder-time">01:00 pm</div>
-          </div>
-          <div class="reminder-item">
-            <div class="reminder-number five">5</div>
-            <div class="reminder-text">Write letter to Bob R.</div>
-            <div class="reminder-time">11:30 am</div>
+      <div class="left">
+        <div class="reminders">
+          <h2>Welcome</h2>
+          <h6>You have 42 messages and 6 notifications</h6>
+          <div>
+            <div class="reminder-item">
+              <div class="reminder-number one">1</div>
+              <div class="reminder-text">Please contact me</div>
+              <div class="reminder-time">09:00 pm</div>
+            </div>
+            <div class="reminder-item">
+              <div class="reminder-number two">2</div>
+              <div class="reminder-text">Sign a contract</div>
+              <div class="reminder-time">10:16 am</div>
+            </div>
+            <div class="reminder-item">
+              <div class="reminder-number three">3</div>
+              <div class="reminder-text">Open new shop</div>
+              <div class="reminder-time">08:24 am</div>
+            </div>
+            <div class="reminder-item">
+              <div class="reminder-number four">4</div>
+              <div class="reminder-text">Call back to Sylvia</div>
+              <div class="reminder-time">01:00 pm</div>
+            </div>
+            <div class="reminder-item">
+              <div class="reminder-number five">5</div>
+              <div class="reminder-text">Write letter to Bob R.</div>
+              <div class="reminder-time">11:30 am</div>
+            </div>
           </div>
         </div>
       </div>
-      <div>
-        <div class="sales-figures" id="sales-figures">chart</div>
-        <div class="sales-numbers">
+      <div class="center">
+        <div class="sales-chart"></div>
+        <div class="sales-numbers-container">
           <div>
-            <h2>$406,100</h2>
+            <h2 class="sales-number">$406,100</h2>
             <p class="sales-caption">Sales marketing report</p>
           </div>
           <div>
-            <h2>$150,401</h2>
+            <h2 class="sales-number">$150,401</h2>
             <p class="sales-caption">Annual sales revenue</p>
           </div>
           <div>
-            <h2>$16,822</h2>
+            <h2 class="sales-number">$16,822</h2>
             <p class="sales-caption">Half-year revenue margin</p>
           </div>
         </div>
       </div>
-      <div class="project-progress">
-        <h2>Project Artemis Progress</h2>
+
+      <div class="right">
+        <h2 class="project-title">Project Artemis Progress</h2>
         <div id="artemis-progress"></div>
-        <h2>Milestones</h2>
+        <h2 class="milestones-title">Milestones</h2>
         <div class="milestones-container">
           <div class="milestone">
             <div class="first">60%</div>
-            <div class="last ontime">19 April</div>
+            <div class="last" data-status="ontime">19 April</div>
           </div>
           <div class="milestone">
             <div class="first">50%</div>
-            <div class="last ontime">11 March</div>
+            <div class="last" data-status="ontime">11 March</div>
           </div>
           <div class="milestone">
             <div class="first">40%</div>
-            <div class="last ontime">02 February</div>
+            <div class="last" data-status="ontime">02 February</div>
           </div>
           <div class="milestone">
             <div class="first">30%</div>
-            <div class="last late">12 December</div>
+            <div class="last" data-status="late">12 December</div>
           </div>
           <div class="milestone">
             <div class="first">20%</div>
-            <div class="last late">06 October</div>
+            <div class="last" data-status="late">06 October</div>
           </div>
           <div class="milestone">
             <div class="first">10%</div>
-            <div class="last ontime">27 August</div>
+            <div class="last" data-status="online">27 August</div>
           </div>
         </div>
-        
         
         <div class="configuration" id="configuration">
           <h3>CONFIGURATION</h3>
@@ -194,10 +207,10 @@
                 <div class="off">OFF</div>
               </div>
               <div class="pull-bar" id="pull-bar">
-              &lt; >  
+                &lt; >
               </div>
             </div>
-
+        
             <div class="skin">SKINS
             </div>
             <div class="skin default">DEFAULT</div>
@@ -205,23 +218,35 @@
             <div class="skin green">MATERIAL DESIGN</div>
           </div>
         </div>
+        </div>
       </div>
     </div>
-    
-    <!-- details section -->
+    <!-- .details -->
     <div class="details">
-      <div class="left">left</div>
-      <div class="center">center</div>
-      <div class="right">right</div>
-    </div>
-    <footer></footer>
+      <div class="left">
+        <div>
+          dd
+        </div>
 
-    
+        <div class="comments">
+        </div>
+      </div>
+      
+      <div class="center">
+        
+      </div>
+      <div class="right">
+      </div>
+    </div>
+    <footer class="overlay" data-selectors="footer">
+      
+    </footer>
   </main>
 </body>
 
+
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  <script>
+<script>
 
   const options = {
     series: [{
@@ -251,7 +276,7 @@
       },
     },
   };
-  const chart = new ApexCharts(document.querySelector("#sales-figures"), options);
+  const chart = new ApexCharts(document.querySelector(".sales-chart"), options);
   chart.render();
 </script>
 <script>
@@ -262,64 +287,50 @@
 </script>
 <script>
   const progressOptions = {
-      chart: {
-        height: 280,
-        type: "radialBar"
-      },
+    chart: {
+      height: 280,
+      type: "radialBar"
+    },
 
-      series: [67],
+    series: [67],
 
-      plotOptions: {
-        radialBar: {
-          hollow: {
-            margin: 15,
-            size: "70%"
+    plotOptions: {
+      radialBar: {
+        hollow: {
+          margin: 15,
+          size: "70%"
+        },
+
+        dataLabels: {
+          showOn: "always",
+          name: {
+            offsetY: -10,
+            show: true,
+            color: "#888",
+            fontSize: "13px"
           },
-
-          dataLabels: {
-            showOn: "always",
-            name: {
-              offsetY: -10,
-              show: true,
-              color: "#888",
-              fontSize: "13px"
-            },
-            value: {
-              color: "#111",
-              fontSize: "30px",
-              show: true
-            }
+          value: {
+            color: "#111",
+            fontSize: "30px",
+            show: true
           }
         }
-      },
+      }
+    },
 
-      stroke: {
-        lineCap: "round",
-      },
-      labels: ["Progress"]
-    };
+    stroke: {
+      lineCap: "round",
+    },
+    labels: ["Progress"]
+  };
 
-    const progressChart = new ApexCharts(document.querySelector("#artemis-progress"), progressOptions);
+  const progressChart = new ApexCharts(document.querySelector("#artemis-progress"), progressOptions);
 
-    progressChart.render();
+  progressChart.render();
 
 </script>
 
 <style>
-  aside {
-    background-color: #253949;
-    color: #A7B1C2;
-    height: 100vh;
-  }
-  body {
-    display: grid;
-    grid-template-columns: 180px 1fr; 
-  }
-  * {
-    font-family: Lato;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
-  }
+ 
 </style>
 </html>

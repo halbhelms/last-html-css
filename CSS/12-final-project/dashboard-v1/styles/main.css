@@ -1,0 +1,11 @@
+main{
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: 2rem auto 1fr 1.5rem;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

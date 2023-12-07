@@ -1,0 +1,6 @@
+.details .col-4:first-child {
+  display: grid;
+  grid-template-rows: 120px 1fr;
+  gap: var(--gap-large);
+  color: white;
+}

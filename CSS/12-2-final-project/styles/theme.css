@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@100;300;400;700&display=swap');
+
+* {
+  font-family: Lato;
+}
+
+:root {
+  /* background colors 1-10 */
+  --color-bg-1: #F3F3F4;
+  --color-bg-2: #253949;
+  --color-bg-3: #19B394;
+  --color-bg-4: #1C84C6;
+  --color-bg-5: #23C6C8;
+  --color-bg-6: #F8AC59;
+
+  /* text colors 1-10 */
+  --color-text-1: #676A6C;
+  --color-text-2: #6C757D;
+  --color-text-3: #A7B1C2;
+  --color-text-4: white;
+
+  /* basic colors */
+  --color-white: white;
+  --color-black: black;
+
+  /* margin sizes */
+  --margin-small: .75rem;
+  --margin-medium: 1rem;
+  --margin-large: 1.25rem;
+}

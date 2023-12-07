@@ -1,0 +1,49 @@
+:root {
+  --section-gap: 1rem;
+  --half-gap: 0.5rem;
+
+  --aside-bg: #253949;
+  --aside-text: #A7B1C2;
+    
+  --main-text: #676A6C;
+  --main-text-hover: white;
+
+  /* background colors */
+  --bg-color-primary: white;
+  --bg-color-secondary: #F3F3F4;
+  --bg-color-dark: #253949;
+  --bg-color-contrast-green: #19B394;
+  --bg-color-contrast-orange: #F8AC59;
+  --bg-color-contrast-blue: #1C84C6;
+  --bg-color-contrast-gray: #D1DADE;
+
+  /* fonts */
+  --font-family-text: Lato;
+  --font-family-header: Lato;
+
+  --font-large: 1.5rem;
+  --font-normal: 1rem;
+  --font-small: 0.7rem;
+  --font-tiny: 0.5rem;
+
+  --font-color-white: white;
+  --font-color-black: black;
+  --font-color-muted: #A7B1C2;
+  --font-color-teal: #23C6C8;
+
+  /* margins */
+  --margin-x-
+}
+
+body {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  height: 100vh;
+}
+
+* {
+  font-family: Lato;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}

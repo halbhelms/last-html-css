@@ -1,0 +1,55 @@
+/* viewable */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html, body, main {
+  height: 100vh;
+  width: 100vw;
+}
+/* variables */
+:root {
+  /* sizes */
+  --size-tiny: 0.60rem;
+  --size-small: 0.75rem;
+  --size-base: 1rem;
+  --size-large: 1.25rem;
+  --size-huge: 2rem;
+
+  /* font weights */
+  --weight-light: 300;
+  --weight-base: normal;
+  --weight-heavy: bold;
+
+  /* colors */
+  /* --grey-base: #F3F3F4;
+  --grey-lighter: #F3F3F4;
+  --grey-light: #F5F5F5;
+  --grey-medium: #676A6C;
+  --grey-dark: #253949;
+  --black: #000000;
+  --white: #FFFFFF;
+  --teal: #23C6C8;
+  --orange: #F8AC59;
+  --blue: #1C84C6;
+  --green: #19B394; */
+
+  /* gaps */
+  --gap-none: 0px;
+  --gap-small: 8px;
+  --gap-medium: 14px;
+  --gap-large: 20px;
+
+  /* margins */
+  --margin-none: 0px;
+  --margin-small: 8px;
+  --margin-medium: 14px;
+  --margin-large: 20px;
+
+  /* padding */
+  --padding-none: 0px;
+  --padding-tiny: 4px;
+  --padding-small: 8px;
+  --padding-medium: 14px;
+  --padding-large: 20px;
+}

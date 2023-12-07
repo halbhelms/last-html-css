@@ -1,0 +1,9 @@
+.details, .details .left, .details .center, .details .right {
+  outline: 2px solid pink;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}

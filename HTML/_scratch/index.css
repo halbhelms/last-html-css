@@ -1,0 +1,30 @@
+/* main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 1rem;
+} */
+
+:root {
+  --primary: purple;
+  --secondary: red;
+  --tertiary: gray;
+}
+
+.grid-2-1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.header-1 {
+  font-size: 1.5rem;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-tertiary {
+  background-color: var(--tertiary);
+}
+
+

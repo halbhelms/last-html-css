@@ -1,0 +1,14 @@
+header, 
+.template, 
+.contents, 
+.user-info, 
+.sidebar, 
+.row, 
+[class*=" col-"],
+[class*="col-"] {
+  outline: 1px solid white;
+}
+
+.overview .left, .overview .center, .overview .right {
+  outline: 1px solid pink;
+}

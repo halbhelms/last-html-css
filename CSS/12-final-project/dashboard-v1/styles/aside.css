@@ -1,0 +1,113 @@
+aside {
+  background-color: var(--aside-bg);
+  color: var(--aside-text);
+  height: 100vh;
+}
+
+details[open]>summary:after {
+  content: "v";
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+details[open]>summary {
+  position: relative;
+  top: 12px;
+}
+
+details>summary {
+  list-style: none;
+}
+
+details>summary:after {
+  content: ">";
+  font-weight: bold;
+  margin-left: 30px;
+  margin-top: 14px;
+}
+
+details ul {
+  list-style-type: none;
+}
+
+details ul li {
+  margin-bottom: 4px;
+  color: #A7B1C2;
+}
+
+details ul li:hover {
+  margin-bottom: 4px;
+  color: white;
+}
+
+.sidebar-list {
+  margin: 20px 0 0 40px;
+}
+
+.iconoir-share-android-solid-absolute {
+  position: absolute
+}
+
+.categories {
+  position: relative;
+  left: 28px;
+}
+
+.iconoir-profile-circle::before {
+  font-size: 2rem;
+  color: #DFE4ED;
+  margin: 20px 0 0 14px;
+}
+
+.iconoir-dollar-circle::before {
+  font-size: .6rem;
+}
+
+.sidebar-item {
+  margin: 30px 0 0 14px;
+  position: relative;
+}
+
+.sidebar-item:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar-text {
+  font-size: .5rem;
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+  left: 2px;
+}
+
+.side-arrow {
+  display: inline-block;
+  position: absolute;
+  right: 14px;
+}
+
+.title {
+  font-size: .4rem;
+  margin: 0 0 0 14px;
+}
+
+h5 {
+  font-size: .5rem;
+  color: #DFE4ED;
+  margin: 0 0 0 14px;
+}
+
+.tag {
+  display: inline-block;
+  position: absolute;
+  background-color: #23C6C8;
+  height: .5rem;
+  width: auto;
+  color: #DFE4ED;
+  font-size: .4rem;
+  border-radius: 2px;
+  right: 14px;
+  top: 6px;
+  padding: 0 3px;
+}
