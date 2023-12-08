@@ -13,5 +13,5 @@
 
 .template .contents {
   display: grid;
-  grid-template-rows:  auto auto 1fr 30px;
+  grid-template-rows:  40px auto 1fr 30px;
 }

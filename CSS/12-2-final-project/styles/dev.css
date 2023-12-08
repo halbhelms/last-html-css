@@ -4,11 +4,28 @@ header,
 .user-info, 
 .sidebar, 
 .row, 
+.details,
 [class*=" col-"],
 [class*="col-"] {
   outline: 1px solid white;
 }
 
+.overview {
+  outline: 2px solid red;
+}
+
+.details {
+  outline: 2px solid navy;
+}
+
+footer {
+  outline: 2px solid green;
+}
+
 .overview .left, .overview .center, .overview .right {
   outline: 1px solid pink;
+}
+
+.details .left, .details .center, .details .right {
+  outline: 1px solid blue;
 }

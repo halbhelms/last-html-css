@@ -15,21 +15,22 @@
 }
 
 /* font sizes */
+.text-tiny{
+  font-size: var(--text-tiny);
+}
+.text-small{
+  font-size: var(--text-small);
+}
+.text-medium{
+  font-size: var(--text-medium);
+}
 .text-large{
-  font-size: var(--size-large);
+  font-size: var(--text-large);
+}
+.text-huge{
+  font-size: var(--text-huge);
 }
 
-.text-base {
-  font-size: var(--size-default);
-}
-
-.text-small {
-  font-size: var(--size-small);
-}
-
-.text-tiny {
-  font-size: var(--size-tiny);
-}
 
 /* font weights */
 .font-bold {
@@ -49,50 +50,69 @@
   font-weight: var(--weight-default);
 }
 
-.text-color-1 {
-  color: var(--color-text-1);
+/* standard text colors */
+.text-primary {
+  color: var(--text-primary);
 }
-
-.text-color-2 {
-  color: var(--color-text-2);
+.text-secondary {
+  color: var(--text-secondary);
 }
-
-.text-color-3 {
-  color: var(--color-text-3);
+.text-success {
+  color: var(--text-success);
 }
-
-.text-color-4 {
-  color: var(--color-text-4);
+.text-danger {
+  color: var(--text-danger);
 }
-
-.text-color-5 {
-  color: var(--color-text-5);
+.text-warning {
+  color: var(--text-warning);
 }
-
-.text-color-6 {
-  color: var(--color-text-6);
+.text-info {
+  color: var(--text-info);
 }
-
-.text-color-7 {
-  color: var(--color-text-7);
+.text-light {
+  color: var(--text-light);
 }
-
-.text-color-8 {
-  color: var(--color-text-8);
+.text-dark {
+  color: var(--text-dark);
 }
-
-.text-color-9 {
-  color: var(--color-text-9);
+.text-muted {
+  color: var(--text-muted);
 }
-
-.text-color-10 {
-  color: var(--color-text-10);
-}
-
 .text-white {
-  color: white;
+  color: var(--text-white);
+}
+.text-black {
+  color: var(--text-black);
 }
 
-.text-black {
-  color: black;
+/* custom text colors */
+.text-color-1 {
+  color: var(--text-color-1);
+}
+.text-color-2 {
+  color: var(--text-color-2);
+}
+.text-color-3 {
+  color: var(--text-color-3);
+}
+.text-color-4 {
+  color: var(--text-color-4);
+}
+.text-color-5 {
+  color: var(--text-color-5);
+}
+.text-color-6 {
+  color: var(--text-color-6);
+}
+.text-color-7 {
+  color: var(--text-color-7);
+}
+.text-color-8 {
+  color: var(--text-color-8);
+}
+.text-color-9 {
+  color: var(--text-color-9);
+}
+.text-color-10 {
+  color: var(--text-color-10);
 }

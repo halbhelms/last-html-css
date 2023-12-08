@@ -5,26 +5,27 @@
 }
 
 :root {
-  /* background colors 1-10 */
-  --color-bg-1: #F3F3F4;
-  --color-bg-2: #253949;
-  --color-bg-3: #19B394;
-  --color-bg-4: #1C84C6;
-  --color-bg-5: #23C6C8;
-  --color-bg-6: #F8AC59;
+/* custom colors */
+  /* background custom colors 1-10 */
+  --bg-color-1: #F3F3F4;
+  --bg-color-2: #253949;
+  --bg-color-3: #19B394;
+  --bg-color-4: #1C84C6;
+  --bg-color-5: #23C6C8;
+  --bg-color-6: #F8AC59;
+  --bg-color-7: red;
+  --bg-color-8: black;
+  --bg-color-9: black;
+  --bg-color-10: black;
 
-  /* text colors 1-10 */
-  --color-text-1: #676A6C;
-  --color-text-2: #6C757D;
-  --color-text-3: #A7B1C2;
-  --color-text-4: white;
-
-  /* basic colors */
-  --color-white: white;
-  --color-black: black;
-
-  /* margin sizes */
-  --margin-small: .75rem;
-  --margin-medium: 1rem;
-  --margin-large: 1.25rem;
+  /* text custom colors */
+  --text-color-1: #676A6C;
+  --text-color-2: #6C757D;
+  --text-color-3: #A7B1C2;
+  --text-color-4: white;
+  --text-color-6: black;
+  --text-color-7: black;
+  --text-color-8: black;
+  --text-color-9: black;
+  --text-color-10: black;
 }
