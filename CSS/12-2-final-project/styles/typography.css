@@ -1,3 +1,29 @@
+/* misc */
+.thin-silver-line {
+  border: 1px solid #D1DADE;
+  height: 1px;
+}
+
+.line-height-1-rem {
+  line-height: 1rem;
+}
+
+.line-height-2-rem {
+  line-height: 2rem;
+}
+
+.line-height-3-rem {
+  line-height: 3rem;
+}
+
+.line-height-4-rem {
+  line-height: 4rem;
+}
+
+.line-height-5-rem {
+  line-height: 5rem;
+}
+
 /* text alignment */
 .text-left {
   text-align: left;
@@ -33,16 +59,16 @@
 
 
 /* font weights */
-.font-bold {
-  font-weight: var(--weight-heavy);
+.font-heavy {
+  font-weight: var(--font-heavy);
 }
 
-.font-base {
-  font-weight: var(--weight-base);
+.font-medium {
+  font-weight: var(--font-medium);
 }
 
 .font-light {
-  font-weight: var(--weight-light);
+  font-weight: var(--font-light);
 }
 
 .text-default {

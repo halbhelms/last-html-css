@@ -18,14 +18,14 @@
   --bg-color-9: black;
   --bg-color-10: black;
 
-  /* text custom colors */
+  /* text  colors */
   --text-color-1: #676A6C;
   --text-color-2: #6C757D;
   --text-color-3: #A7B1C2;
-  --text-color-4: white;
-  --text-color-6: black;
-  --text-color-7: black;
-  --text-color-8: black;
+  --text-color-4: #1C84C6;
+  --text-color-6: #19B394;
+  --text-color-7: #23C6C8;
+  --text-color-8: #F8AC59;
   --text-color-9: black;
   --text-color-10: black;
 }

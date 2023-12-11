@@ -11,9 +11,9 @@ header,
 }
 
 .overview {
-  /* outline: 2px solid red; */
+  outline: 2px solid red;
 }
-
+/* 
 .details {
   outline: 2px solid navy;
 }
@@ -23,9 +23,9 @@ footer {
 }
 
 .overview .left, .overview .center, .overview .right {
-  /* outline: 1px solid pink; */
+  /* outline: 1px solid pink; 
 }
 
 .details .left, .details .center, .details .right {
   outline: 1px solid blue;
-}
+} */

@@ -7,35 +7,72 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <link rel="stylesheet" href="./styles/root.css">
+  <link rel="stylesheet" href="./styles/theme.css">
   <link rel="stylesheet" href="./styles/grid.css">
   <link rel="stylesheet" href="./styles/typography.css">
-  <link rel="stylesheet" href="./styles/template.css">
+  <link rel="stylesheet" href="./styles/search-results-template.css">
   <link rel="stylesheet" href="./styles/boxes.css">
+  <link rel="stylesheet" href="./styles/displays.css">
   <link rel="stylesheet" href="./styles/custom.css">
   <link rel="stylesheet" href="./styles/dev.css">
-  <link rel="stylesheet" href="./styles/theme.css">
   <title>Dashboard</title>
 </head>
 <!-- body -->
-<body>
+<body class="bg-color-1">
   <!-- template -->
   <main class="template">
     <!-- left section -->
     <section class="sidebar bg-color-2">
-      <div class="user-info"></div>
-      <nav></nav>
+      <!-- user info -->
+      <div class="user-info margin-left-medium margin-top-medium margin-bottom-huge">
+        <div class="bi-person-circle text-white text-huge"></div>
+        <p class="text-small font-heavy text-white margin-top-tiny">Hatem Jaber</p>
+        <p class="text-tiny text-color-3 margin-top-tiny">CTO</p>
+      </div>
+      
+      <!-- nav -->
+      <nav>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-coin text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">Sales</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-pc text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">IT</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-person-badge-fill text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">Team</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-bar-chart text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">Marketing</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-person-lines-fill text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">HR</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-truck text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">Operations</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-bank2 text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">Investors</span></div>
+        </div>
+      </nav>
     </section>
     <!-- right section -->
     
     <section class="contents bg-color-1">
       <!-- header -->
-      <header>
+      <header class="flex align-items-center justify-content-between margin-top-huge">
         <div class="left">
-          <div class="bg-color-3"><i class="bi-list text-white"></i></div>
+          <div class="bg-color-3 bi-list inline-block text-white width-2-rem text-center rounded-tiny"></div>
           <input type="text" class="bg-color-1 rounded-tiny text-white border-0 padding-x-medium" placeholder="Search for something">
         </div>
       
-        <div class="right">
+        <div class="right margin-right-medium flex width-10-rem">
           <p class="inline-block">ForTheOverwhelmed.com</p>
           <i class="bi-bell-fill" style="color:maroon;"></i>
           <i class="bi-envelope-fill" style="color:green;"></i>
@@ -46,41 +83,53 @@
       </header>
      
       <!-- overview -->
-      <div class="overview row bg-white gap-medium">
+      <div class="overview row bg-white">
         <!-- left -->
-        <div class="col-3 left bg-white">
+        <div class="col-3 left bg-white margin-left-small-neg">
           <h1 class="font-light text-large">Welcome</h1>
           <p class="font-light text-tiny text-color-1 margin-y-medium">You have 42 message and notifications</p>
-          <div class="reminder text-tiny">
-            <div class="number bg-color-3 text-center-all rounded-small">1</div>
-            <div class="text">Please contact me</div>
-            <div class="time">8.00 am</div>
+          <!-- reminder -->
+          <div class="reminder text-tiny grid gap-small align-items-center gap-none justify-content-start row margin-y-small">
+            <div class="number bg-color-3 text-center-all rounded-small col-1">1</div>
+            <div class="text text-left col-8">Please contact me</div>
+            <div class="time text-right col-3">8.00 am</div>
           </div>
-          <div class="reminder text-tiny">
-            <div class="number bg-color-4 text-center-all rounded-small">2</div>
-            <div class="text">Sign contract</div>
-            <div class="time">9.30 am</div>
+          <hr class="thin-silver-line margin-x-tiny margin-top-tiny-neg">
+          <!-- reminder -->
+          <div class="reminder text-tiny grid gap-small align-items-center gap-none justify-content-start row margin-y-small">
+            <div class="number bg-color-4 text-center-all rounded-small col-1">2</div>
+            <div class="text text-left col-8">Sign contract</div>
+            <div class="time text-right col-3">9.30 am</div>
           </div>
-          <div class="reminder text-tiny">
-            <div class="number bg-color-5 text-center-all rounded-small">3</div>
-            <div class="text">Meet AJ for lunch</div>
-            <div class="time">12.00 pm</div>
+          <hr class="thin-silver-line margin-x-tiny margin-top-tiny-neg">
+          <!-- reminder -->
+          <div class="reminder text-tiny grid gap-small align-items-center gap-none justify-content-start row margin-y-small">
+            <div class="number bg-color-3 text-center-all rounded-small col-1">3</div>
+            <div class="text text-left col-8">Meet AJ for lunch</div>
+            <div class="time text-right col-3">12.30 pm</div>
           </div>
-          <div class="reminder text-tiny">
-            <div class="number bg-color-6 text-center-all rounded-small">4</div>
-            <div class="text">Staff meeting</div>
-            <div class="time">2.00 pm</div>
+          <hr class="thin-silver-line margin-x-tiny margin-top-tiny-neg">
+          <!-- reminder -->
+          <div class="reminder text-tiny grid gap-small align-items-center gap-none justify-content-start row margin-y-small">
+            <div class="number bg-color-6 text-center-all rounded-small col-1">4</div>
+            <div class="text text-left col-8">Staff meeting</div>
+            <div class="time text-right col-3">2.30 pm</div>
           </div>
-          <div class="reminder text-tiny">
-            <div class="number bg-color-2 text-center-all rounded-small">5</div>
-            <div class="text">Review budget</div>
-            <div class="time">3.00 pm</div>
+          <hr class="thin-silver-line margin-x-tiny margin-top-tiny-neg">
+          <!-- reminder -->
+          <div class="reminder text-tiny grid gap-small align-items-center gap-none justify-content-start row margin-y-small">
+            <div class="number bg-color-7 text-center-all rounded-small col-1">5</div>
+            <div class="text text-left col-8">Review budget</div>
+            <div class="time text-right col-3">4.00 pm</div>
           </div>
-          <div class="reminder text-tiny">
-            <div class="number bg-color-3 text-center-all rounded-small">6</div>
-            <div class="text">Pick up Ann from airport</div>
-            <div class="time">8.15 pm</div>
+          <hr class="thin-silver-line margin-x-tiny margin-top-tiny-neg">
+          <!-- reminder -->
+          <div class="reminder text-tiny grid gap-small align-items-center gap-none justify-content-start row margin-y-small">
+            <div class="number bg-color-2 text-center-all rounded-small col-1">6</div>
+            <div class="text text-left col-8">Pick up Ana from airport</div>
+            <div class="time text-right col-3">8.00 pm</div>
           </div>
+          
         </div>
         <!-- center -->
         <div class="col-6 center bg-white">
@@ -139,19 +188,183 @@
         <!-- left column -->
         <div class="col-4 left">
           <!-- top row -->
-          <div class="top rounded">
-            <div class="text-base font-weight-bold text-small padding-xy-medium inline-block">New data for the report</div>
-            <div class="label bg-green"><i class="bi-sliders2-vertical bg-green text-white text-small"></i></div>
+          <div class="top rounded padding-top-small padding-left-small">
+            <!-- top -->
+            <div class="text-small inline-block text-color-2 font-heavy margin-right-medium">New data for the report</div>
+            <span class="bi-sliders2-vertical rounded-tiny bg-color-3 width-2-rem inline-block text-white text-center"></span>
+            <!-- bottom -->
+            <hr class="margin-x-medium margin-top-tiny thin-silver-line">
+            <!-- flex new data -->
+            <div class="flex align-items-center relative justify-content-between margin-top-tiny">
+              <div class="text-small inline-block text-color-2 font-heavy">NYS report new data!</div> 
+              <img src="./images/small-bar-chart.png" class="width-5-rem">
+            </div>
+            <!-- flex stock price -->
+            <div class="flex align-items-center relative justify-content-between margin-top-tiny">
+              <div class="text-small inline-block text-tiny font-light text-color-2 font-heavy">Current stock price</div> 
+              <div class="text-tiny font-light margin-right-tiny">$278.50</div>
+            </div>
+
           </div>
-          <!-- bottom row -->
-          <div class="bottom rounded">b</div>
+          <!-- details left bottom row -->
+          <div class="bottom rounded">
+            <div class="text-small text-color-2 font-heavy margin-x-tiny margin-top-tiny">Read below comments</div>
+            <hr class="margin-x-medium margin-top-tiny thin-silver-line">
+            <!-- comments -->
+            <div class="comment margin-x-tiny">
+              <span class="text-color-6 text-small">@AlanMerrick</span>
+              <span class="text-small text-color-2">I believe the project could be extended across the entire enterprise if it proves successful here in Tampa.</span>
+              <div class="bi-clock-history margin-top-medium text-tiny text-color-2"> 2 minutes ago</div>
+              <hr class="margin-x-medium margin-top-tiny thin-silver-line">
+            </div>
+            <div class="comment margin-x-tiny">
+              <span class="text-color-6 text-small">@AnnaK</span>
+              <span class="text-small text-color-2">I'm wondering if the project deserves the time and funding we're spending on it?</span>
+              <div class="bi-clock-history margin-top-medium text-tiny text-color-2"> 40 minutes ago</div>
+              <hr class="margin-x-medium margin-top-tiny thin-silver-line">
+            </div>
+            <div class="comment margin-x-tiny">
+              <span class="text-color-6 text-small">@DavisWarren</span>
+              <span class="text-small text-color-2">Project Artemis is picking up steam! Anyone else excited about it?</span>
+              <div class="bi-clock-history margin-top-medium text-tiny text-color-2"> About 2 hours ago</div>
+              <hr class="margin-x-medium margin-top-tiny thin-silver-line">
+            </div>
+            <div class="comment margin-x-tiny">
+              <span class="text-color-6 text-small">@AliceAnderson</span>
+              <span class="text-small text-color-2">I expect to push the next milestone this week! Great job, team!</span>
+              <div class="bi-clock-history margin-top-medium text-tiny text-color-2"> About 3 hours ago</div>
+              <hr class="margin-x-medium margin-top-tiny thin-silver-line">
+            </div>
+          </div>
         </div>
         
-        <div class="col-4 center rounded bg-white"></div>
-        <div class="col-4 right rounded bg-white">right</div>
+        <div class="col-4 center rounded bg-white">
+          <div class="font-heavy text-small margin-tiny text-color-1">Your daily feed</div>
+          <div class="feed flex align-items-center">
+            <!-- profile icon -->
+            <div class="bi-person-circle text-huge text-color-4 margin-x-tiny margin-y-tiny"></div>
+            <!-- post -->
+            <div>
+              <div class="text-small text-color-1 margin-bottom-none"><span class="font-heavy">Monica Smith</span> posted a new blog entry</div>
+              <div class="bi-clock-history margin-top-tiny text-tiny text-color-2"> 10.14 : 1.27 pm</div>
+            </div>
+          </div>
+          <hr class="thin-silver-line margin-x-medium">
+          <!-- feed -->
+          <div class="feed flex align-items-center">
+            <!-- profile icon -->
+            <div class="bi-person-circle text-huge text-color-6 margin-x-tiny margin-y-tiny"></div>
+            <!-- post -->
+            <div>
+              <div class="text-small text-color-1 margin-bottom-none"><span class="font-heavy">Davis Bacon</span> commented on <span class="font-heavy">@HatemJaber</span>'s blog post</div>
+              <div class="bi-clock-history margin-top-tiny text-tiny text-color-2"> 10.13 : 4.11 pm</div>
+            </div>
+          </div>
+          
+          <hr class="thin-silver-line margin-x-medium">
+          <!-- feed -->
+          <div class="feed flex align-items-center">
+            <!-- profile icon -->
+            <div class="bi-person-circle text-huge text-color-8 margin-x-tiny margin-y-tiny"></div>
+            <!-- post -->
+            <div>
+              <div class="text-small text-color-1 margin-bottom-none"><span class="font-heavy">Kevin Marti</span> closed the Millers Brothers contract</div>
+              <div class="bi-clock-history margin-top-tiny text-tiny text-color-2"> 10.10 : 3.00 pm</div>
+            </div>
+          </div>
+          <hr class="thin-silver-line margin-x-medium">
+          <!-- feed -->
+          <div class="feed flex align-items-center">
+            <!-- profile icon -->
+            <div class="bi-person-circle text-huge text-color-9 margin-x-tiny margin-y-tiny"></div>
+            <!-- post -->
+            <div>
+              <div class="text-small text-color-1 margin-bottom-none"><span class="font-heavy">Donna Abandando</span> was promoted to Senior Account Executive</div>
+              <div class="bi-clock-history margin-top-tiny text-tiny text-color-2"> 10.09</div>
+            </div>
+          </div>
+          <hr class="thin-silver-line margin-x-medium">
+          <!-- feed -->
+          <div class="feed flex align-items-center">
+            <!-- profile icon -->
+            <div class="bi-person-circle text-huge text-color-3 margin-x-tiny margin-y-tiny"></div>
+            <!-- post -->
+            <div>
+              <div class="text-small text-color-1 margin-bottom-none"><span class="font-heavy">Grace Alfurguson</span> was indicted</div>
+              <div class="bi-clock-history margin-top-tiny text-tiny text-color-2"> 10.07</div>
+            </div>
+          </div>
+          <hr class="thin-silver-line margin-x-medium">
+          <!-- feed -->
+          <div class="feed flex align-items-center">
+            <!-- profile icon -->
+            <div class="bi-person-circle text-huge text-color-4 margin-x-tiny margin-y-tiny"></div>
+            <!-- post -->
+            <div>
+              <div class="text-small text-color-1 margin-bottom-none"><span class="font-heavy">Hal Helms</span> turned down a promotion due to "excessive humility"</div>
+              <div class="bi-clock-history margin-top-tiny text-tiny text-color-2"> 10.04</div>
+            </div>
+          </div>
+          <hr class="thin-silver-line margin-x-medium">
+          <!-- feed -->
+          <div class="feed flex align-items-center">
+            <!-- profile icon -->
+            <div class="bi-person-circle text-huge text-color-6 margin-x-tiny margin-y-tiny"></div>
+            <!-- post -->
+            <div>
+              <div class="text-small text-color-1 margin-bottom-none"><span class="font-heavy">Don Adam</span> was fired for incompetence</div>
+              <div class="bi-clock-history margin-top-tiny text-tiny text-color-2"> 10.02</div>
+            </div>
+          </div>
+          <hr class="thin-silver-line margin-x-medium">
+          <!-- feed -->
+          <div class="feed flex align-items-center">
+            <!-- profile icon -->
+            <div class="bi-person-circle text-huge text-color-8 margin-x-tiny margin-y-tiny"></div>
+            <!-- post -->
+            <div>
+              <div class="text-small text-color-1 margin-bottom-none"><span class="font-heavy">Wes Robinson</span> was promoted to CEO</div>
+              <div class="bi-clock-history margin-top-tiny text-tiny text-color-2"> 10.01</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 right rounded bg-white margin-right-small">
+          <div class="font-heavy text-small margin-tiny text-color-1">Project Artemis</div>
+          <div class="bg-color-1">
+            <h1 class="font-light padding-huge">You have a meeting today!</h1>
+            <p class="text-small font-light padding-bottom-medium margin-x-small">The meeting regards the funding for ongoing IT work.</p>
+          </div>
+          <div class="project-item row gap-small">
+            <div class="time col-4 text-right">
+              <div class="bi-calendar-event margin-top-tiny text-tiny"></div>
+              <p class="text-small text-color-6">4.00pm</p>
+            </div>
+            <div class="notes col-8">
+              <div class="text-small text-color-1 margin-bottom-none font-heavy margin-y-medium margin-left-medium">Meeting</div>
+              <p class="text-color-2 text-small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quaerat! Minima reprehenderit itaque odio, voluptate modi quas accusantium illo laborum. Enim totam amet reiciendis placeat dolorum molestiae iusto quibusdam deserunt!
+              </p>
+            </div>
+          </div>
+          <hr class="thin-silver-line margin-x-medium margin-y-small">
+          <div class="project-item row gap-small">
+            <div class="time col-4 text-right">
+              <div class="bi-file-pdf margin-top-tiny text-tiny"></div>
+              <p class="text-small text-color-6">Email</p>
+            </div>
+            <div class="notes col-8">
+              <div class="text-small text-color-1 margin-bottom-none font-heavy margin-y-medium margin-left-medium">Documents</div>
+              <p class="text-color-2 text-small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- footer -->
-      <footer class="bg-white">footer</footer>
+      <footer class="bg-white">
+        <div class="bi-c-circle-fill text-black margin-left-tiny">&copy; Copyright 2023</div>
+      </footer>
     </section>
   </main>
 </body>
