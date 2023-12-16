@@ -7,6 +7,24 @@
   display: block;
 }
 
+.margin-auto-x {
+  margin: auto auto;
+}
+
+.border-1-color-1 {
+  border: 1px solid var(--text-color-1);
+}
+.border-1-color-2 {
+  border: 1px solid var(--text-color-2);
+}
+.border-1-color-3 {
+  border: 1px solid var(--text-color-3);
+}
+
+.border-bottom-1-color-3 {
+  border-bottom: 1px solid var(--text-color-3);
+}
+
 .height-fit-content {
   height: fit-content;
   padding-top: 10px;
@@ -70,11 +88,16 @@
 .width-40-rem {
   width: 40rem;
 }
+
 .width-full {
   width: 100%;
 }
 
 /* heights */
+.height-small {
+  height: 0.8rem;
+}
+
 .height-1-rem {
   height: 1rem;
 }

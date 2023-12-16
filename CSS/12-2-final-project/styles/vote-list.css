@@ -1,0 +1,73 @@
+:root {
+  /* text colors */
+  --text-white: white;
+  --text-black: black;
+
+  --text-primary: #007BFC;
+  --text-secondary: #6C757D;
+  --text-success: #29A745;
+  --text-danger: #DC3545;
+  --text-warning: #FFC124;
+  --text-info: #18A2B8;
+  --text-light: #F8F9FA;
+  --text-dark: #333A40;
+  --text-muted: #6C757D;
+
+  /* background colors */
+  --bg-primary: #007BFC;
+  --bg-secondary: #6C757D;
+  --bg-success: #29A745;
+  --bg-danger: #DC3545;
+  --bg-warning: #FFC124;
+  --bg-info: #18A2B8;
+  --bg-light: #F8F9FA;
+  --bg-dark: #333A40;
+  --bg-muted: #6C757D;
+  --bg-white: white;
+  --bg-black: black;
+
+  /* margin sizes */
+  --margin-none: 0;
+  --margin-tiny: 0.5rem;
+  --margin-small: .75rem;
+  --margin-medium: 1rem;
+  --margin-large: 1.25rem;
+  --margin-huge: 2rem;
+
+  /* padding sizes */
+  --padding-none: 0px;
+  --padding-tiny: 4px;
+  --padding-small: 8px;
+  --padding-medium: 14px;
+  --padding-large: 20px;
+  --padding-huge: 30px;
+
+  /* border radiuses */
+  --rounded-none: 0px;
+  --rounded-tiny: 2px;
+  --rounded-small: 4px;
+  --rounded-medium: 6px;
+  --rounded-large: 10px;
+  --rounded-huge: 15px;
+
+
+  /* text sizes */
+  --text-tiny: 0.60rem;
+  --text-small: 0.75rem;
+  --text-medium: 1rem;
+  --text-large: 1.25rem;
+  --text-huge: 2rem;
+
+  /* font weights */
+  --font-light: 300;
+  --font-medium: normal;
+  --font-heavy: bold;
+
+  /* gaps */
+  --gap-none: 0px;
+  --gap-tiny: 4px;
+  --gap-small: 8px;
+  --gap-medium: 14px;
+  --gap-large: 20px;
+  --gap-huge: 30px;
+}

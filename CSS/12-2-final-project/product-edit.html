@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./styles/theme.css">
+  <link rel="stylesheet" href="./styles/typography.css">
+  <link rel="stylesheet" href="vote-list.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="contents">
+    <!-- HEADER -->
+    <header>
+      
+      <div class="header-left">
+        <div class="bi-list"></div>
+        <input type="text" class="search-box" placeholder="Search for something...">
+      </div>
+
+      <div class="header-right">
+        <p>ForTheOverwhelmed.com </p>
+        <div class="bi-bell-fill"></div>
+        <div class="bi-envelope-fill"></div>
+        <div class="bi-arrow-right-square-fill"></div>
+        <p>Log out</p>
+        <div class="bi-sliders"></div>
+        <div class="message-number">4</div>
+      </div>
+    
+    </header>
+    <!-- TITLE ROW -->
+    <div class="title-bar">
+      <h1>Product form</h1>
+      <div class="breadcrumbs">
+        <p>Home &nbsp;&nbsp;/</p>
+        <p>E-commerce &nbsp;&nbsp;/</p>
+        <p>&nbsp;&nbsp;Product form</p>
+      </div>
+    </div>
+    
+    <main>
+      <!-- TABS -->
+      <div class="tabs">
+        <div class="product-info-tab tab active" onclick="activateTab(0)">
+          <h2>Product info</h2>
+        </div>
+        <div class="product-data-tab tab" onclick="activateTab(1)">
+            <h2>Data</h2>
+        </div>
+      </div>
+      <!-- FORMS -->
+      <div class="forms">
+        <div class="product-info-form active form">
+          <div class="form-element">
+            <div>Name</div>
+            <div><input placeholder="Product name"></div>
+          </div>
+        
+          <div class="form-element">
+            <div>Price</div>
+            <div><input placeholder="$"></div>
+          </div>
+          
+          <div class="form-element">
+            <div>Description</div>
+            <textarea placeholder="Product description"></textarea>
+          </div>
+          
+          <div class="form-element">
+            <div>Meta tag title</div>
+            <div><input></div>
+          </div>
+          
+          <div class="form-element">
+            <div>Meta tag description</div>
+            <div><input></div>
+          </div>
+          
+          <div class="form-element">
+            <div>Meta tag keywords</div>
+            <div><input></div>
+          </div>
+        
+        </div>
+
+        <div class="product-data-form form">
+          <div class="form-element">
+            <div>ID</div>
+            <div><input placeholder="Use 'auto' to let the DB assign an ID"></div>
+          </div>
+          
+          <div class="form-element">
+            <div>Model</div>
+            <div><input></div>
+          </div>
+          
+          <div class="form-element">
+            <div>Location</div>
+            <div><input></div>
+          </div>
+          
+          <div class="form-element">
+            <div>Tax class</div>
+            <div><input></div>
+          </div>
+          
+          <div class="form-element">
+            <div>Quantity</div>
+            <div><input></div>
+          </div>
+          
+          <div class="form-element">
+            <div>Minimum quatity</div>
+            <div><input></div>
+          </div>
+          
+          <div class="form-element">
+            <div>Status</div>
+            <div><input></div>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+    </main>
+        
+  </div>
+
+    
+    <footer><div>&copy; 2023</div></footer>
+  </div>
+</body>
+
+<script>
+  function activateTab(index) {
+    // Remove 'active' class from all tabs and all forms
+    const tabs = document.querySelectorAll('.tab');
+    const forms = document.querySelectorAll('.form');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    forms.forEach(form => form.classList.remove('active'));
+
+    // Add 'active' class to the clicked tab and its corresponding form
+    tabs[index].classList.add('active');
+    forms[index].classList.add('active');
+  }
+</script>
+
+<style>
+  /* TABS */
+  .tabs {
+    display: grid;
+    grid-template-columns: 160px 160px;
+    
+  }
+
+  .tab {
+    font-size: .65rem;
+    padding: 8px;
+    font-weight: 300;
+    color: var(--text-color-3);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 60px;
+  }
+
+  .tab.active {
+    position: relative;
+    background-color: white;
+    border-radius: 6px 6px 0 0;
+    border-left: 1px solid silver;
+    border-top: 1px solid silver;
+    border-right: 1px solid silver;
+    color: var(--text-secondary);
+    bottom: -1px;
+    z-index: 200;
+  }
+
+  .tab:hover {
+    cursor: pointer;
+  }
+
+  /* FORMS */
+  .forms {
+    background-color: white;
+  }
+
+  .form-element {
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .form-element input, .form-element textarea {
+    font-size: 1.25rem;
+    width: calc(100% - 20px);
+    padding-left: 12px;
+    
+  }
+
+  .form {
+    position: relative;
+    display: none;
+
+  }
+
+  .form.active {
+    display: grid;
+    height: fit-content;
+    overflow:visible;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+    border-bottom: 1px solid silver;
+    padding-top: 20px;
+    padding-left: 20px
+  }
+
+  /* .form.active::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 160px;
+  right: 0; 
+  border-top: 1px solid silver; 
+  height: 0; 
+} */
+
+  * {
+    box-sizing: border-box;
+  }
+
+  header, main, div, p, span, footer {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--bg-color-1);
+  }
+
+  /* HEADER */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    /* width: fit-content; */
+    margin: 20px;
+    text-align: center;
+    border-radius: 2px;
+  }
+
+  .header-right {
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 18rem;
+    margin: 20px;
+    border-radius: 2px;
+  }
+
+  .message-number {
+    position: absolute;
+    background-color: var(--bg-color-7);
+    top: -3px;
+    right: 180px;
+    font-size: .4rem;
+    width: 10px;
+    height: 10px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 100;
+  }
+
+  /* TITLE BAR */
+  .title-bar, .breadcrumbs {
+    background-color: white;
+  }
+
+  h1 {
+    color: var(--text-color-5);
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-left: 20px;
+  }
+
+  .breadcrumbs {
+    font-size: .5rem;
+    margin-left: 20px;
+    color: var(--text-color-5);
+
+    :first-child {
+      font-weight: 300;
+      display: inline-block;
+    }
+
+    :nth-child(2) {
+      font-weight: 300;
+      display: inline-block;
+    }
+
+    :nth-child(3) {
+      font-weight: bold;
+      display: inline-block;
+    }
+  }
+
+  .forms {
+    border-top: 1px solid silver;
+  }
+
+  /* MAIN */
+  main {
+    margin: 20px;
+  }
+
+  footer {
+    background-color: white;
+  }
+
+  footer div {
+    margin-left: 6px;
+  }
+
+  .more {
+    font-size: .75rem;
+  }
+
+
+  /* ICONS */
+  .bi-list {
+    display: inline-block;
+    background-color: var(--bg-color-3);
+    color: white;
+    width: 40px;
+  }
+
+  .bi-bell-fill {
+    color: maroon;
+  }
+
+  .bi-envelope-fill {
+    color: green;
+  }
+
+  .bi-chevron-up, .bi-chevron-down {
+    color: green;
+    font-weight: bold;
+  }
+
+  .bi-phone, .bi-palette2, .bi-currency-dollar, .bi-youtube, .bi-translate, .bi-arrow-right-circle, .bi-gear, .bi-list-columns {
+    font-size: 4rem;
+    color: var(--text-color-3);
+    font-weight: light;
+  }
+
+  input.search-box {
+    border: 0;
+    background-color: var(--bg-color-1);
+    margin-left: 8px;
+  }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contents {
+  display: grid;
+  grid-template-rows: 50px 100px 1fr 30px;
+  height: 100%;
+}
+</style>
+
+</html>

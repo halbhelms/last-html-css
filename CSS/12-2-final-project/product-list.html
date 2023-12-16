@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./styles/modern-normalize.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/root.css">
+  <link rel="stylesheet" href="./styles/theme.css">
+  <link rel="stylesheet" href="./styles/grid.css">
+  <link rel="stylesheet" href="./styles/typography.css">
+  <link rel="stylesheet" href="./styles/search-results-template.css">
+  <link rel="stylesheet" href="./styles/boxes.css">
+  <link rel="stylesheet" href="./styles/displays.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <!-- <link rel="stylesheet" href="./styles/dev.css"> -->
+  <title>Dashboard</title>
+</head>
+<!-- body -->
+<body class="bg-color-1">
+  <!-- template -->
+  <main class="template">
+    <!-- left section -->
+    <section class="sidebar bg-color-2">
+      <!-- user info -->
+      <div class="user-info margin-left-medium margin-top-medium margin-bottom-huge">
+        <div class="bi-person-circle text-white text-huge"></div>
+        <p class="text-small font-heavy text-white margin-top-tiny">Hatem Jaber</p>
+        <p class="text-tiny margin-top-tiny">CTO</p>
+      </div>
+      
+      <!-- nav -->
+      <nav>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-coin text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">Sales</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-pc text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">IT</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-person-badge-fill text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">Team</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-bar-chart text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">Marketing</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-person-lines-fill text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">HR</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-truck text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">Operations</span></div>
+        </div>
+        <!-- nav item -->
+        <div class="nav-item margin-bottom-huge">
+          <div class="bi-bank2 text-white text-color-3 margin-left-medium"><span class="margin-left-tiny">Investors</span></div>
+        </div>
+      </nav>
+    </section>
+    <!-- right section -->
+    
+    <section class="contents bg-color-1">
+      <!-- header -->
+      <header class="flex  align-items-center justify-content-between">
+        <div class="left">
+          <div class="bg-color-3 bi-list inline-block text-white width-2-rem text-center rounded-tiny margin-left-large"></div>
+          <input type="text" class="bg-color-1 rounded-tiny text-white border-0 padding-x-medium" placeholder="Search for something">
+        </div>
+      
+        <div class="right margin-right-medium flex width-10-rem">
+          <p class="inline-block">ForTheOverwhelmed.com</p>
+          <i class="bi-bell-fill" style="color:maroon;"></i>
+          <i class="bi-envelope-fill" style="color:green;"></i>
+          <i class="bi-arrow-right-square-fill"></i>
+          <p class="inline-block">Log out</p>
+          <i class="bi-sliders"></i>
+        </div>
+      </header>
+     
+      <!-- overview -->
+      <!-- <div class="overview margin-bottom-large border-2"> -->
+        <div class="title-section text-secondary height-fit-content margin-bottom-large bg-white">
+          <h1 class="text-large font-light margin-top-large margin-left-large margin-bottom-small">Product List</h1>
+            <div class="flex align-items width-15-rem gap-large justify-content-start margin-left-large">
+              <div class="text-small">Home</div>
+              <div class="text-small">/</div>
+              <div class="text-small">E Commerce</div>
+              <div class="text-small">/</div>
+              <div class="text-small text-color-4 text-bold">Product List</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="details bg-white margin-top-none margin-x-medium margin-bottom-large padding-medium bg-color-1">
+          <div class="filter-bar height-10-rem bg-white row gap-medium padding-top-large">
+            <div class="col-4 text-small margin-x-medium">Product Name</div>
+            <div class="col-2 text-small">Price</div>
+            <div class="col-2 text-small">Quantity</div>
+            <div class="col-4 text-small">Status</div>
+          </div>
+          <div class="filter-bar height-10-rem bg-white row gap-medium  padding-bottom-huge padding-x-medium">
+            <div class="col-4 margin-top-large"><input class="text-large width-full height-3-rem" placeholder="Product Name"></div>
+            <div class="col-2 margin-top-large"><input class="text-large width-full height-3-rem" placeholder="Price"></div>
+            <div class="col-2 margin-top-large"><input class="text-large width-full height-3-rem" placeholder="Quantity"></div>
+            <div class="col-4 margin-top-large"><input class="text-large width-full height-3-rem" placeholder="Status"></div>
+          </div>
+          
+          <div class="products-list bg-white margin-y-medium">
+            <div class="products-table">
+              <table class="width-full">
+                <tr class="row text-tiny font-heavy text-black margin-bottom-small border-bottom-1-color-3 height-1-rem">
+                  <th class="col-4 text-left padding-left-small">Product Name</th>
+                  <th class="col-1 text-left padding-left-small">Model</th>
+                  <th class="col-1 text-left padding-left-small">Price</th>
+                  <th class="col-4 text-left padding-left-small">Status</th>
+                  <th class="col-2 text-left padding-left-small text-right padding-right-huge">Action</th>
+                </tr>
+
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3">
+                  <td class="col-4 padding-left-small">Example Product 1</td>
+                  <td class="col-1 padding-left-small">Model 1</td>
+                  <td class="col-1 padding-left-small">$76.00</td>
+                  <td class="col-4 padding-left-small"><div class="inline-block height-small text-tiny bg-color-5 padding-x-small text-white margin-bottom-tiny">In Stock</div></td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+                
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3 padding-top-medium">
+                  <td class="col-4 padding-left-small">Example Product 2</td>
+                  <td class="col-1 padding-left-small">Model 2</td>
+                  <td class="col-1 padding-left-small">$54.00</td>
+                  <td class="col-4 padding-left-small"><div class="inline-block height-small text-tiny bg-color-5 padding-x-small text-white margin-bottom-tiny">In Stock</div></td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+                
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3 padding-top-medium">
+                  <td class="col-4 padding-left-small">Example Product 3</td>
+                  <td class="col-1 padding-left-small">Model 3</td>
+                  <td class="col-1 padding-left-small">$119.00</td>
+                  <td class="col-4 padding-left-small"><div class="inline-block height-small text-tiny bg-danger padding-x-small text-white margin-bottom-tiny">Out of Stock</div></td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+                
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3 padding-top-medium">
+                  <td class="col-4 padding-left-small">Example Product 4</td>
+                  <td class="col-1 padding-left-small">Model 4</td>
+                  <td class="col-1 padding-left-small">$26.75</td>
+                  <td class="col-4 padding-left-small"><div class="inline-block height-small text-tiny bg-warning padding-x-small text-black margin-bottom-tiny">Delayed</div></td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+                
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3 padding-top-medium">
+                  <td class="col-4 padding-left-small">Example Product 5</td>
+                  <td class="col-1 padding-left-small">Model 5</td>
+                  <td class="col-1 padding-left-small">$48.00</td>
+                  <td class="col-4 padding-left-small">
+                    <div class="inline-block height-small text-tiny bg-color-5 padding-x-small text-white margin-bottom-tiny">In Stock</div>
+                  </td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3 padding-top-medium">
+                  <td class="col-4 padding-left-small">Example Product 6</td>
+                  <td class="col-1 padding-left-small">Model 6</td>
+                  <td class="col-1 padding-left-small">$81.00</td>
+                  <td class="col-4 padding-left-small">
+                    <div class="inline-block height-small text-tiny bg-danger padding-x-small text-white margin-bottom-tiny">Out of Stock</div>
+                  </td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3 padding-top-medium">
+                  <td class="col-4 padding-left-small">Example Product 7</td>
+                  <td class="col-1 padding-left-small">Model 7</td>
+                  <td class="col-1 padding-left-small">$224.50</td>
+                  <td class="col-4 padding-left-small">
+                    <div class="inline-block height-small text-tiny bg-color-5 padding-x-small text-white margin-bottom-tiny">In Stock</div>
+                  </td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3 padding-top-medium">
+                  <td class="col-4 padding-left-small">Example Product 8</td>
+                  <td class="col-1 padding-left-small">Model 8</td>
+                  <td class="col-1 padding-left-small">$15.50</td>
+                  <td class="col-4 padding-left-small">
+                    <div class="inline-block height-small text-tiny bg-color-5 padding-x-small text-white margin-bottom-tiny">In Stock</div>
+                  </td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3 padding-top-medium">
+                  <td class="col-4 padding-left-small">Example Product 9</td>
+                  <td class="col-1 padding-left-small">Model 9</td>
+                  <td class="col-1 padding-left-small">$26.75</td>
+                  <td class="col-4 padding-left-small">
+                    <div class="inline-block height-small text-tiny bg-danger padding-x-small text-white margin-bottom-tiny">Out of Stock</div>
+                  </td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3 padding-top-medium">
+                  <td class="col-4 padding-left-small">Example Product 10</td>
+                  <td class="col-1 padding-left-small">Model 10</td>
+                  <td class="col-1 padding-left-small">$182.00</td>
+                  <td class="col-4 padding-left-small">
+                    <div class="inline-block height-small text-tiny bg-color-5 padding-x-small text-white margin-bottom-tiny">In Stock</div>
+                  </td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3 padding-top-medium">
+                  <td class="col-4 padding-left-small">Example Product 11</td>
+                  <td class="col-1 padding-left-small">Model 11</td>
+                  <td class="col-1 padding-left-small">$31.50</td>
+                  <td class="col-4 padding-left-small">
+                    <div class="inline-block height-small text-tiny bg-color-5 padding-x-small text-white margin-bottom-tiny">In Stock</div>
+                  </td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+
+                <tr class="row text-tiny text-color-2 align-items-center border-bottom-1-color-3 padding-top-medium">
+                  <td class="col-4 padding-left-small">Example Product 12</td>
+                  <td class="col-1 padding-left-small">Model 12</td>
+                  <td class="col-1 padding-left-small">$58.00</td>
+                  <td class="col-4 padding-left-small">
+                    <div class="inline-block height-small text-tiny bg-danger padding-x-small text-white margin-bottom-tiny">Out of Stock</div>
+                  </td>
+                  <td class="col-2 padding-left-small"><button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3 margin-right-small">View</button> <button class="margin-bottom-medium padding-x-medium bg-white border-1-color-3">Edit</button></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      
+        <div class="margin-bottom-small">
+        <div class="pagination flex flex-row justify-content-center">
+          <div class="width-1-rem border-1 flex align-items-center justify-content-center line-height-2-rem"><span>
+              < </span>
+          </div>
+          <div class="width-2-rem border-1 flex align-items-center justify-content-center line-height-2-rem bg-color-4 text-white"><span>1</span></div>
+          <div class="width-2-rem border-1 flex align-items-center justify-content-center line-height-2-rem"><span>2</span></div>
+          <div class="width-2-rem border-1 flex align-items-center justify-content-center line-height-2-rem"><span>3</span></div>
+          <div class="width-2-rem border-1 flex align-items-center justify-content-center line-height-2-rem"><span>4</span></div>
+          <div class="width-2-rem border-1 flex align-items-center justify-content-center line-height-2-rem"><span>5</span></div>
+          <div class="width-2-rem border-1 flex align-items-center justify-content-center line-height-2-rem"><span>6</span></div>
+          <div class="width-2-rem border-1 flex align-items-center justify-content-center line-height-2-rem"><span>></span></div>
+        </div>
+        </div>
+      <!-- footer -->
+      <footer class="bg-white margin-top-medium">
+        <div class="bi-c-circle-fill text-black margin-left-tiny">&copy; Copyright 2023</div>
+      </footer>
+    </section>
+  </main>
+</body>
+
+<style>
+  .price {
+    right: 0;
+    bottom: 0;
+  }
+
+  .product-detail {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+ 
+  /* .sidebar {
+  position: fixed;
+  top: 0;         
+  left: 0;        
+  width: 200px;   
+  height: 100%;   
+  overflow-y: auto; 
+  }
+
+  .contents {
+    margin-left: 200px;
+  } */
+

@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-left: 20px;
+}
+
+pre {
+  font-family:'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: maroon;
+}
+
+.one::after {
+  content: '<div data-price="22.50" class="one">Left-handed widget</div>';
+
+}
+
+.two::after {
+  content: '<a href="www.amazon.com" class="two">Cool products</a>';
+
+}
+
+.three::after {
+  content: '<a href="https://amazon.com" class="three">Cool products</a>';
+
+}
+
+.four::after {
+  content: '<a href="http://javascript.info" class="four">In-depth Javascript</a>';
+
+}
+
+.five::after {
+  content: '<a href="http://objects.javascript.io" class="five">JavaScript objects</a>';
+
+}
+
+.six::after {
+  content: '<a href="http://ForTheOverwhelmed.com/arrays/functions" class="six">JavaScript arrays</a>';
+
+}
+
+.seven::after {
+  content: '<p class="language-en-us" class="seven">Color</p>';
+
+}
+
+.eight::after {
+  content: '<p class="language-en-gb" class="eight">Colour</p>';
+
+}
+
+*::after {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1000px;
+  margin-left: 200px;
+  margin-top: -1rem;
+  font-family:'Courier New', Courier, monospace;
+  left: 20px;
+  font-size: 0.75rem;
+  color:maroon;
+}

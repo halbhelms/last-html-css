@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/selectors-specificity-01.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    a { text-decoration: none; color: inherit; }
+    [data-price] { color: blue; }
+    [href="www.amazon.com"] { color: red; }
+    [href^="https"] { color: orange; }
+    [href$=".info"] { color:aqua; }
+    [href*="objects"] { color: grey; }
+    [href*="arrays"] { color: coral; }
+    [class|="language-en"] { color: pink; }
+  </style>
+  <title>Attribute Selectors</title>
+</head>
+<body>
+  <div data-price="22.50">Left-handed widget</div>
+  <a href="www.amazon.com">Cool products</a><br />
+  <a href="https://amazon.com">Cool products</a><br />
+  <a href="http://javascript.info">In-depth Javascript</a><br />
+  <a href="http://objects.javascript.io">JavaScript objects</a><br />
+  <a href="http://ForTheOverwhelmed.com/arrays/functions">JavaScript arrays</a><br />
+  <p class="language-en-us">Color</p>
+  <p class="language-en-gb">Colour</p>
+</body>
+</html>

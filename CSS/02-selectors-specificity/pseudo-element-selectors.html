@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/selectors-specificity-01.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <style>
+    
+    a[href^="http"]::before {
+      content: '';
+      margin-right: 26px;
+    }
+
+    a[href^="https"]::before {
+      display: inline-block;
+      content: '';
+      background-image: url('./images/secure.png');
+      background-size: cover; /* or contain, depending on your needs */
+      width: 24px;
+      height: 24px;
+      position: relative;
+      top: 2px;
+      margin-right: 2px;
+    }
+
+    a[href$="pdf"]::after {
+      display: inline-block;
+      content: 'PDF';
+      font-size: 0.5rem;
+      margin-left: 0;
+    }
+
+    .tale-of-2-cities {
+      display: inline-block;
+      width: 20rem;
+      color: grey;
+    }
+
+    .tale-of-2-cities::first-line {
+      content: '';
+      display: inline-block;
+      color: black;
+      font-weight: 800;
+    }
+    .tale-of-2-cities::first-letter {
+      float: left;           /* Allows the letter to float to the left */
+      font-size: 2.3rem;       /* Sets the size of the first letter */
+      line-height: 1;        /* Adjusts the line height of the first letter */
+      margin-right: 4px;     /* Adds some space between the first letter and the rest of the text */
+    }
+    .tale-of-2-cities::selection {
+      background-color: yellow;
+      font-weight: 800;
+      color: green;
+    }
+
+
+  </style>
+  <title>Pseudo-Element Selectors</title>
+</head>
+<body>
+  <a href="https://ForTheOverwhelmed.com/scores.html">FTO test scores</a><br />
+  <a href="https://ForTheOverwhelmed.com/refund.html">FTO Refunds</a><br />
+  <a href="http://ForTheOverwhelmed.com/about-us.pdf">Behind FTO's meteoric rise</a><br />
+  <a href="http://ForTheOverwhelmed.com.html">FTO home page</a><br />
+  <a href="http://ForTheOverwhelmed.com/courses.pdf">FTO's courses</a><br />
+  <a href="https://ForTheOverwhelmed.com/bank-account.pdf">FTO's bank info</a><br />
+
+  <p class="tale-of-2-cities">It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way &mdash; in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.</p>
+</body>
+</html>

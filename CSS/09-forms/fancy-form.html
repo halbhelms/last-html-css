@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+ 
+    body {
+      display: flex;
+      justify-content: center;
+      background-color:lightgrey
+    }
+
+    form {
+      background: white;
+      border-radius: 6px;
+      border: 1px solid silver;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+    }
+
+    .floating-label-group {
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .floating-label-group input, 
+    .floating-label-group textarea {
+      padding: 15px;
+      padding-top: 25px;
+    }
+
+    .floating-label-group label {
+      position: absolute;
+      pointer-events: none;
+      left: 15px;
+      top: 15px;
+      transition: 0.2s ease all;
+    }
+
+    .floating-label-group input:focus + label,
+    .floating-label-group input:not(:placeholder-shown) + label,
+    .floating-label-group textarea:focus + label,
+    .floating-label-group textarea:not(:placeholder-shown) + label {
+      top: -12px;
+      left: 10px;
+      font-size: 0.75em;
+      opacity: 1;
+      z-index: 200;
+      background-color: white;
+      padding: 4px;
+    }
+
+    textarea {
+      width: 400px;
+      height: 80px;
+      border-radius: 4px;
+    }
+
+    input {
+      width: 400px;
+      border: 1px solid silver;
+      border-radius: 4px;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+      width: 24px;
+      border: 0;
+    }
+
+    fieldset {
+      border: 2px solid #ddd;
+      padding: 10px;
+      margin-top: 20px;
+      width: fit-content;
+      font-size: 0.65rem;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      margin-left: 185px;
+    }
+
+    legend {
+      padding: 0 5px;
+      font-weight: bold;
+    }
+
+    .javascript {
+      margin-top: 20px;
+      font-size: 0.65rem;
+    }
+
+    select {
+      margin-top: 20px;
+      margin-left: 12px;
+      font-size: 0.65rem;
+      border-radius: 4px;
+    }
+
+    label {
+      font-size: 0.75rem;
+    }
+
+    * {
+      font-family: Lato;
+    }
+
+
+  </style>
+  <title>Forms</title>
+</head>
+<body>
+
+<form>
+  <fieldset> 
+    <legend>Personal info</legend>
+    <div class="floating-label-group">
+      <input type="text" name="first-name" id="first-name" placeholder=" " required>
+      <label for="first-name">First name</label>
+    </div>
+    
+    <div class="floating-label-group">
+      <input type="text" name="last-name" id="last-name" placeholder=" " required>
+      <label for="last-name">Last name</label>
+    </div>
+    
+    <div class="floating-label-group">
+      <input type="tel" name="phone" id="phone" placeholder=" " required>
+      <label for="phone">Phone</label>
+    </div>
+    
+    <div class="floating-label-group">
+      <input type="email" name="email" id="email" placeholder=" " required>
+      <label for="email">Email</label>
+    </div>
+    
+    
+    <div class="floating-label-group">
+      <input type="date" name="dob" id="dob" placeholder=" " required>
+      <label for="dob">Date of birth</label>
+    </div>
+    
+    <div class="floating-label-group">
+      <textarea name="bio" id="bio" placeholder=" " required></textarea>
+      <label for="bio">Biography</label>
+    </div>
+  </fieldset>
+
+  <select id="framework" name="framework" required>
+    <option value="">Select a framework</option>
+    <option value="Svelte">Svelte</option>
+    <option value="React">React</option>
+    <option value="Vue">Vue</option>
+    <option value="Angular">Angular</option>
+  </select>
+
+  <div class="javascript">
+    <input type="radio" value="javascript" name="js-ts" id="javascript" for="js-ts"> 
+    <label for="javascript">JavaScript</label>
+    <input type="radio" value="typescript" name="js-ts" id="typescript" for="js-ts"> 
+    <label for="typescript">TypeScript</label>
+  </div>
+
+  <div class="newsletter">
+    <input type="checkbox" value="newsletter" name="newsletter" id="newsletter">
+    <label for="newsletter">Receive newsletter</label>
+  </div>
+
+  <button>Save</button>
+</form>
+
+</body>
+</html>

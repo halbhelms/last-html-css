@@ -1,17 +1,5 @@
-header, 
-.template, 
-.contents, 
-.user-info, 
-.sidebar, 
-.row, 
-.details,
-[class*=" col-"],
-[class*="col-"] {
-  /* outline: 1px solid white; */
-}
-
-.overview {
-  outline: 2px solid red;
+.filter-bar div input{
+  outline: 2px solid green;
 }
 /* 
 .details {

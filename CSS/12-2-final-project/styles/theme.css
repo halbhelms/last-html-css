@@ -8,7 +8,7 @@
 /* custom colors */
   /* background custom colors 1-10 */
   --bg-color-1: #F3F3F4;
-  --bg-color-2: #253949;
+  --bg-color-2: #E6E6E6;
   --bg-color-3: #19B394;
   --bg-color-4: #1C84C6;
   --bg-color-5: #23C6C8;
@@ -26,6 +26,6 @@
   --text-color-6: #19B394;
   --text-color-7: #23C6C8;
   --text-color-8: #F8AC59;
-  --text-color-9: black;
+  --text-color-9: #E6E6E6;
   --text-color-10: black;
 }

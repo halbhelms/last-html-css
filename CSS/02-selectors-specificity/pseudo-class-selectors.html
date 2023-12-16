@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/selectors-specificity-01.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <style>
+    .nav-item {
+      background-color: white;
+      color: navy;
+      width: 10rem;
+    }
+
+    .nav-item:hover {
+      background-color: navy;
+      color: white;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    #product:focus, #service:focus {
+      color: white;
+      background-color: green;
+    }
+
+    .fancy-button {
+      padding: 10px 20px;
+      background-color: #4CAF50; /* Green background */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.1s ease; /* Smooth transition for the transform */
+    }
+
+    .fancy-button:active {
+      transform: scale(0.95); /* Scales down the button to 95% of its original size */
+    }
+
+    ul li:nth-child(3) {
+      color: red;
+    }
+
+    tr:nth-child(odd) {
+      background-color: white;
+    }
+    tr:nth-child(even) {
+      background-color: grey;
+      color: white;
+    }
+    
+    div.first-last p:first-child {
+      font-weight: bold;
+      font-size: 1.1rem
+    }
+    div.first-last p:last-child {
+      font-weight: lighter;
+      font-size: 0.9rem
+    }
+
+    .price-tiers p:not([class="free"]) {
+      color: silver;
+    }
+
+  </style>
+  <title>Pseudo-Class Selectors</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-item">Products</div>
+    <div class="nav-item">Services</div>
+    <div class="nav-item">Repairs</div>
+  </nav>
+
+  <form action="#">
+    <label>Product
+      <input name="product" id="product" placeholder="Product"/>
+    </label>
+    <label>Service
+      <input name="service" id="service" placeholder="Service"/>
+    </label>
+    <button class="fancy-button">OK</button>
+  </form>
+
+  <ul>
+    <li>Boring...</li>
+    <li>Boring...</li>
+    <li>BAM!!</li>
+    <li>Boring...</li>
+  </ul>
+
+  <table>
+    <tr>
+      <td>I'm odd</td>
+    </tr>
+    <tr>
+      <td>I'm even</td>
+    </tr>
+    <tr>
+      <td>I'm odd</td>
+    </tr>
+    <tr>
+      <td>I'm even</td>
+    </tr>
+    <tr>
+      <td>I'm odd</td>
+    </tr>
+    <tr>
+      <td>I'm even</td>
+    </tr>
+  </table>
+
+  <div class="first-last">
+    <p>I'm very important</p>
+    <p>I'm just kind of important</p>
+    <p>I'm not at all important</p>
+  </div>
+
+  <div class="price-tiers">
+    <p class="free">Entry: 2 users</p>
+    <p class="100-monthly">Small team: 5 users</p>
+    <p class="200-monthly">Medium team: 10 users</p>
+    <p class="500-monthly">Large team: 50 users</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/selectors-specificity-01.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <style>
+    div.grandparent div  {
+      color: red;
+    }
+
+    div.grandparent>div {
+      border: 2px solid green;
+    }
+
+    main>div {
+      border: 1px solid pink;
+    }
+
+    .sparta ~ div {
+      background-color:blanchedalmond;
+    }
+
+    .A + .B {
+      background-color:aquamarine;
+    }
+    
+    .A + .C {
+      background-color:darksalmon;
+    }
+    
+
+    
+
+  </style>
+  <title>Pseudo-Element Selectors</title>
+</head>
+<body>
+  <div class="grandparent">
+    I am the grandparent
+    <div class="parent">I am the parent
+      <div class="child">I am the child
+        <main>
+          <div class="grandchild">I am grandchild No. 1</div>
+          <div class="grandchild">I am grandchild No. 2</div>
+          <div class="grandchild">I am grandchild No. 3</div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <div class="sparta">I am Sparta</div>
+  <div>I am Sparta</div>
+  <div>I am Sparta</div>
+  <div>I am Sparta</div>
+  <div>I am Sparta</div>
+  <div>I am Sparta</div>
+  <div>I am Sparta</div>
+  
+  <section>
+    <div class="A">I am A</div>
+    <div class="B">I am B</div>
+    <div class="C">I am C</div>
+  </section>
+
+</body>
+</html>
