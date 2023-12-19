@@ -15,26 +15,28 @@
     }
 
     form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       background: white;
       border-radius: 6px;
       border: 1px solid silver;
       margin-top: 1rem;
+      margin: auto auto;
       padding-left: 20px;
       padding-right: 20px;
       padding-bottom: 20px;
-      width: 600px;
-    }
-
-    .grid-form {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 20px;
+      width: 500px;
     }
 
     textarea {
       width: 400px;
       height: 80px;
       border-radius: 4px;
+    }
+
+    .form-element {
+      margin-top: 20px;
     }
 
     input {
@@ -45,7 +47,6 @@
 
     input[type="radio"], input[type="checkbox"] {
       width: 24px;
-      border: 0;
     }
 
     button {
@@ -54,37 +55,36 @@
     }
 
     .javascript {
-      margin-top: 20px;
       font-size: 0.65rem;
+      position: relative;
+      left: -106px;
     }
 
     select {
-      margin-top: 20px;
-      margin-left: 12px;
-      margin-right: 12px;
       font-size: 0.65rem;
       border-radius: 4px;
+      position: relative;
+      left: -120px;
     }
 
-    label {
-      font-size: 0.75rem;
+    .newsletter {
+      font-size: 0.65rem;
+      position: relative;
+      left: -132px;
     }
 
     * {
       font-family: Lato;
     }
 
-    .form-element {
+    /* .form-element {
       margin-top: 1rem;
-    }
+    } */
 
-    .label {
+    /* .label {
       text-align: right;
-    }
+    } */
 
-    select {
-      margin-left: 0;
-    }
 
     button {
       width: 5rem;
@@ -97,28 +97,19 @@
 <body>
 
 <form action="#">
-  <div class="grid-form">
+    <div class="input form-element""><input name="first-name" placeholder="First name" /></div>
 
-    <div class="label form-element">First name</div>
-    <div class="input form-element"><input name="first-name" /></div>
+    <div class="input form-element"><input name="last-name" placeholder="Last name" /></div>
 
-    <div class="label form-element">Last name</div>
-    <div class="input form-element"><input name="last-name" /></div>
+    <div class="input form-element"><input name="phone" placeholder="Phone" /></div>
 
-    <div class="label form-element">Phone</div>
-    <div class="input form-element"><input name="phone" /></div>
+    <div class="input form-element"><input name="email" placeholder="Email" /></div>
 
-    <div class="label form-element">Email</div>
-    <div class="input form-element"><input name="email" /></div>
+    <div class="input form-element"><input name="dob" placeholder="Date of birth" /></div>
 
-    <div class="label form-element">Date of birth</div>
-    <div class="input form-element"><input name="dob" /></div>
+    <textarea name="dob" class="form-element" placeholder="Enter a brief biography"></textarea>
 
-    <div class="label form-element">Bio</div>
-    <textarea name="dob"></textarea>
-
-    <div class="label form-element">Framework</div>
-    <select name="framework">
+    <select name="framework" class="form-element">
       <option value="">Select a framework</option>
       <option value="svelte">Svelte</option>
       <option value="svelte">React</option>
@@ -126,23 +117,19 @@
       <option value="svelte">Angular</option>
     </select>
 
-    <div></div>
-    <div class="javascript">
+    <div class="javascript form-element">
       <input type="radio" value="javascript" name="js-ts" id="javascript" for="js-ts">
       <label for="javascript">JavaScript</label>
       <input type="radio" value="typescript" name="js-ts" id="typescript" for="js-ts">
       <label for="typescript">TypeScript</label>
     </div>
     
-    <div></div>
-    <div class="newsletter">
+    <div class="newsletter form-element">
       <input type="checkbox" value="newsletter" name="newsletter" id="newsletter">
       <label for="newsletter">Receive newsletter</label>
     </div>
 
-    <div></div>
     <button>Save</button>
-  </div>
 </form>
 
 </body>

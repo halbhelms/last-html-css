@@ -1,0 +1,16 @@
+:root {
+  --body-bg: #ECECEC;
+  --aside-bg: #253949;
+  --aside-text: #F1F3F4;
+  --overview-bg: white;
+  --overview-text: #253949;
+  --details-bg: #ECECEC;
+  --details-text: #253949;
+  --section-gap: 20px;
+  --details-section-bg: white;
+  --details-section-text: #253949;
+}
+
+* {
+  outline: 2px solid pink;
+}
