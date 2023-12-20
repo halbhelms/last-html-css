@@ -73,11 +73,14 @@ footer {
 
   h1 {
     font-size: 1rem;
-    padding-bottom: 20px;
   }
 
   section {
     column-count: 1;
+  }
+
+  section div {
+    margin-top: 12px;
   }
 
   img {
