@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+
+  <form action="#">
+    <div class="form-field">
+      <label>
+        <span>Course 
+          <select name="course">
+            <option value="none">Please select a course</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+          </select>
+        </span>
+      </label>
+    </div>
+    <br />
+    <div class="form-field">
+      <label>
+        <span>Name <input type="text" name="name" placeholder="Enter full name" ></span>
+      </label>
+    </div>
+    <br />
+    <div class="form-field">
+      <label>
+        <span>Email <input type="email" name="email" placeholder="Enter business email"></span>
+      </label>
+    </div>
+    <br />
+    <div class="form-field">
+      <label>
+        <span>Phone <input type="tel" name="phone" placeholder="Enter phone"></span>
+      </label>
+    </div>
+    <br />
+    <div class="form-field">
+      <label>
+        <span>Reason<span></span> 
+      </label>
+      <textarea name="reason" placeholder="Explain briefly what you hope to get from the course." cols="40" rows="3"></textarea>
+    </div>
+    <br />
+    <div class="form-field">
+      <label>
+        <input type="checkbox" value="newsletter"> <span>Subscribe to newsletter</span>
+      </label>
+    </div>
+    <br />
+    <div class="form-field">
+      <label>
+        <input type="radio" name="course-type" value="online"> <span>Online</span><br />
+      </label>
+      <label>
+        <input type="radio" name="course-type" value="in-person"> <span>In Person</span><br />
+      </label>
+    </div>
+    <br />
+    <button>OK</button>
+  </form>
+</body>
+</html>
