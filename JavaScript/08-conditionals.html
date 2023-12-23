@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditional Logic</title>
+</head>
+<body>
+  
+</body>
+
+<script>
+  // if a condition is true, execute...
+  if (true) {
+    console.log('This will always run')
+  }
+
+  let age = 19
+  // TODO Explain why canApply needs to be defined outside of the if statement
+  let canApply = false
+  // TODO Explain why upper-case
+  const MINOR_UPPER_LIMIT = 17
+  if (age > MINOR_UPPER_LIMIT) {
+    canApply = true
+  } 
+
+  if (canApply) {
+    console.log('Why not apply today?')
+  }
+
+  // TODO Refactor to elminate else clause
+  if (age == MINOR_UPPER_LIMIT) {
+    console.log('Welcome to adulthood')
+  } else {
+    console.log('You are either too young or too old')
+  }
+</script>
+</html>

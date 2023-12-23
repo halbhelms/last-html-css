@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/base.css">
+  <title>Object</title>
+</head>
+
+<body>
+
+</body>
+<p id="output"></p>
+
+<p id="property"></p>
+<script>
+  // create a simple object
+  const address = {
+    street: '123 Main St',
+    city: 'Guilford',
+    state: 'CT'
+  }
+  address.zip = '02657'
+  // TODO Explain square bracket notation
+  address['country'] = 'USA'
+  console.log(address)
+
+  // square bracket notation for dynamic inputs
+  const USER_PROFILE = {
+    color: 'red',
+    age: 36,
+    country: 'USA'
+  }
+
+  let propertyElement = document.querySelector('#property')
+  let property = prompt('What USER_PROFILE property do want to see?')
+  if (property == 'color') {
+    propertyElement.style.color = USER_PROFILE.color
+  }
+  propertyElement.innerHTML = USER_PROFILE[property]
+
+  // TODO Explain ordered and non-ordered collections
+  let composer = {
+    name: 'Ludwig van Beethoven',
+    genre: 'romantic',
+    symphonies: [
+      'Symphony No. 1 in C major',
+      'Symphony No. 2 in D major',
+      'Symphony No. 3 (Eroica) in E♭ major',
+      'Symphony No. 4 in B♭ major',
+      'Symphony No. 5 (Fate) in C minor',
+      'Symphony No. 6 (Pastoral) in F major',
+      'Symphony No. 7 in A major',
+      'Symphony No. 8 in F major',
+      'Symphony No. 9 (Choral) in D minor'
+    ],
+    born: 1770,
+    died: 1827
+  }
+
+  let brief = composer.name + ', born in ' + composer.born + ' and died in ' + composer.died + ',<br />'
+  brief += 'wrote in the '+ composer.genre + ' genre and wrote ' + composer.symphonies.length + ' symphonies,<br />'
+  brief += 'of which perhaps his greatest is ' + composer.symphonies.at(8) +'.'
+  document.querySelector('#output').innerHTML = brief
+</script>
+
+</html>

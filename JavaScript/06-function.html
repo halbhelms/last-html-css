@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/base.css">
+  <title>Function</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    // create a function that takes a variable and outputs the value to the console
+    // TODO Explain what 'console' is
+    function printValue(variable) {
+      console.log(variable)
+    }
+
+    let frenchCapital = 'Paris'
+    printValue(frenchCapital)
+
+    // create a taxable product object
+    // TODO Explain difference between let and const
+    const product1 = {
+      name: 'Widget',
+      origin: 'China',
+      price: 7.95,
+      taxable: true
+    }
+
+    // create a non-taxable product object
+  const product2 = {
+    name: 'Wrench',
+    origin: 'USA',
+    price: 17.50,
+    taxable: false
+  }
+
+  // create am applyTax function that takes in a product and a tax rate and returns the new price
+  function applyTax(product, taxRate) {
+    // TODO Refactor
+    if (product.taxable) {
+      return product.price + (product.price * taxRate)
+    } else {
+      return product.price
+    }
+  }
+
+  console.log('The product should now cost $' + applyTax(product1, .10))
+  console.log('The product should now cost $' + applyTax(product2, .10))
+
+  // create a function to cut down on verbosity of writing 'console.log'
+  function log(value) {
+    console.log(value)
+  }
+
+  // create a function to test if a string is a palindrome (same frontwards and backwards)
+  function isPalindrome(text) {
+    // Remove non-alphanumeric characters and change to lowercase
+    // TODO Walk through
+    var cleaned = text.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+
+    // Compare the string with its reverse
+    // TODO Explain = == and ===
+    return cleaned === cleaned.split('').reverse().join('');
+  }
+
+  log(isPalindrome('radar'))
+
+    
+</script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./styles/base.css"> -->
+  <title>Events</title>
+</head>
+<body>
+  <p>What if someone hovers over me?</p>
+
+  <button class="not-twice">Don't click me twice...</button>
+
+  <form action="#">
+    <input type="text" name="firstName" placeholder="First name"><br />
+    <input type="text" name="lastName" placeholder="Last name"><br />
+
+    <button type="submit">OK</input>
+  </form>
+</body>
+
+<script>
+  function processForm(event) {
+      event.preventDefault(); // Stop the form from submitting
+
+      // Access the form and its values
+      const form = event.target; // This is the form element that triggered the event
+      const firstName = form.elements['firstName'].value; // Access the firstName input value
+      const lastName = form.elements['lastName'].value; // Access the lastName input value
+
+      // Do something with the values
+      console.log("First Name:", firstName, "Last Name:", lastName);
+    }
+
+
+  function handleMouseEnter(event) {
+    console.log(event.clientX, event.clientY)
+    console.log(event)
+    event.target.style.color = 'red'
+    event.target.style.fontWeight = 900
+  }
+
+  function handleMouseLeave(event) {
+    console.log(event.clientX, event.clientY)
+    event.target.style.color = 'black'
+    event.target.style.fontWeight = 500
+  }
+
+  function preventDoubleClick(event) {
+    event.target.disabled = true
+  }
+
+  // TODO refactor to avoid duplication
+  document.querySelector('p').addEventListener('mouseenter', handleMouseEnter) 
+  document.querySelector('p').addEventListener('mouseleave', handleMouseLeave) 
+
+  document.querySelector('button.not-twice').addEventListener('click', preventDoubleClick)
+
+  document.querySelector('form').addEventListener('submit', processForm)
+  
+</script>
+</html>
