@@ -1,11 +1,3 @@
-// set up the balances
-const outputs = {
-  checking: document.querySelector('#checking'),
-  savings: document.querySelector('#savings'),
-  'money-market': document.querySelector('#money-market'),
-  total: document.querySelector('#total'),
-}
-
 const balances = {
   checking: 0,
   savings: 0,
