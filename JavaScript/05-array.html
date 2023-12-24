@@ -24,18 +24,18 @@
   const symphonies = [
     {
       composer: 'Gustav Mahler',
-      name: 'Symphony No. 7',
-      year: '1905'
+          name: 'Symphony No. 7',
+          year: '1905'
     },
     {
       composer: 'Ludwig van Beethoven',
-      name: 'Symphony No. 3 (Eroica)',
-      year: '1804'
+          name: 'Symphony No. 3 (Eroica)',
+          year: '1804'
     },
     {
       composer: 'Dmitri Shostakovich',
-      name: 'Symphony No. 9',
-      year: '1945'
+          name: 'Symphony No. 9',
+          year: '1945'
     },
   ]
   
@@ -49,11 +49,11 @@
   symphony = symphonies.at(2)
   console.log(symphony.composer + ' wrote ' + symphony.name + ' in ' + symphony.year)
 
+  let outputElement = document.querySelector('#output')
   function displaySymphony(symphony) {
-    let outputElement = document.querySelector('#output')
     outputElement.innerHTML += '<p>' + symphony.composer + ' wrote ' + symphony.name + ' in ' + symphony.year + '</p>'
   }
-
+  // TODO Explain the forEach functon of arrays
   symphonies.forEach(displaySymphony)
 </script>
 

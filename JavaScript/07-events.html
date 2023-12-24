@@ -23,13 +23,19 @@
   function processForm(event) {
       event.preventDefault(); // Stop the form from submitting
 
-      // Access the form and its values
       const form = event.target; // This is the form element that triggered the event
-      const firstName = form.elements['firstName'].value; // Access the firstName input value
-      const lastName = form.elements['lastName'].value; // Access the lastName input value
+      let formFields = {};
 
-      // Do something with the values
-      console.log("First Name:", firstName, "Last Name:", lastName);
+      // Iterate over each element in the form
+      Array.from(form.elements).forEach(function (element) {
+        // Ensure the element has a name attribute and isn't a submit button
+        if (element.name && element.type !== 'submit') {
+          formFields[element.name] = element.value;
+        }
+      });
+
+      // Now formFields object contains all the form fields as key-value pairs
+      console.log(formFields);
     }
 
 

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/banking-app.css">
+  <link rel="stylesheet" href="./styles/dev.css">
+  <title>Banking App</title>
+</head>
+<body>
+  <main>
+    <div class="balances quadrant">
+      <h2>Balances</h2>
+      <section class="balances">
+        <div class="balance">
+          <h3>Checking</h3>
+          <h3 id="checking">1,102.46</h3>
+        </div>
+        
+        <div class="balance">
+          <h3>Savings</h3>
+          <h3 id="savings">355.00</h3>
+        </div>
+        
+        <div class="balance">
+          <h3>Money Market</h3>
+          <h3 id="money-market">1,355.00</h3>
+        </div>
+        
+        <div class="balance top-padding">
+          <h3>Total</h3>
+          <h3 id="total">3,355.46</h3>
+        </div>
+        
+      </section>
+    </div>
+    
+    <div class="deposits quadrant">
+      <h2>Deposits</h2>
+      <section class="deposits">
+        <select name="deposit-to">
+          <option value="">Deposit to...</option>
+          <option value="checking">Checking</option>
+          <option value="savings">Savings</option>
+          <option value="money-market">Money Market</option>
+        </select>
+
+        <input type="text" name="deposit-amount" placeholder="Deposit amount">
+
+        <button onclick="processDeposit()">Deposit</button>
+      </section>
+    </div>
+    
+    <div class="withdrawals quadrant">
+      <h2>Withdrawals</h2>
+      <section class="withdrawals">
+        <select name="withdraw-from">
+          <option value="">Withdraw from...</option>
+          <option value="checking">Checking</option>
+          <option value="savings">Savings</option>
+          <option value="money-market">Money Market</option>
+        </select>
+      
+        <input type="text" name="withdrawal-amount" placeholder="Withdrawal amount">
+      
+        <button onclick="processWithdrawal()">Withdraw</button>
+    </div>
+
+    <div class="transfers quadrant">
+      <h2>Transfers</h2>
+      <section class="transfers">
+        <select name="transfer-from">
+          <option value="">Transfer from...</option>
+          <option value="checking">Checking</option>
+          <option value="savings">Savings</option>
+          <option value="money-market">Money Market</option>
+        </select>
+        <br />
+        <select name="transfer-to">
+          <option value="">Transfer to...</option>
+          <option value="checking">Checking</option>
+          <option value="savings">Savings</option>
+          <option value="money-market">Money Market</option>
+        </select>
+      
+        <input type="text" name="transfer-amount" placeholder="Transfer amount">
+      
+        <button onclick="processTransfer()">Transfer</button>
+    </div>
+  </main>
+
+  <script src="./bank-app.js"></script>
+</body>
+</html>

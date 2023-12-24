@@ -18,8 +18,8 @@
   // create a simple object
   const address = {
     street: '123 Main St',
-    city: 'Guilford',
-    state: 'CT'
+      city: 'Guilford',
+     state: 'CT'
   }
   address.zip = '02657'
   // TODO Explain square bracket notation
@@ -28,13 +28,13 @@
 
   // square bracket notation for dynamic inputs
   const USER_PROFILE = {
-    color: 'red',
-    age: 36,
+      color: 'red',
+        age: 36,
     country: 'USA'
   }
 
   let propertyElement = document.querySelector('#property')
-  let property = prompt('What USER_PROFILE property do want to see?')
+  let property = prompt('What USER_PROFILE property do you want to see?')
   if (property == 'color') {
     propertyElement.style.color = USER_PROFILE.color
   }
@@ -42,8 +42,8 @@
 
   // TODO Explain ordered and non-ordered collections
   let composer = {
-    name: 'Ludwig van Beethoven',
-    genre: 'romantic',
+          name: 'Ludwig van Beethoven',
+         genre: 'romantic',
     symphonies: [
       'Symphony No. 1 in C major',
       'Symphony No. 2 in D major',
@@ -55,8 +55,8 @@
       'Symphony No. 8 in F major',
       'Symphony No. 9 (Choral) in D minor'
     ],
-    born: 1770,
-    died: 1827
+        born: 1770,
+        died: 1827
   }
 
   let brief = composer.name + ', born in ' + composer.born + ' and died in ' + composer.died + ',<br />'

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/base.css">
+  <title>Template String</title>
+</head>
+
+<body>
+  <p id="output"></p>
+
+  <div class="symphonies"></div>
+</body>
+
+<script>
+  // creaee an array of computer languages
+  // TODO Explain array indexes start at 0
+  const languages = ['JavaScript', 'C#', 'Go', 'Java']
+  console.log(languages[languages.length - 1])
+
+  // create array of objects
+  const symphonies = [
+    {
+      composer: 'Gustav Mahler',
+      name: 'Symphony No. 7',
+      year: '1905'
+    },
+    {
+      composer: 'Ludwig van Beethoven',
+      name: 'Symphony No. 3 (Eroica)',
+      year: '1804'
+    },
+    {
+      composer: 'Dmitri Shostakovich',
+      name: 'Symphony No. 9',
+      year: '1945'
+    },
+  ]
+
+  // TODO this is awfully verbose...
+  let symphony = symphonies.at(0)
+  // console.log(symphony.composer + ' wrote ' + symphony.name + ' in ' + symphony.year)
+  console.log(`${symphony.composer} wrote ${symphony.name} in ${symphony.year}`)
+
+  symphony = symphonies.at(1)
+  // console.log(symphony.composer + ' wrote ' + symphony.name + ' in ' + symphony.year)
+  console.log(`${symphony.composer} wrote ${symphony.name} in ${symphony.year}`)
+  
+  symphony = symphonies.at(2)
+  // console.log(symphony.composer + ' wrote ' + symphony.name + ' in ' + symphony.year)
+  console.log(`${symphony.composer} wrote ${symphony.name} in ${symphony.year}`)
+  let outputElement = document.querySelector('#output')
+  function displaySymphony(symphony) {
+    // outputElement.innerHTML += '<p>' + symphony.composer + ' wrote ' + symphony.name + ' in ' + symphony.year + '</p>'
+  outputElement.innerHTML += `<p>${symphony.composer} wrote ${symphony.name} in ${symphony.year}</p>`
+  }
+  // TODO Explain the forEach functon of arrays
+  symphonies.forEach(displaySymphony)
+</script>
+
+</html>

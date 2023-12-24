@@ -1,0 +1,173 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: 100px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 700px 700px;
+  width: 80%;
+  height: 80%;
+  margin: auto auto; 
+  gap: 16px;
+  color: grey;
+}
+
+div.balances {
+  background-color: #155F82;
+  color: #E7E7E7; 
+}
+
+div.balance {
+  display: grid;
+  grid-template-columns: 30ch 20ch;
+  text-align: center;
+  margin-top: 20px;
+}
+
+div.balance h3 {
+  text-align: right;
+  font-size: 1.8rem;
+}
+
+div.deposits {
+  background-color: #800080;
+  color: #E7E7E7; 
+}
+
+div.withdrawals {
+  background-color: #F5753E; 
+  color: #E7E7E7;
+}
+
+div.transfers {
+  background-color: #008000; 
+  color: #E7E7E7;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.top-padding {
+  padding-top: 40px;
+}
+
+section.deposits,
+section.withdrawals,
+section.transfers {
+  text-align: center;
+}
+
+section.deposits select
+{
+  background-color: #800080;
+  color: white;
+  font-size: 1.8rem;
+}
+
+section.withdrawals select {
+  background-color: #F5753E;
+  color: white;
+  font-size: 1.8rem;
+}
+
+section.transfers select {
+  background-color: #008000;
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+input[name="deposit-amount"] {
+  display: block;
+  width: 12rem;
+  font-size: 1.8rem;
+  margin: 10px auto 0 auto;
+  margin-top: 30px;
+  background-color: #800080;
+  color: white;
+  border: 0;
+}
+
+input[name="withdrawal-amount"] {
+  display: block;
+  width: 12rem;
+  font-size: 1.8rem;
+  margin: 10px auto 0 auto;
+  margin-top: 30px;
+  background-color: #F5753E;
+  color: white;
+  border: 0;
+}
+input[name="transfer-amount"] {
+  display: block;
+  width: 12rem;
+  font-size: 1.8rem;
+  margin: 10px auto 0 auto;
+  /* margin-top: 30px; */
+  background-color: #008000;
+  color: white;
+  border: 0;
+}
+
+input[name="deposit-amount"]::placeholder,
+input[name="transfer-amount"]::placeholder {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+input[name="withdrawal-amount"]::placeholder {
+  color: black;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+section.deposits button {
+  background-color: white;
+  color: #800080;
+  margin-top: 50px;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.8rem;
+  border-radius: 1.5rem;
+}
+
+section.withdrawals button {
+  background-color: white;
+  color: #F5753E;
+  margin-top: 50px;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.8rem;
+  border-radius: 1.5rem;
+}
+
+section.transfers button {
+  background-color: white;
+  color: #008000;
+  margin-top: 50px;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.8rem;
+  border-radius: 1.5rem;
+}
+
+button:hover {
+  font-weight: bold;
+  cursor: pointer
+}
+
+button:active {
+  transform: translateY(2px);
+  /* Moves the button down 2 pixels */
+}
