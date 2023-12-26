@@ -29,7 +29,6 @@ function processDeposit() {
 function processWithdrawal() {
   // which account are we withdrawing fromo?
   let balance = document.querySelector('select[name="withdraw-from"]').value
-  console.log('balance', balance)
   // how much is being withdrawn?
   let withdrawalAmount = +document.querySelector('input[name="withdrawal-amount"]').value
   // is there enough in the account?
@@ -51,12 +50,8 @@ function processTransfer() {
   let fromBalance = document.querySelector('select[name="transfer-from"]').value
   // which account are we transferring to?
   let toBalance = document.querySelector('select[name="transfer-to"]').value
-
-  console.log('fromBalance', fromBalance)
-  console.log('toBalance', toBalance)
   // how much is the transfer for?
   let transferAmount = +document.querySelector('input[name="transfer-amount"]').value
-  console.log('transferAmount', transferAmount)
   // try to make the transfer
   if (balances[fromBalance] >= transferAmount) {
     balances[toBalance] += transferAmount

@@ -28,9 +28,6 @@ function drawRandomCards() {
       return pip == cardB.split('_')[1]
     })
 
-    console.log('aScore', aScore)
-    console.log('bScore', bScore)
-
     if (aScore > bScore) {
       scores.a++
     }
