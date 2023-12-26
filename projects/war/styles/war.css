@@ -1,0 +1,33 @@
+h1 {
+  text-align: center;
+  margin-top: 60px;
+}
+
+h1:hover {
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: auto auto;
+  margin-top: 40px;
+}
+
+.players {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: auto auto;
+}
+
+#score-a, #score-b {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 3rem;
+}
