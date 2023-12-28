@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #illustration {
+      margin-top: 60px;
+      margin-left: 60px;
+      font-size: 2rem;
+    }
+
+    button {
+      width: 20rem;
+      height: 3rem;
+      font-size: 1.6rem;
+    }
+  </style>
+  <title>Variables</title>
+</head>
+<body>
+  <p id="illustration"></p>
+  <button onclick="wrongAnswer()">Simulate wrong answer</button>
+
+<script>
+  let home = "2034 W. Oak St"
+  // we moved!
+  home = "726 E. Kensington Rd"
+
+  const POSSIBLE_POINTS = 100
+  const WRONG_ANSWER_PENALTY = 10
+  
+  let score = POSSIBLE_POINTS
+
+  function wrongAnswer() {
+    score = score - WRONG_ANSWER_PENALTY
+    document.querySelector('#illustration').innerHTML = `You now have ${score} points.`
+  }
+
+</script>
+</body>
+</html>

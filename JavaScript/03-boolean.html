@@ -9,21 +9,25 @@
 </head>
 
 <body>
-  <p id="output"></p>
+  <p id="illustration"></p>
 </body>
 
 <script>
-  let seatsPurchased = 8
-  let seatsOccupied = 8
-  let message = "Welcome, friend"
+  let learningModeActivated = true
+  let stayOverwhelmed = false
 
+  let seatsPurchased = 8
+  let seatsOccupied = 6
+  
   let openSeat = seatsOccupied < seatsPurchased
-  // TODO Explain conditional logic
-  if (!openSeat) {
+  
+  let message = "Sorry, no seats are available"
+  
+  if (openSeat) {
     message = "Sorry, no more room"
   }
   
-  document.querySelector('#output').innerHTML = message
+  document.querySelector('#illustration').innerHTML = message
 </script>
 
 </html>

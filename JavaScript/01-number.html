@@ -3,19 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/base.css">
+  <style>
+    #illustration {
+      margin-top: 60px;
+      margin-left: 60px;
+      font-size: 2rem;
+    }
+  </style>
   <title>Number</title>
 </head>
 <body>
-  <p id="output"></p>
+  <p id="illustration"></p>
 </body>
 
 <script>
-  let width = 13
-  let depth = 8
-  let height = 12
-  let area = width * depth * height
-  // TODO Explain query selectors
-  document.querySelector('#output').innerHTML = area;
+  let radius = 15
+  let circumference = 2 * Math.PI * radius
+  
+  let message = `Given a radius of ${radius}, the circumference of such a circle is ${circumference}`
+
+  score = score - WRONG_ANSWER_PENALTY
+  score -= WRONG_ANSWER_PENALTY
+
+  score += 5
+  score *= 10
+  score /= 2
+
+  score++
+  score--
+  
+  
+  document.querySelector('#illustration').innerHTML = message
+  
+  console.log(message)
+
+  
 </script>
 </html>

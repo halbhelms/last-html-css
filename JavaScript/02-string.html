@@ -9,12 +9,13 @@
 <body>
   
 </body>
-  <p id="output"></p>
+  <p id="illustration"></p>
 <script>
   let firstName = 'Hal'
-  let lastName = 'Helms'
-  // TODO Explain concatenation
-  let fullName = firstName + ' ' + lastName
-  document.querySelector('#output').innerHTML = fullName
+  let middleInit = `B`
+  let lastName = "Helms"
+  let fullName = firstName + ' ' + middleInit + ' ' + lastName
+
+  document.querySelector('#illustration').innerHTML = fullName
 </script>
 </html>

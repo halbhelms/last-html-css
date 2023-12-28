@@ -5,64 +5,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/base.css">
+  <style>
+    select {
+      margin-left: 60px;
+      margin-top: 30px;
+    }
+  </style>
   <title>Object</title>
 </head>
 
 <body>
+  <p id="genre"></p>
+  
+  <p id="info"></p>
+  
+  <p id="property"></p>
+  
+  <select name="genre">
+    <option value="none">Choose genre</option>
+    <option value="operas">Operas</option>
+    <option value="concertos">Concertos</option>
+    <option value="string-quartets">Concertos</option>
+    <option value="piano-trios">Piano trios</option>
+    <option value="piano-sonatas">Piano sonatas</option>
+  </select>
 
-</body>
-<p id="output"></p>
-
-<p id="property"></p>
-<script>
-  // create a simple object
-  const address = {
-    street: '123 Main St',
-      city: 'Guilford',
-     state: 'CT'
-  }
-  address.zip = '02657'
-  // TODO Explain square bracket notation
-  address['country'] = 'USA'
-  console.log(address)
-
-  // square bracket notation for dynamic inputs
-  const USER_PROFILE = {
+  <select name="symphony">
+      <option value="0">Choose a symphony</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </option>
+  </select>
+  <script>
+    // create a simple object
+    let address = {
+      street: '123 Main St',
+        city: 'Guilford',
+       state: 'CT'
+    }
+    // Add to the object with dot notation
+    address.zip = '02653'
+    // And another with square bracket notation
+    address['country'] = 'USA'
+    
+    console.log('a', address)
+    
+    // square bracket notation for dynamic inputs
+    const USER_PROFILE = {
       color: 'red',
-        age: 36,
-    country: 'USA'
-  }
+      age: 36,
+      country: 'USA'
+    }
+    
+    let propertyElement = document.querySelector('#property')
+    let property = prompt('What USER_PROFILE property do you want to see?')
+    propertyElement.innerHTML = USER_PROFILE[property]
+    
+    let composer = {
+      name: 'Ludwig van Beethoven',
+      style: 'romantic',
+      operas: 1,
+      concertos: 12,
+      'string-quartets': 17,
+      'piano-trios': 10,
+      'piano-sonatas': 29,
+      born: 1770,
+      died: 1827,
+    }
+    
+    document.querySelector('[name="genre"]').addEventListener('change', function (event) {
+      let genre = event.target.value
+      document.querySelector('p#genre').innerHTML = `Beethoven wrote ${composer[genre]} pieces in the genre of ${genre}`
+    })
 
-  let propertyElement = document.querySelector('#property')
-  let property = prompt('What USER_PROFILE property do you want to see?')
-  if (property == 'color') {
-    propertyElement.style.color = USER_PROFILE.color
-  }
-  propertyElement.innerHTML = USER_PROFILE[property]
+    composer.symphonies = [
+      {
+        name: 'Symphony No. 1',
+        key: 'C major',
+        opus: '21',
+        published: '1801'
+      },
+      {
+        name: 'Symphony No. 2',
+        key: 'D major',
+        opus: '36',
+        published: '1803'
+      },
+      {
+        name: 'Symphony No. 3 Eroica',
+        key: 'E♭ major',
+        opus: '55',
+        published: '1804'
+      },
+      {
+        name: 'Symphony No. 4',
+        key: 'B♭ major',
+        opus: '60',
+        published: '1806'
+      },
+      {
+        name: 'Symphony No. 5 Fate',
+        key: 'C minor',
+        opus: '67',
+        published: '1808'
+      },
+      {
+        name: 'Symphony No. 6',
+        key: 'F major Pastorale',
+        opus: '68',
+        published: '1808'
+      },
+      {
+        name: 'Symphony No. 7',
+        key: 'A major',
+        opus: '92',
+        published: '1812'
+      },
+      {
+        name: 'Symphony No. 8',
+        key: 'F major',
+        opus: '93',
+        published: '1812'
+      },
+      {
+        name: 'Symphony No. 9',
+        key: 'D minor',
+        opus: '125',
+        published: '1824'
+      }
+    ]
 
-  // TODO Explain ordered and non-ordered collections
-  let composer = {
-          name: 'Ludwig van Beethoven',
-         genre: 'romantic',
-    symphonies: [
-      'Symphony No. 1 in C major',
-      'Symphony No. 2 in D major',
-      'Symphony No. 3 (Eroica) in E♭ major',
-      'Symphony No. 4 in B♭ major',
-      'Symphony No. 5 (Fate) in C minor',
-      'Symphony No. 6 (Pastoral) in F major',
-      'Symphony No. 7 in A major',
-      'Symphony No. 8 in F major',
-      'Symphony No. 9 (Choral) in D minor'
-    ],
-        born: 1770,
-        died: 1827
-  }
+    console.log('composer', composer)
 
-  let brief = composer.name + ', born in ' + composer.born + ' and died in ' + composer.died + ',<br />'
-  brief += 'wrote in the '+ composer.genre + ' genre and wrote ' + composer.symphonies.length + ' symphonies,<br />'
-  brief += 'of which perhaps his greatest is ' + composer.symphonies.at(8) +'.'
-  document.querySelector('#output').innerHTML = brief
-</script>
+    document.querySelector('[name="symphony"]').addEventListener('change', function (event) {
+      let symphonyNumber = event.target.value
+      let symphony = composer.symphonies[symphonyNumber -1]
+      let info = `Beethoven's ${symphony.name} in ${symphony.key}, Opus ${symphony.opus} was published in ${symphony.published}`
+      document.querySelector('p#info').innerHTML = info
+    })
+    
+  </script>
+  </body>
 
 </html>
