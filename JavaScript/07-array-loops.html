@@ -9,6 +9,34 @@
       margin-left: 60px;
       margin-top: 60px;
       font-size: 2rem;
+
+      .book-card {
+        border: 2px solid grey;
+        width: 600px;
+        height: 880px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      .book-card h2 {
+        font-size: 2rem;
+        width: fit-content;
+        text-align: center;
+        padding-top: 12px;
+      }
+
+      .book-card p {
+        text-align: center;
+        padding-top: 8px;
+      }
+
+      .book-card img {
+        margin-left: 50px;
+        margin-right: 50px;;
+        margin-top: 16px;
+      }
+
     }
   </style>
   <title>Array Looping</title>
@@ -23,6 +51,97 @@
       output.innerHTML += number
       output.innerHTML += '<br />'
     })
+
+    let todos = [
+      {
+              id: 100,
+            task: 'Send birthday invitations',
+        complete: false
+      },
+      {
+              id: 200,
+            task: 'Order birthday cake',
+        complete: false
+      },
+      {
+              id: 300,
+            task: 'Arrange entertainment',
+        complete: false
+      }
+    ]
+
+    todos.forEach(function(todo){
+      let p = `<p>${todo.task}</p>`
+      let outputArea = document.querySelector('#illustration')
+      outputArea.innerHTML += p
+    })
+
+    let books = [
+      {
+            id: 1000,
+         title: 'The Last Chairlift',
+        author: 'John Irving',
+         cover: 'last-chairlift.jpg',
+        rating: 3.9,
+         price: 20.59
+      },
+      {
+            id: 2000,
+         title: 'A Prayer for Owen Meany',
+        author: 'John Irving',
+         cover: 'prayer-owen-meany.jpg',
+        rating: 4.8,
+         price: 29.76
+      },
+      {
+            id: 3000,
+         title: 'Hotel New Hampshire',
+        author: 'John Irving',
+         cover: 'hotel.jpg',
+        rating: 4.5,
+         price: 15.99
+      }
+    ]
+
+    books = books.filter(function (book) {
+      return book.rating > 4.4
+    })
+
+    books.forEach(function(book) {
+      let card = document.createElement('div')
+      card.classList.add('book-card')
+
+      let title = document.createElement('h2')
+      title.innerHTML = book.title
+      let author = document.createElement('p')
+      author.innerHTML = book.author
+      let cover = document.createElement('img')
+      cover.src = `./images/${book.cover}`
+
+      card.appendChild(title)
+      card.appendChild(author)
+      card.appendChild(cover)
+
+      document.querySelector('#illustration').appendChild(card)
+    })
+
+    // let card = document.createElement('div')
+    // card.classList.add('book-card')
+
+    // let title = document.createElement('h2')
+    // title.innerHTML = 'A Prayer for Owen Meany'
+    // let author = document.createElement('p')
+    // author.innerHTML = 'John Irving'
+    // let cover = document.createElement('img')
+    // cover.src = './images/prayer-owen-meany.jpg'
+
+    // card.appendChild(title)
+    // card.appendChild(author)
+    // card.appendChild(cover)
+
+    // document.querySelector('#illustration').appendChild(card)
+
+    // document.querySelector('#illustration').appendChild(card)
   </script>
 </body>
 </html>
