@@ -11,63 +11,88 @@
 </body>
 
 <script>
-    // create a function that takes a variable and outputs the value to the console
-    // TODO Explain what 'console' is
-    function printValue(variable) {
-      console.log(variable)
-    }
-
-    let frenchCapital = 'Paris'
-    printValue(frenchCapital)
-
-    // create a taxable product object
-    // TODO Explain difference between let and const
-    const product1 = {
-         name: 'Widget',
-       origin: 'China',
-        price: 7.95,
-      taxable: true
-    }
-
-    // create a non-taxable product object
-  const product2 = {
-       name: 'Wrench',
-     origin: 'USA',
-      price: 17.50,
-    taxable: false
+  function add(num1, num2) {
+    return num1 + num2
   }
 
-  // create am applyTax function that takes in a product and a tax rate and returns the new price
-  function applyTax(product, taxRate) {
-    // TODO Refactor
-    if (product.taxable) {
-      return product.price + (product.price * taxRate)
-    } else {
-      return product.price
-    }
+  let sum = add(5, 10)
+
+  
+  let widget = {
+       width: 23,
+      height: 16,
+       depth: 12,
+    material: 'wood',
+       price: 29.99
+  }
+  
+  let volume = calculateVolume(widget.width, widget.height, widget.depth)
+  
+  function calculateVolume(width, height, depth) {
+    return width * height * depth
   }
 
-  console.log('The product should now cost $' + applyTax(product1, .10))
-  console.log('The product should now cost $' + applyTax(product2, .10))
-
-  // create a function to cut down on verbosity of writing 'console.log'
-  function log(value) {
-    console.log(value)
+  function calculateCubeVolume(cube) {
+    return cube.width * cube.height * cube.depth
   }
 
-  // create a function to test if a string is a palindrome (same frontwards and backwards)
-  function isPalindrome(text) {
-    // Remove non-alphanumeric characters and change to lowercase
-    // TODO Walk through
-    var cleaned = text.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+  volume = calculateCubeVolume(widget)
 
-    // Compare the string with its reverse
-    // TODO Explain = == and ===
-    return cleaned === cleaned.split('').reverse().join('');
-  }
-
-  log(isPalindrome('radar'))
-
+  function determineBoxSize(cube) {
+    const SMALL_LIMIT = 1000
+    let volume = cube.width * cube.height * cube.depth
+    let boxSize = 'small'
     
+    if (volume > SMALL_LIMIT) {
+      boxSize = 'large'
+    }
+    return `You will need a ${boxSize} box`
+  }
+
+  function betterDetermineBoxSize(cube, smallLimit) {
+    let volume = cube.width * cube.height * cube.depth
+    let boxSize = 'small'
+
+    if (volume > smallLimit) {
+      boxSize = 'large'
+    }
+    return `You will need a ${boxSize} box`
+  }
+
+  const SMALL_LIMIT = 1000
+
+  function worseDetermineBoxSize(cube) {
+    let cubeVolume = cube.width * cube.height * cube.depth
+    let boxSize = 'small'
+
+    if (cubeVolume > SMALL_LIMITt) {
+      boxSize = 'large'
+    }
+    return `You will need a ${boxSize} box`
+  }
+  // let boxVolume = cubeVolume
+
+  let customer = {
+         name: 'Richie Rich',
+     netWorth: 1000000,
+      address: {
+         street: '235 Benedict Canyon',
+           city: 'Beverly Hills',
+          state: 'CA',
+            zip: '90210'
+     },
+    creditLimit: function() {
+      let limit = 5000
+      if (this.netWorth > 500000) {
+        limit = 25000
+      }
+      return limit
+    }
+  }
+
+  console.log(customer.creditLimit())
+
+
+
 </script>
 </html>
