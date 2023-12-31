@@ -23,20 +23,25 @@
   <button onclick="wrongAnswer()">Simulate wrong answer</button>
 
 <script>
-  let home = "2034 W. Oak St"
-  // we moved!
-  home = "726 E. Kensington Rd"
-
-  const POSSIBLE_POINTS = 100
-  const WRONG_ANSWER_PENALTY = 10
-  
+// #region -- establish variable for home
+let home = "2034 W. Oak St"
+// #endregion
+// #region -- moving to new address
+home = "726 E. Kensington Rd"
+// #endregion
+// #region -- establish constants
+const POSSIBLE_POINTS = 100
+const WRONG_ANSWER_PENALTY = 10
+// #endregion
+// #region -- set initial score
   let score = POSSIBLE_POINTS
-
+  // #endregion
+// #region -- create function to simulate wrong answer
   function wrongAnswer() {
     score = score - WRONG_ANSWER_PENALTY
     document.querySelector('#illustration').innerHTML = `You now have ${score} points.`
   }
-
+  // #endregion
 </script>
 </body>
 </html>

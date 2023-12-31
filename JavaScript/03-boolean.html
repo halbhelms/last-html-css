@@ -13,6 +13,7 @@
 </body>
 
 <script>
+// #region -- initialize variables
   let learningModeActivated = true
   let stayOverwhelmed = false
 
@@ -22,12 +23,17 @@
   let openSeat = seatsOccupied < seatsPurchased
   
   let message = "Sorry, no seats are available"
+  // #endregion
   
+// #region -- conditional logic
   if (openSeat) {
     message = "Sorry, no more room"
   }
+  // #endregion
   
+// #region -- display
   document.querySelector('#illustration').innerHTML = message
+  // #endregion
 </script>
 
 </html>

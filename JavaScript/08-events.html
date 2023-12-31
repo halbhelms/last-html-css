@@ -3,66 +3,243 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="./styles/base.css"> -->
+  <link rel="stylesheet" href="./styles/base.css">
+  <style>
+    .event-process {
+      display: flex;
+      justify-content: center;
+    }
+
+    input, button, #nav {
+      margin-bottom: 2rem;
+      margin-left: 4rem;
+    }
+
+    input {
+      width: 20rem;
+      height: 3rem;
+      font-size: 2rem;
+    }
+
+    button {
+      width: 10rem;
+      height: 3rem;
+      font-size: 2rem;
+      border-radius: .6rem;
+    }
+
+    .not-twice {
+      width: 24rem;
+    }
+
+    #nav {
+      width: 8rem;
+      height: 3rem;
+      font-size: 2rem;
+      text-align: center;
+      background-color: navy;
+      color: white;  
+      padding: 8px;
+      border-radius: .6rem;
+    }
+
+    #nav.reverse {
+      background-color: grey;
+      color: gold;;
+    }
+
+    #form-error {
+      display: block;
+      margin: 2rem 0 2rem 15rem;
+      width: 800px;
+      font-size: 1.3rem;
+      color: red;
+      text-align: left;
+    }
+
+    #password-rules {
+      position: absolute;
+      z-index: 200;
+      border: 1px solid grey;
+      background-color: white;
+      left: 10rem;
+      top: 10rem;;
+      text-align: left;
+      padding: 30px;
+      border-radius: 12px;
+      background-color: #E8E8E8;
+      font-size: 1.3rem;
+      color: navy;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .shown {
+      display: block;
+    }
+
+    form[name="registration"] {
+      position: relative;
+      width: 1000px;
+    }
+
+    h3 {
+      display: block;
+      margin-top: 100px;
+      width: 1200px;
+    }
+
+    img.eye {
+      position: absolute;
+      top: 108px;
+      left: 800px;
+      width: 96px;
+    }
+  </style>
   <title>Events</title>
 </head>
 <body>
-  <p>What if someone hovers over me?</p>
+  <div class="event-process">
+    <img src="./images/event-process.png">
+  </div>
+
+  <div id="nav">Home</div>
 
   <button class="not-twice">Don't click me twice...</button>
 
-  <form action="#">
+  <form action="#" name="info">
     <input type="text" name="firstName" placeholder="First name"><br />
     <input type="text" name="lastName" placeholder="Last name"><br />
+    <input type="num" name="age" placeholder="Age"><br />
 
     <button type="submit">OK</input>
+  </form>
+
+
+  <h3>Create an Account</h3>
+  <div id="form-error"></div>
+  <form action="#" name="registration">
+  <input type="text" name="username" placeholder="User name"><br />
+  <div id="password-rules" class="hidden">
+    Please create a password that...
+    <ul>
+      <li>is at least 8 characters long</li>
+      <li>has at least one of these special characters: ! # $ % </li>
+    </ul>
+  </div>
+  <img src="./images/eye-open.png" alt="" class="eye"><input type="text" name="password" placeholder="Password"><br />
   </form>
 </body>
 
 <script>
+  // #region #nav click listener
+  document.querySelector('#nav').addEventListener('click', handleNavClick)
+  function handleNavClick(event) {
+    console.log(event)
+    event.target.classList.toggle('reverse')
+  }
+  // #endregion
+
+  // #region form info process listener
+  document.querySelector('form[name="info"]').addEventListener('submit', processForm)
   function processForm(event) {
-      event.preventDefault(); // Stop the form from submitting
+    event.preventDefault(); // Stop the form from submitting
 
-      const form = event.target; // This is the form element that triggered the event
-      let formFields = {};
+    const form = event.target; // This is the form element that triggered the event
+    let formFields = {};
+    console.log('form.elements', form.elements)
+    // Iterate over each element in the form
+    Array.from(form.elements).forEach(function (element) {
+      // Ensure the element has a name attribute and isn't a submit button
+      if (element.name && element.type !== 'submit') {
+        formFields[element.name] = element.value;
+      }
+    });
+    // Save the form to localStorage
+    localStorage.setItem('formFields', JSON.stringify(formFields))
+    // Now formFields object contains all the form fields as key-value pairs
+    console.log(JSON.parse(localStorage.getItem('formFields')))
+  }
+  // #endregion
 
-      // Iterate over each element in the form
-      Array.from(form.elements).forEach(function (element) {
-        // Ensure the element has a name attribute and isn't a submit button
-        if (element.name && element.type !== 'submit') {
-          formFields[element.name] = element.value;
-        }
-      });
+  // #region button.not-twice click listener
+  document.querySelector('button.not-twice').addEventListener('click', preventDoubleClick)
+  function preventDoubleClick(event) {
+    event.target.disabled = true
+  }
+  // #endregion
 
-      // Now formFields object contains all the form fields as key-value pairs
-      console.log(formFields);
-    }
-
-
+  // #region initial events listeners
+  document.querySelector('.event-process').addEventListener('mouseenter', handleMouseEnter) 
+  document.querySelector('.event-process').addEventListener('mouseleave', handleMouseLeave) 
+  window.addEventListener('load', handlePageLoad)
   function handleMouseEnter(event) {
     console.log(event.clientX, event.clientY)
-    console.log(event)
-    event.target.style.color = 'red'
-    event.target.style.fontWeight = 900
   }
 
   function handleMouseLeave(event) {
     console.log(event.clientX, event.clientY)
-    event.target.style.color = 'black'
-    event.target.style.fontWeight = 500
   }
 
-  function preventDoubleClick(event) {
-    event.target.disabled = true
+  function handlePageLoad(event) {
+    console.log('The page has loaded')
   }
-
-  // TODO refactor to avoid duplication
-  document.querySelector('p').addEventListener('mouseenter', handleMouseEnter) 
-  document.querySelector('p').addEventListener('mouseleave', handleMouseLeave) 
-
-  document.querySelector('button.not-twice').addEventListener('click', preventDoubleClick)
-
-  document.querySelector('form').addEventListener('submit', processForm)
+  // #endregion
   
+  // #region password rules
+  document.querySelector('input[name="password"]').addEventListener('focus', showPasswordRules)
+  document.querySelector('input[name="password"]').addEventListener('blur', validatePassword)
+  function showPasswordRules(event) {
+    document.querySelector('#form-error').innerHTML = ''
+    document.querySelector('#password-rules').classList.remove('hidden')
+    document.querySelector('#password-rules').classList.add('shown')
+  }
+  
+  function hidePasswordRules() {
+    document.querySelector('#password-rules').classList.remove('shown')
+    document.querySelector('#password-rules').classList.add('hidden')
+  }
+  // #endregion
+
+  // #region password validation listener
+  function validatePassword(event) {
+    hidePasswordRules()
+    let errors = []
+    let password = event.target.value
+    if (password.length < 8) {
+      document.querySelector('#form-error').innerHTML += `Your password must be at least 8 characters<br />`
+    }
+    
+    const SPECIAL_CHARACTERS = ['!', '#', '$', '%']
+    let specialCharacterFound = false
+    SPECIAL_CHARACTERS.forEach(function(specialCharacter) {
+      if (password.includes(specialCharacter)) {
+        specialCharacterFound = true
+      }
+    })
+    if (!specialCharacterFound) {
+      document.querySelector('#form-error').innerHTML += `Your password must include a special character`
+    }
+  }
+  // #endregion
+
+  // #region password or text input
+  document.querySelector('img.eye').addEventListener('click', toggleAsterisks)
+  function toggleAsterisks(event) {
+    let passwordAsterisks = false
+    if (event.target.src.includes('open')) {
+      passwordAsterisks = true
+    }
+    if (passwordAsterisks) {
+      event.target.src = './images/eye-closed.png'
+      document.querySelector('input[name="password"]').type="password"
+    } else {
+      event.target.src = './images/eye-open.png'
+      document.querySelector('input[name="password"]').type="text"
+    }
+  } 
+  // #endregion
 </script>
 </html>

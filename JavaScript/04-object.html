@@ -15,12 +15,15 @@
 </head>
 
 <body>
+<!-- #region -- output areas -->
   <p id="genre"></p>
   
   <p id="info"></p>
   
   <p id="property"></p>
+  <!-- #endregion -->
   
+<!-- #region -- select field for genre -->
   <select name="genre">
     <option value="none">Choose genre</option>
     <option value="operas">Operas</option>
@@ -29,7 +32,9 @@
     <option value="piano-trios">Piano trios</option>
     <option value="piano-sonatas">Piano sonatas</option>
   </select>
+<!-- #endregion -->
 
+<!-- #region -- select field for symphony -->
   <select name="symphony">
       <option value="0">Choose a symphony</option>
       <option value="1">1</option>
@@ -43,31 +48,42 @@
       <option value="9">9</option>
     </option>
   </select>
+<!-- #endregion -->
+  
   <script>
-    // create a simple object
+  // #region -- create a simple object
     let address = {
       street: '123 Main St',
         city: 'Guilford',
        state: 'CT'
     }
-    // Add to the object with dot notation
+  // #endregion
+
+  // #region -- add property to the object with dot notation
     address.zip = '02653'
-    // And another with square bracket notation
+  // #endregion
+
+  // #region -- and another property with square bracket notation
     address['country'] = 'USA'
+  // #endregion
     
+  // #region -- display
     console.log('a', address)
-    
-    // square bracket notation for dynamic inputs
+  // #endregion
+
+  // #region -- square bracket notation for dynamic inputs
     const USER_PROFILE = {
-      color: 'red',
-      age: 36,
+        color: 'red',
+          age: 36,
       country: 'USA'
     }
     
     let propertyElement = document.querySelector('#property')
     let property = prompt('What USER_PROFILE property do you want to see?')
     propertyElement.innerHTML = USER_PROFILE[property]
+  // #endregion
     
+  // #region -- create composer object
     let composer = {
       name: 'Ludwig van Beethoven',
       style: 'romantic',
@@ -79,12 +95,16 @@
       born: 1770,
       died: 1827,
     }
+    // #endregion
     
+  // #region -- create event listener for genre select
     document.querySelector('[name="genre"]').addEventListener('change', function (event) {
       let genre = event.target.value
       document.querySelector('p#genre').innerHTML = `Beethoven wrote ${composer[genre]} pieces in the genre of ${genre}`
     })
+  // #endregion
 
+  // #region -- add symphonies to composer object
     composer.symphonies = [
       {
         name: 'Symphony No. 1',
@@ -141,17 +161,20 @@
         published: '1824'
       }
     ]
+  // #endregion
 
-    console.log('composer', composer)
+  // #region -- display composer
+  console.log('composer', composer)
+  // #endregion
 
+  // #region -- create event listener for symphony select
     document.querySelector('[name="symphony"]').addEventListener('change', function (event) {
       let symphonyNumber = event.target.value
       let symphony = composer.symphonies[symphonyNumber -1]
       let info = `Beethoven's ${symphony.name} in ${symphony.key}, Opus ${symphony.opus} was published in ${symphony.published}`
       document.querySelector('p#info').innerHTML = info
     })
-    
+  // #endregion 
   </script>
-  </body>
-
+</body>
 </html>

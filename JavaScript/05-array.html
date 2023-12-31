@@ -12,35 +12,42 @@
   <p id="output"></p>
 
   <div class="symphonies"></div>
+  
+  <script>
+  // #region -- creaee an array of computer languages
+    const LANGUAGES = ['JavaScript', 'C#', 'Go', 'Java']
+    // #endregion
+    
+  // #region -- illustrate different direct access of arrays
+    console.log(LANGUAGES[3])
+    
+    console.log(LANGUAGES.at(3))
+    
+    console.log(LANGUAGES[LANGUAGES.length-1])
+    
+    LANGUAGES[LANGUAGES.length] = 'Python'
+    
+    console.log('languages', LANGUAGES) 
+    // #endregion
+    
+  // #region -- uncomment to show nature of constants
+    // LANGUAGES = ['Php', 'Ruby', 'Smalltalk']
+    // #endregion
+    
+  // #region -- push to add item onto end of array
+    LANGUAGES.push('PHP')
+    console.log('languages', LANGUAGES) 
+    // #endregion
+    
+  // #region -- unshift to add item to beginning of array
+    LANGUAGES.unshift('PHP')
+    console.log('languages', LANGUAGES) 
+    // #endregion
+    
+  // #region -- shift to remove an item from beginning of array
+    LANGUAGES.shift()
+    console.log('languages', LANGUAGES) 
+    // #endregion
+  </script>
 </body>
-
-<script>
-  // creaee an array of computer languages
-  const LANGUAGES = ['JavaScript', 'C#', 'Go', 'Java']
-
-  console.log(LANGUAGES[3])
-
-  console.log(LANGUAGES.at(3))
-
-  console.log(LANGUAGES[LANGUAGES.length-1])
-
-  LANGUAGES[LANGUAGES.length] = 'Python'
-
-  console.log('languages', LANGUAGES) 
-  
-  // LANGUAGES = ['Php', 'Ruby', 'Smalltalk']
-  
-  LANGUAGES.push('PHP')
-  
-  console.log('languages', LANGUAGES) 
-  
-  LANGUAGES.unshift('PHP')
-  
-  console.log('languages', LANGUAGES) 
-  
-  LANGUAGES.shift()
-  
-  console.log('languages', LANGUAGES) 
-</script>
-
 </html>

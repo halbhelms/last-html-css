@@ -44,6 +44,7 @@
 <body>
   <div id="illustration"></div>
   <script>
+  // #region -- create/loop over Fibonacci series
     let fibonacci = [1,1,2,3,5,8,13,21,34,55]
     
     fibonacci.forEach(function (number) {
@@ -51,7 +52,9 @@
       output.innerHTML += number
       output.innerHTML += '<br />'
     })
+  // #endregion
 
+  // #region -- create/loop over todos
     let todos = [
       {
               id: 100,
@@ -69,13 +72,35 @@
         complete: false
       }
     ]
-
+    
     todos.forEach(function(todo){
       let p = `<p>${todo.task}</p>`
       let outputArea = document.querySelector('#illustration')
       outputArea.innerHTML += p
     })
+    // #endregion
 
+  // #region -- uncomment to show hard-coded book card
+    // let card = document.createElement('div')
+    // card.classList.add('book-card')
+
+    // let title = document.createElement('h2')
+    // title.innerHTML = 'A Prayer for Owen Meany'
+    // let author = document.createElement('p')
+    // author.innerHTML = 'John Irving'
+    // let cover = document.createElement('img')
+    // cover.src = './images/prayer-owen-meany.jpg'
+
+    // card.appendChild(title)
+    // card.appendChild(author)
+    // card.appendChild(cover)
+
+    // document.querySelector('#illustration').appendChild(card)
+
+    // document.querySelector('#illustration').appendChild(card)    
+  // #endregion
+
+  // #region -- create arry of books
     let books = [
       {
             id: 1000,
@@ -102,11 +127,15 @@
          price: 15.99
       }
     ]
+  // #endregion
 
-    books = books.filter(function (book) {
-      return book.rating > 4.4
-    })
+  // #region -- uncomment to show books filter
+    // books = books.filter(function (book) {
+    //   return book.rating > 4.4
+    // })
+  // #endregion
 
+  // #region -- loop over books, creating book card for each one
     books.forEach(function(book) {
       let card = document.createElement('div')
       card.classList.add('book-card')
@@ -124,24 +153,7 @@
 
       document.querySelector('#illustration').appendChild(card)
     })
-
-    // let card = document.createElement('div')
-    // card.classList.add('book-card')
-
-    // let title = document.createElement('h2')
-    // title.innerHTML = 'A Prayer for Owen Meany'
-    // let author = document.createElement('p')
-    // author.innerHTML = 'John Irving'
-    // let cover = document.createElement('img')
-    // cover.src = './images/prayer-owen-meany.jpg'
-
-    // card.appendChild(title)
-    // card.appendChild(author)
-    // card.appendChild(cover)
-
-    // document.querySelector('#illustration').appendChild(card)
-
-    // document.querySelector('#illustration').appendChild(card)
+  // #endregion
   </script>
 </body>
 </html>

@@ -17,11 +17,16 @@
 </body>
 
 <script>
+// #region -- simple math
   let radius = 15
   let circumference = 2 * Math.PI * radius
-  
-  let message = `Given a radius of ${radius}, the circumference of such a circle is ${circumference}`
 
+  let message = `Given a radius of ${radius}, the circumference of such a circle is ${circumference}`
+  document.querySelector('#illustration').innerHTML = message
+  
+  console.log(message)
+  // #endregion
+// #region -- op= operators
   score = score - WRONG_ANSWER_PENALTY
   score -= WRONG_ANSWER_PENALTY
 
@@ -31,12 +36,6 @@
 
   score++
   score--
-  
-  
-  document.querySelector('#illustration').innerHTML = message
-  
-  console.log(message)
-
-  
+  // #endregion
 </script>
 </html>
