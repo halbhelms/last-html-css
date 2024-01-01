@@ -117,11 +117,12 @@
     <button type="submit">OK</input>
   </form>
 
-
   <h3>Create an Account</h3>
+<!-- #region Any failed validation? -->
   <div id="form-error"></div>
   <form action="#" name="registration">
   <input type="text" name="username" placeholder="User name"><br />
+<!-- #region -- password-rules HTML-->
   <div id="password-rules" class="hidden">
     Please create a password that...
     <ul>
@@ -129,12 +130,13 @@
       <li>has at least one of these special characters: ! # $ % </li>
     </ul>
   </div>
+<!-- #endregion -->
   <img src="./images/eye-open.png" alt="" class="eye"><input type="text" name="password" placeholder="Password"><br />
   </form>
 </body>
 
 <script>
-  // #region #nav click listener
+  // #region -- #nav click listener
   document.querySelector('#nav').addEventListener('click', handleNavClick)
   function handleNavClick(event) {
     console.log(event)
@@ -142,7 +144,7 @@
   }
   // #endregion
 
-  // #region form info process listener
+  // #region -- form info process listener
   document.querySelector('form[name="info"]').addEventListener('submit', processForm)
   function processForm(event) {
     event.preventDefault(); // Stop the form from submitting
@@ -164,14 +166,14 @@
   }
   // #endregion
 
-  // #region button.not-twice click listener
+  // #region -- button.not-twice click listener
   document.querySelector('button.not-twice').addEventListener('click', preventDoubleClick)
   function preventDoubleClick(event) {
     event.target.disabled = true
   }
   // #endregion
 
-  // #region initial events listeners
+  // #region -- initial events listeners
   document.querySelector('.event-process').addEventListener('mouseenter', handleMouseEnter) 
   document.querySelector('.event-process').addEventListener('mouseleave', handleMouseLeave) 
   window.addEventListener('load', handlePageLoad)
@@ -188,50 +190,55 @@
   }
   // #endregion
   
-  // #region password rules
+  // #region -- password rules
   document.querySelector('input[name="password"]').addEventListener('focus', showPasswordRules)
-  document.querySelector('input[name="password"]').addEventListener('blur', validatePassword)
+  
   function showPasswordRules(event) {
     document.querySelector('#form-error').innerHTML = ''
     document.querySelector('#password-rules').classList.remove('hidden')
     document.querySelector('#password-rules').classList.add('shown')
   }
-  
+
   function hidePasswordRules() {
     document.querySelector('#password-rules').classList.remove('shown')
     document.querySelector('#password-rules').classList.add('hidden')
   }
   // #endregion
+  
+  // #region -- password validation 
+  document.querySelector('input[name="password"]').addEventListener('blur', validatePassword)
 
-  // #region password validation listener
   function validatePassword(event) {
     hidePasswordRules()
-    let errors = []
     let password = event.target.value
+    
+    // Is the password long enough?
     if (password.length < 8) {
       document.querySelector('#form-error').innerHTML += `Your password must be at least 8 characters<br />`
     }
     
+    // Does the password have at least one of our special characters?
     const SPECIAL_CHARACTERS = ['!', '#', '$', '%']
-    let specialCharacterFound = false
-    SPECIAL_CHARACTERS.forEach(function(specialCharacter) {
-      if (password.includes(specialCharacter)) {
-        specialCharacterFound = true
-      }
-    })
+
+    let specialCharacterFound = SPECIAL_CHARACTERS.some(function(specialCharacter) {
+      return password.includes(specialCharacter)
+    }) 
+
     if (!specialCharacterFound) {
       document.querySelector('#form-error').innerHTML += `Your password must include a special character`
     }
   }
   // #endregion
 
-  // #region password or text input
+  // #region -- password obscured or not?
   document.querySelector('img.eye').addEventListener('click', toggleAsterisks)
+  
   function toggleAsterisks(event) {
     let passwordAsterisks = false
     if (event.target.src.includes('open')) {
       passwordAsterisks = true
     }
+    
     if (passwordAsterisks) {
       event.target.src = './images/eye-closed.png'
       document.querySelector('input[name="password"]').type="password"

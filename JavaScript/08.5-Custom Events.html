@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/base.css">
+  <style>
+    h3 {
+      margin-top: 30px;
+      font-size: 1.6rem;
+    }
+
+    p, label {
+      font-size: 1.4rem;
+    }
+
+    html {
+      margin-top: 4rem;
+      margin-left: 10rem;
+    }
+  </style>
+  <title>Custom Event</title>
+</head>
+<body>
+  <main>
+    <h2>User Profile</h2>
+    <p id="completion-percent">Profile <span id="percent">0</span>% complete</p>
+    <div>
+    <!-- #region -- preferred OS HTML -->
+      <h3>Preferred OS</h3>
+      <div id="os">
+        <div><input type="radio" name="os" id="windows" value="windows"> <label for="windows">Windows</label></div>
+        <div><input type="radio" name="os" id="mac" value="mac"> <label for="mac">Mac</label></div>
+        <div><input type="radio" name="os" id="linux" value="linux"> <label for="linux">Linux</label></div>
+      </div>
+    <!-- #endregion -->
+
+    <!-- #region -- preferred shift HTML -->
+      <h3>Preferred Shift</h3>
+      <div id="shift">
+        <div><input type="radio" name="shift" id="day" value="day"> <label for="day">Day</label></div>
+        <div><input type="radio" name="shift" id="night" value="night"> <label for="night">Night</label></div>
+        <div><input type="radio" name="shift" id="midnight" value="midnight"> <label for="midnight">Midnight</label></div>
+      </div>
+    <!-- #endregion -->
+      
+    <!-- #region -- availability HTML -->
+      <h3>Availability</h3>
+      <div id="availability">
+        <div><input type="radio" name="availability" id="regular" value="regular"> <label for="regular"> Regular days only</label> </div>
+        <div><input type="radio" name="availability" id="weekends" value="weekends"> <label for="weekends"> Regular days plus weekends</label> </div>
+        <div><input type="radio" name="availability" id="holidays" value="holidays"> <label for="holidays"> Regular days plus holidays</label> </div>
+        <div><input type="radio" name="availability" id="weekends-holidays" value="weekends-holidays"> <label for="weekends-holidays"> Regular days plus weekends and holidays</label> </div>
+      </div>
+  <!-- #endregion -->
+    </div>
+  </main>
+
+  <script>
+  // #region -- initialize variables
+    let user = {
+            name: 'Darlene Watson',
+      department: 'Engineering',
+        fulltime: true
+    }  
+
+    let completions = 0
+
+    let completionPercentages = {
+      1: 33,
+      2: 66,
+      3: 100
+    }
+// #endregion
+
+// #region -- verify OS
+    document.querySelectorAll('input[name="os"]').forEach(function(os) {
+      os.addEventListener('click', registerOS)
+    })
+    
+    function registerOS(event) {
+      completions++
+      displayCompletion()
+    }   
+// #endregion
+
+// #region -- verify shift
+    document.querySelectorAll('input[name="shift"]').forEach(function(shift) {
+      shift.addEventListener('click', registerShift)
+    })
+    
+    function registerShift(event) {
+      completions++
+      displayCompletion()
+    }   
+// #endregion
+
+// #region -- verify availability
+    document.querySelectorAll('input[name="availability"]').forEach(function(availability) {
+      availability.addEventListener('click', registerAvailability)
+    })
+    
+    function registerAvailability(event) {
+      completions++
+      displayCompletion()
+    }   
+// #endregion
+
+// #region -- display profile completion
+    function displayCompletion() {
+      document.querySelector('#completion-percent').innerHTML = `Your profile is ${completionPercentages[completions]}% complete`
+    }
+// #endregion
+
+  </script>
+</body>
+</html>
