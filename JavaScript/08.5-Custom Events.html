@@ -73,7 +73,7 @@
     }
 // #endregion
 
-// #region -- verify OS
+  // #region -- verify OS
     document.querySelectorAll('input[name="os"]').forEach(function(os) {
       os.addEventListener('click', registerOS)
     })
@@ -84,7 +84,7 @@
     }   
 // #endregion
 
-// #region -- verify shift
+  // #region -- verify shift
     document.querySelectorAll('input[name="shift"]').forEach(function(shift) {
       shift.addEventListener('click', registerShift)
     })
@@ -95,7 +95,7 @@
     }   
 // #endregion
 
-// #region -- verify availability
+  // #region -- verify availability
     document.querySelectorAll('input[name="availability"]').forEach(function(availability) {
       availability.addEventListener('click', registerAvailability)
     })
@@ -106,7 +106,7 @@
     }   
 // #endregion
 
-// #region -- display profile completion
+  // #region -- display profile completion
     function displayCompletion() {
       document.querySelector('#completion-percent').innerHTML = `Your profile is ${completionPercentages[completions]}% complete`
     }
