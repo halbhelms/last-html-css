@@ -6,39 +6,56 @@
   <title>Form</title>
 </head>
 <body>
+<!-- #region -- page title -->
   <h2>Registration Form</h2>
-
+<!-- #endregion -->
+<!-- #region -- form -->
   <form action="#">
+  <!-- #region -- form-field div course -->
     <div class="form-field">
+    <!-- #region -- label for course select -->
       <label>
         <span>Course 
+        <!-- #region -- course select -->
           <select name="course">
+            <!--#region -- course options  -->
             <option value="none">Please select a course</option>
             <option value="html">HTML</option>
             <option value="css">CSS</option>
             <option value="js">JavaScript</option>
+          <!-- #endregion -->
           </select>
+        <!-- #endregion -->
         </span>
       </label>
+    <!-- #endregion -->
     </div>
+  <!-- #endregion -->
+  <!-- #region -- form-field div name -->
     <br />
     <div class="form-field">
       <label>
         <span>Name <input type="text" name="name" placeholder="Enter full name" ></span>
       </label>
     </div>
+  <!-- #endregion -->
+  <!-- #region -- form-field div email -->
     <br />
     <div class="form-field">
       <label>
         <span>Email <input type="email" name="email" placeholder="Enter business email"></span>
       </label>
     </div>
+  <!-- #endregion -->
+  <!-- #region -- form-field div phone -->
     <br />
     <div class="form-field">
       <label>
         <span>Phone <input type="tel" name="phone" placeholder="Enter phone"></span>
       </label>
     </div>
+  <!-- #endregion -->
+  <!-- #region -- form-field div reason -->
     <br />
     <div class="form-field">
       <label>
@@ -46,12 +63,16 @@
       </label>
       <textarea name="reason" placeholder="Explain briefly what you hope to get from the course." cols="40" rows="3"></textarea>
     </div>
+  <!-- #endregion -->
+  <!-- #region -- form-field div newsletter -->
     <br />
     <div class="form-field">
       <label>
         <input type="checkbox" value="newsletter"> <span>Subscribe to newsletter</span>
       </label>
     </div>
+  <!-- #endregion -->
+  <!-- #region -- form-field div course type -->
     <br />
     <div class="form-field">
       <label>
@@ -61,8 +82,12 @@
         <input type="radio" name="course-type" value="in-person"> <span>In Person</span><br />
       </label>
     </div>
+  <!-- #endregion -->
+  <!-- #region button -->
     <br />
     <button>OK</button>
+  <!-- #endregion -->
   </form>
+<!-- #endregion -->
 </body>
 </html>
