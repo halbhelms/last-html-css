@@ -1,3 +1,4 @@
+/* #region -- major sections */
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -8,12 +9,23 @@ main {
     'footer footer';
 }
 
+footer {
+  grid-area: footer;
+}
+/* #endregion */
+/* #region -- misc */
 .title {
   font-weight: bold;
   font-size: 1.3rem;
   text-align: center;
 }
 
+.detail-row {
+  display: grid;
+  grid-template-columns: 150px 200px;
+}
+/* #endregion */
+/* #region -- customer-related */
 .customers {
   grid-area: list;
 }
@@ -22,9 +34,6 @@ main {
   grid-area: list-detail;
 }
 
-footer {
-  grid-area: footer;
-}
 
 .customer {
   display: grid;
@@ -33,13 +42,8 @@ footer {
   border-bottom: 1px solid silver; 
   font-size: 0.75rem;
 }
-
-.detail-row {
-  display: grid;
-  grid-template-columns: 150px 200px;
-}
-
-
+/* #endregion */
+/* #region -- utility classes */
 .text-large {
   font-size: 2rem;
 }
@@ -51,3 +55,4 @@ footer {
 .bg-green {
   background-color: green;
 }
+/* #endregion */

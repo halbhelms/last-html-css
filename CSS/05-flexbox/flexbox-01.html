@@ -3,55 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <title>Document</title>
+  <link rel="stylesheet" href="../../JavaScript/styles/base.css">
+  <link rel="stylesheet" href="./styles/flexbox.css">
+  <title>Flexbox</title>
 </head>
 <body>
-  <div class="left-right">
-    <p class="i1">1</p>
-    <p class="i2">2</p>
-    <p class="i3">3</p>
-    <p class="i4">4</p>
-    <p class="i5">5</p>
+  <img src="./images/flex-direction-row.png" alt="">
+  <img src="./images/flex-direction-column.png" alt="">
+<!-- #region -- toggle flex-direction  -->
+  <div id="nav-selection" onclick="toggleNav()"><i class="bi-three-dots active"></i> /  <i class="bi-three-dots-vertical"></i> Toggle Nav</div>
+  <nav class="horizontal">
+    <div><i class="bi-house-fill"></i> Home</div>
+    <div><i class="bi-people-fill"></i> About Us</div>
+    <div><i class="bi-display-fill"></i> Courses</div>
+  </nav>
+<!-- #endregion -->
+<!-- #region -- change justify-content -->
+  <div id="space-around" class="jc" onclick="changeJustifyContent('space-around')">space-around</div>
+  <div id="space-between" class="jc" onclick="changeJustifyContent('space-between')">space-between</div>
+  <div id="space-evenly" class="jc" onclick="changeJustifyContent('space-evenly')">space-evenly</div>
+  <div id="space-evenly" class="jc" onclick="changeJustifyContent('flex-start')">flex-start</div>
+  <div id="space-evenly" class="jc" onclick="changeJustifyContent('flex-end')">flex-end</div>
+  <div id="space-evenly" class="jc" onclick="changeJustifyContent('center')">center</div>
+
+  <div class="filters">
+    <div><input type="radio" id="all" name="filter" value="all"> <label for="all"> All Products</label></div>
+    <div><input type="radio" id="sale" name="filter" value="sale"><label for="sale"> On-Sale Products</label></div>
+    <div><input type="radio" id="clearance" name="filter" value="clearance"><label for="clearance"> Clearance Products</label></div>
+    <div><input type="radio" id="bogo" name="filter" value="bogo"><label for="bogo"> BOGO Products</label></div>
   </div>
+<!-- #endregion -->
+<!-- #region -- change align-items -->
+  <div id="flex-start" class="jc" onclick="changeAlignItems('flex-start')">flex-start</div>
+  <div id="flex-end" class="jc" onclick="changeAlignItems('flex-end')">flex-end</div>
+  <div id="center" class="jc" onclick="changeAlignItems('center')">center</div>
+  <div id="baseline" class="jc" onclick="changeAlignItems('baseline')">baseline</div>
+  <div id="stretch" class="jc" onclick="changeAlignItems('stretch')">stretch</div>
+
+  <div class="icons">
+    <i class="one bi-1-circle" onclick="changeAlignItems()"></i>
+    <i class="two bi-2-square-fill"></i>
+    <i class="three bi-3-circle-fill"></i>
+    <i class="four bi-4-square"></i>
+    <i class="five bi-5-circle"></i>
+  </div>
+<!-- #endregion -->
+<!-- #region -- show flex-grow -->
+<div id="expand" onclick="expandGrow()">Expand/Shrink</div>
+
+  <div id="grow" class="grow">
+    <div class="grow-item one">one</div>
+    <div class="grow-item two">two</div>
+    <div class="grow-item three">three</div>
+  </div>
+<!-- #endregion -->
+<!-- #region -- script -->
+  <script>
+    function toggleNav() {
+      document.querySelector('nav').classList.toggle('vertical')
+    }
+
+    function expandGrow() {
+      document.querySelector('#grow').classList.toggle('bigger')
+    }
+
+    function changeJustifyContent(type) {
+      document.querySelector('div.filters').style.justifyContent = type
+    }
+
+    function changeAlignItems(type) {
+      document.querySelector('div.icons').style.alignItems = type
+    }
+  </script>
+<!-- #endregion -->
 </body>
-
-<style>
-  * {
-    font-family: Lato;
-  }
-
-  body {
-    margin-left: 30px;
-  }
-
-  p {
-    outline: 1px solid pink;
-  }
-
-  .i3 {
-    align-self: baseline;
-  }
-
-  .small {
-    max-width: 150px;
-    height: auto
-  }
-
-  /* a {
-    margin-right: 30px;
-  } */
-
-  .left-right {
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
-    align-items: center;
-    width: 100px;
-    flex-wrap: wrap;
-    border: 1px solid gray;
-  }
-</style>
 </html>

@@ -1,0 +1,76 @@
+/* #region -- main sections */
+header {
+  margin-bottom: 30px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: blue;
+  color: white;
+}
+/* #endregion */
+/* #region -- timeline-related */
+.timeline {
+  display: grid;
+  grid-template-columns: 100px 16px 1fr;
+  align-items: top;
+  gap: 6px;
+  position: relative;
+  width: 225px;
+}
+
+.time {
+  text-align: right;
+  font-size: .5rem;
+  display: inline-block;
+  padding: 0 10px 0 0;
+  margin: 0;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #f00;
+  border-radius: 50%;
+  position: absolute;
+  left: 102px;
+  top: 2px;
+}
+
+.event {
+  width: 175px;
+  border-left: 3px solid navy;
+  display: inline-block;
+  font-size: .7rem;
+  padding-left: 16px;
+  padding-bottom: 20px;
+}
+/* #endregion */
+/* #region -- misc */
+.sticky {
+  color: green;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.bottom {
+  padding-bottom: 4px;
+}
+
+.normal {
+  background-color: green;
+}
+
+.heightened {
+  background-color: red;
+}
+
+.resolved {
+  background-color: blue;
+}
+/* #endregion */
+

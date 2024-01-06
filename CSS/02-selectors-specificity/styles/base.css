@@ -1,18 +1,26 @@
+/* #region -- fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@100;300;400;700&family=Lora:wght@400;600&display=swap');
+/* #endregion */
+/* #region -- reset values */
 * {
   margin: 0;
   padding: 0;
+  font-family: Lato;
 }
-
+/* #endregion */
+/* #region -- major sections */
 body {
   margin-left: 20px;
 }
-
+/* #endregion */
+/* #region -- misc */
 pre {
   font-family:'Courier New', Courier, monospace;
   font-weight: bold;
   color: maroon;
 }
-
+/* #endregion */
+/* #region -- pseudo-elements */
 .one::after {
   content: '<div data-price="22.50" class="one">Left-handed widget</div>';
 
@@ -64,3 +72,4 @@ pre {
   font-size: 0.75rem;
   color:maroon;
 }
+/* #endregion */

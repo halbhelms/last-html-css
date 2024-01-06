@@ -1,0 +1,33 @@
+/* #region -- fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@100;300;400;700&family=Lora:wght@400;600&display=swap');
+/* #endregion */
+/* #region -- all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato;
+}
+
+html {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+/* #endregion */
+/* #region -- images */
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+/* #endregion */
+/* #region -- lists */
+ul,
+ol {
+  margin-left: 20px;
+}
+/* #endregion */
+/* #region -- misc */
+a {
+  text-decoration: none;
+}
+/* #endregion */

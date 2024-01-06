@@ -1,0 +1,16 @@
+/* #region -- grid-related classes */
+.grid-container {
+  display: inline-grid;
+  border: 2px solid gray;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  column-gap: 20px;
+}
+
+.grid-item {
+  outline: 1px solid pink;
+}
+/* #endregion */

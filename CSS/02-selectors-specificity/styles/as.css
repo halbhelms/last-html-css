@@ -1,0 +1,36 @@
+/* #region -- misc */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* #endregion */
+/* #region --attribute selectors */
+/* remove default styling */
+[data-price] {
+  color: blue;
+}
+
+[href="www.amazon.com"] {
+  color: red;
+}
+
+[href^="https"] {
+  color: orange;
+}
+
+[href$=".info"] {
+  color: aqua;
+}
+
+[href*="objects"] {
+  color: grey;
+}
+
+[href*="arrays"] {
+  color: coral;
+}
+
+[class|="language-en"] {
+  color: pink;
+}
+/* #endregion */
