@@ -4,14 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../JavaScript/styles/base.css">
-  <link rel="stylesheet" href="../../JavaScript/styles/grid.css">
+  <link rel="stylesheet" href="./styles/grid.css">
   <title>Grid</title>
 </head>
 <body>
-  <div class="timeline">
-    <div class="time"></div>
-    <div class="dot"></div>
-    <div class="event"></div>
+  <!-- #region -- layout-1 -->
+  <div class="toggle" onclick="toggleShow('region-1')">Show/Hide</div>
+  <div id="region-1" class="hidden">
+    <img src="./images/layout-1.png" alt="">
+    <div id="layout-1">
+      <div>250px</div>
+      <div>varies by screen size</div>
+    </div>
   </div>
+  <!-- #endregion -->
+  <!-- #region -- layout-2 -->
+  <div class="toggle" onclick="toggleShow('region-2')">Show/Hide</div>
+  <div id="region-2" class="hidden">
+    <img src="./images/layout-2.png" alt="">
+    <div id="layout-2">
+      <div>250px</div>
+      <div>varies by screen size</div>
+      <div>250px</div>
+    </div>
+  </div>
+  <!-- #endregion -->
+  <!-- #region -- layout-3 -->
+    <div class="toggle" onclick="toggleShow('region-3')">Show/Hide</div>
+    <div id="region-3" class="hidden">
+      <img src="./images/layout-3.png" alt="">
+      <div id="layout-3">
+        <div id="sidebar">250px</div>
+        <div id="inner-grid">
+          <div>125px high x width varies by screen size</div>
+          <div>height and width vary by screen size</div>
+        </div>
+        </div>
+      </div>
+  <!-- #endregion -->
+  <!-- #region -- layout-4 -->
+
+      <div class="toggle" onclick="toggleShow('region-4')">Show/Hide</div>
+      <div id="region-4" class="hidden">
+        <img src="./images/layout-4.png" alt="">
+        <div id="layout-4">
+          <div>125 high x varies by screen size</div>
+          <div id="inner-grid">
+            <div>left</div>
+            <div>center</div>
+            <div>right</div>
+          </div>
+          
+        </div>
+      </div>
+  <!-- #endregion -->
+  <!-- #region -- script -->
+ <script>
+    function toggleShow(region) {
+      document.querySelector(`#${region}`).classList.toggle('hidden')
+    }
+  </script>
+<!-- #endregion -->
 </body>
 </html>
