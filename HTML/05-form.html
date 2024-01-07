@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../JavaScript/styles/base.css">
   <title>Form</title>
 </head>
 <body>
 <!-- #region -- page title -->
-  <h2>Registration Form</h2>
+  <h2  id="region-1" class="hidden">Registration Form</h2>
 <!-- #endregion -->
 <!-- #region -- form -->
-  <form action="#">
+  <form action="#"  id="region-2" class="hidden">
   <!-- #region -- form-field div course -->
     <div class="form-field">
     <!-- #region -- label for course select -->
@@ -83,11 +84,18 @@
       </label>
     </div>
   <!-- #endregion -->
-  <!-- #region button -->
+  <!-- #region -- button -->
     <br />
     <button>OK</button>
   <!-- #endregion -->
   </form>
+<!-- #endregion -->
+<!-- #region -->
+<div id="show-buttons">
+  <i class="bi-1-square" onclick="showHide(1)"></i>
+  <i class="bi-2-square" onclick="showHide(2)"></i>
+</div>
+<script src="./js/show-hide.js"></script>
 <!-- #endregion -->
 </body>
 </html>

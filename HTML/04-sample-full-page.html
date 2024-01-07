@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../JavaScript/styles/base.css">
 <!-- #region -- include style sheets -->
   <!-- <link rel="stylesheet" href="./styles/00-base.css"> -->
   <!-- <link rel="stylesheet" href="./styles/04-sample-full-page.css"> -->
@@ -13,12 +14,14 @@
 </head>
 <!-- #endregion -->
 <body>
-  <!-- this is a comment. It is ignored by the browser and exists to provide the developer explanation of the underlying code. -->
-<!-- #region -- create page title -->
-  <h2>Sample Full Page</h2>
-<!-- #endregion -->
-<!-- #region -- create div.contents -->
-  <div class="contents">
+  <!-- #region -- create page title -->
+  <div class="region hidden" id="region-1">
+    <!-- this is a comment. It is ignored by the browser and exists to provide the developer explanation of the underlying code. -->
+    <h2>Sample Full Page</h2>
+  </div>
+  <!-- #endregion -->
+  <!-- #region -- create div.contents -->
+  <div class="contents hidden" id="region-2">
   <!-- #region -- create side-nav -->
     <div class="side-nav">
     <!-- #region -- create links -->
@@ -31,7 +34,7 @@
     </div>
   <!-- #endregion -->
   <!-- #region -- create main -->
-    <div class="main">
+    <div class="main hidden" id="region-3">
     <!-- #region -- create img -->
       <img src="./images/seaside-condo.jpg" width="600" alt="Seaside condo">
     <!-- #endregion -->
@@ -62,6 +65,15 @@
     </div>
   <!-- #endregion -->
   </div>
+  <!-- #endregion -->
+<!-- #endregion -->
+<!-- #region -->
+  <div id="show-buttons">
+    <i class="bi-1-square" onclick="showHide(1)"></i>
+    <i class="bi-2-square" onclick="showHide(2)"></i>
+    <i class="bi-3-square" onclick="showHide(3)"></i>
+  </div>
+  <script src="./js/show-hide.js"></script>
 <!-- #endregion -->
 </body>
 </html>

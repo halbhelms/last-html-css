@@ -29,3 +29,12 @@ ol {
 a {
   text-decoration: none;
 }
+
+.hidden {
+  display: none;
+}
+
+#show-buttons {
+  position: absolute;
+  bottom: 1rem;
+}
