@@ -29,7 +29,7 @@ aside div {
   margin-top: 12px;
 }
 /* #endregion */
-/* #region -- main */
+/* #region -- main-content */
 .main-content {
   grid-area: main;
   /* Additional styling */
