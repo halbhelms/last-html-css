@@ -10,3 +10,7 @@
 .border-box {
   box-sizing: border-box;
 }
+
+#parent {
+  color: green;
+}

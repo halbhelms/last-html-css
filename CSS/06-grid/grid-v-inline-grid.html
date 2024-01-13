@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 600px);
+      border: 2px solid pink;
+
+    }
+    
+    .inline-grid {
+      display: inline-grid;
+      grid-template-columns: repeat(3, 600px);
+      border: 2px solid red;
+    }
+  </style>
+  <title>Grid v Inline Grid</title>
+</head>
+<body>
+  <div class="grid">
+    <div>Lorem, ipsum dolor.</div>
+    <div>Lorem, ipsum dolor.</div>
+    <div>Lorem, ipsum dolor.</div>
+  </div>
+
+  <div class="inline-grid">
+    <div>Lorem, ipsum dolor.</div>
+    <div>Lorem, ipsum dolor.</div>
+    <div>Lorem, ipsum dolor.</div>
+  </div>
+</body>
+</html>
