@@ -1,6 +1,8 @@
 /* #region -- main sections */
 header {
-  margin-bottom: 30px;
+  position: relative;
+  top: 30px;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -53,7 +55,7 @@ footer {
 .sticky {
   color: green;
   position: sticky;
-  top: 0;
+  top: 20px;
   background-color: white;
 }
 
