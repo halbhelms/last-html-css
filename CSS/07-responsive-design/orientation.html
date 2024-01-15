@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @media (orientation: portrait) {
+      main {
+        display: block;
+      }
+    }
+
+    @media (orientation: landscape) {
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .75rem;
+      }
+    }
+
+    @media (min-width: 900px) and (max-width: 1200px) {
+      main {
+        color: green;
+      }
+    }
+
+    @media screen {
+      main {
+        background-color: white;
+      }
+    }
+
+    @media print {
+      background-color: transparent;
+    }
+  </style>
+  <title>Reponsive Design</title>
+  <main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda eligendi dolorum sint iste doloribus quia non vero voluptatibus, neque debitis officiis, quaerat deserunt autem nesciunt placeat fugit quas aliquid cupiditate adipisci dolore labore maiores, a recusandae. Officia debitis odit excepturi quaerat.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum quasi numquam sed quaerat? Asperiores beatae placeat excepturi distinctio eos doloremque, at vero illo nam nesciunt numquam suscipit est consectetur! Alias similique architecto accusamus aut. Rem repellat cumque velit veniam repellendus laudantium aperiam quam doloribus.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis libero neque illum voluptatibus distinctio quod totam quisquam enim commodi? Aliquid, numquam? Tenetur id illum sint quia ratione reiciendis libero voluptate dicta, vero quibusdam sunt quas veniam quis, impedit consequuntur dignissimos suscipit unde officia quam nam nobis perspiciatis. Rerum tempora soluta fugit.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia hic recusandae beatae quidem facere eos ad tenetur molestias, ea laborum dicta aspernatur a cumque unde totam et.</p>
+  </main>
+</head>
+<body>
+  
+</body>
+</html>

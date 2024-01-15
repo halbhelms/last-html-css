@@ -6,7 +6,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <title>Grid</title>
+  <style>
+    article {
+      min-width: 20em;
+    }
+  
+    @media (min-width: 50em) {
+      article {
+        column-count: 2;
+        column-gap: 1rem;
+      }
+    }
+
+    @media (min-width: 100rem) {
+      article {
+        column-count: 3;
+        column-gap: .75rem;
+      }
+    }
+  
+    div {
+      margin-bottom: 1rem;
+    }
+  
+    * {
+      font-family: Lato;
+    }
+  
+    body {
+      margin-left: 30px;
+    }
+  </style>
+  <title>Responsive Design</title>
 </head>
 <body>
 
@@ -79,26 +110,4 @@
   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, maiores illo voluptatem aliquid nam harum assumenda cumque nulla neque ipsam nisi impedit a, voluptas minus obcaecati, exercitationem repellendus veritatis consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis unde vero, voluptatum doloremque voluptas quidem nam laudantium delectus facere corrupti mollitia ab recusandae eos, veritatis ullam doloribus neque vel in! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus dicta earum at neque ipsum hic, praesentium excepturi expedita, iusto animi qui. Blanditiis asperiores et nobis reprehenderit cumque rerum accusantium sunt!
 </div>
 </article>
-<style>
-  article {
-    min-width: 20em;
-  }
-  @media (min-width: 50em) {
-  article {
-    column-count: 2;
-  }
-}
-
-  div {
-    margin-bottom: 1rem;
-  }
-
-  * {
-    font-family: Lato;
-  }
-
-  body {
-    margin-left: 30px;
-  }
-</style>
 </html>
