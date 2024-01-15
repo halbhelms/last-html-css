@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: lightgrey
+}
+
+form {
+  background: white;
+  border-radius: 6px;
+  border: 1px solid silver;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.floating-label-group {
+  position: relative;
+  margin-top: 20px;
+}
+
+.floating-label-group input,
+.floating-label-group textarea {
+  padding: 15px;
+  padding-top: 25px;
+}
+
+.floating-label-group label {
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 15px;
+  transition: 0.2s ease all;
+}
+
+.floating-label-group input:focus+label,
+.floating-label-group input:not(:placeholder-shown)+label,
+.floating-label-group textarea:focus+label,
+.floating-label-group textarea:not(:placeholder-shown)+label {
+  top: -12px;
+  left: 10px;
+  font-size: 0.75em;
+  opacity: 1;
+  z-index: 200;
+  background-color: white;
+  padding: 4px;
+}
+
+textarea {
+  width: 400px;
+  height: 80px;
+  border-radius: 4px;
+}
+
+input {
+  width: 400px;
+  border: 1px solid silver;
+  border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 24px;
+  border: 0;
+}
+
+fieldset {
+  border: 2px solid #ddd;
+  padding: 10px;
+  margin-top: 20px;
+  width: fit-content;
+  font-size: 0.65rem;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 185px;
+}
+
+legend {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+.javascript {
+  margin-top: 20px;
+  font-size: 0.65rem;
+}
+
+select {
+  margin-top: 20px;
+  margin-left: 12px;
+  font-size: 0.65rem;
+  border-radius: 4px;
+}
+
+label {
+  font-size: 0.75rem;
+}
+
+* {
+  font-family: Lato;
+}
