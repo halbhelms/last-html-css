@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/base.css">
   <link rel="stylesheet" href="./styles/dev.css">
   <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/sidebar.css">
   <title>Document</title>
 </head>
-<body>
-  <aside>
-    <div class="top">aside.top</div>
-    <div class="bottom">aside.bottom</div>
-  </aside>
 
+<body>
+  <!-- #region -- sidebar navigation -->
+  <aside>
+    <!-- #region -- top -->
+    <div class="top">
+      <div class="bi-person-circle user-icon"></div>
+      <div class="user-name">Hal Helms</div>
+      <div class="user-title">Programmer</div>
+    </div>
+    <!-- #endregion -->
+    <!-- #region -- bottom -->
+    <div class="bottom">aside.bottom</div>
+    <!-- #endregion -->
+  </aside>
+  <!-- #endregion -->
+  <!-- #region -- main -->
   <main>
     <header>
       <div class="left">header div.left</div>
@@ -29,6 +43,7 @@
       <div class="right">.details.right</div>
     </div>
   </main>
-  
+  <!-- #endregion -->
 </body>
+
 </html>

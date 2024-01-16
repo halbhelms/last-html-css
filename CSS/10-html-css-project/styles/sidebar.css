@@ -1,0 +1,28 @@
+aside {
+  background-color: var(--aside-bg);
+  color: var(--aside-text);
+  height: 100vh;
+  padding-left: var(--section-gap);
+  padding-top: calc(var(--section-gap) * 2);
+}
+
+aside {
+  background-color: var(--aside-bg);
+  color: var(--aside-text);
+  height: 100vh;
+  padding-left: var(--section-gap);
+  padding-top: calc(var(--section-gap) * 2);
+}
+
+/* #region -- sidebar items */
+div.user-icon {
+  font-size: 2rem;
+}
+
+div.user-name {
+  font-size: 0.5rem;
+}
+
+div.user-title {
+  font-size: 0.35rem;
+}

@@ -3,9 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./sidebar.css">
@@ -13,6 +10,7 @@
   <title>Dashboard v1</title>
 </head>
 <body>
+  <!-- #region -- sidebar navigation -->
   <aside>
     <i class="iconoir-profile-circle"></i>
     <h5>Hal Helms</h5>
@@ -56,6 +54,8 @@
       </div>
     </div>
   </aside>
+  <!-- #endregion -->
+  <!-- #region -- main -->
   <main>
     <header>
       <div class="menu-container left">
@@ -215,14 +215,11 @@
       <div class="right">right</div>
     </div>
     <footer></footer>
-
-    
   </main>
-</body>
-
+  <!-- #endregion -->
+<!-- #region -- scripts -->
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  <script>
-
+<script>
   const options = {
     series: [{
       name: 'series1',
@@ -304,7 +301,7 @@
     progressChart.render();
 
 </script>
-
+<!-- #endregion -->
 <style>
   aside {
     background-color: #253949;
@@ -322,4 +319,5 @@
     padding: 0;
   }
 </style>
+</body>
 </html>
