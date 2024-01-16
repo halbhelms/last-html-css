@@ -4,9 +4,16 @@ aside {
   height: 100vh;
   padding-left: var(--section-gap);
   padding-top: calc(var(--section-gap) * 2);
+  font-weight: 300;
 }
 
-/* #region -- sidebar items */
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+/* #region -- top sidebar items */
 div.user-icon {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -19,3 +26,39 @@ div.user-name {
 div.user-title {
   font-size: 0.35rem;
 }
+/* #endregion */
+
+div.bottom {
+  margin-top: 1.5rem;
+}
+
+/* #region -- bottom sidebar items */
+div.nav-item {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  font-size: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+
+a.link > span {
+  margin-right: 8px;
+}
+
+div.nav-item > .label {
+  background-color: var(--sidebar-label);
+  font-size: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding-left: 3px;
+  padding-right: 3px;
+  height: fit-content;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-right: 6px;
+  margin-left: 0.9rem;
+  border-radius: 2px;
+}
+
+/* #endregion */
