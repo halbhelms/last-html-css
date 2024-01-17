@@ -49,13 +49,14 @@ div.nav-item > .label {
   font-size: 0.4rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: right; */
   width: fit-content;
   padding-left: 3px;
   padding-right: 3px;
   height: fit-content;
   padding-top: 1px;
   padding-bottom: 1px;
+  
   margin-right: 6px;
   margin-left: 0.9rem;
   border-radius: 2px;

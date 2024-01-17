@@ -1,0 +1,74 @@
+header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 12rem;
+}
+
+div.hamburger {
+  background-color: var(--highlight-green);
+  width: 1.5rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--aside-text);
+  margin-left: var(--section-gap);
+  margin-top: calc(var(--section-gap)/2);
+  margin-bottom: calc(var(--section-gap)/2);
+  border-radius: 3px;
+}
+
+div.left, div.right {
+  display: flex;
+  align-items: center;
+}
+
+div.right {
+  justify-content: space-around;
+}
+
+input[name="search"] {
+  background-color: var(--body-bg);
+  border: 0;
+  margin-left: 1rem;
+  font-size: 0.6rem;
+}
+
+.rotate-right-90 {
+  transform: rotate(90deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.log-out {
+  font-size: 0.6rem;
+}
+
+.bi-envelope-open {
+  font-size: 0.6rem;
+  color: white;
+  background-color: grey;
+  padding: 3px 4px 3px 4px;
+  border-radius: 2px;
+}
+
+.bi-bell {
+  position: relative;
+}
+
+.bell-number {
+  position: absolute;
+  background-color: var(--highlight-green);
+  font-size: 0.3rem;
+  color: white;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 6px;
+  left: 2px;
+}

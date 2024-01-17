@@ -16,17 +16,14 @@ body {
 
 
 
-main {
+/* main {
   display: grid;
   grid-template-rows: 2rem auto 1fr;
-  /* height: 100vh; */
-}
+  height: 100vh;
+} 
+*/
 
-header {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+
 
 .overview {
   display: grid;
