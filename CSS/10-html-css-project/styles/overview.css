@@ -1,0 +1,7 @@
+div.overview {
+  display: grid;
+  grid-template-columns: 1fr 1.75fr 1fr;
+  gap: var(--section-gap);
+  background-color: var(--overview-bg);
+  padding: 0 var(--section-gap) 0 var(--section-gap);
+}

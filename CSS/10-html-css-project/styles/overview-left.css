@@ -1,0 +1,19 @@
+div.overview > div.left {
+  background-color: var(--overview-section-bg);
+  display: grid;
+  grid-template-rows: auto;
+  font-weight: 300;
+  color: var(--overview-text);
+  padding-left: calc(var(--section-gap) / 2);
+  padding-top: calc(var(--section-gap) * 1.75);
+}
+
+div.left > div.top > h1 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 0.45rem;
+}
+
+div.left > div.top > p {
+  font-size: 0.5rem;
+}
