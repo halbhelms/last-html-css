@@ -1,0 +1,19 @@
+div.overview > div.center {
+  background-color: var(--overview-section-bg)
+}
+
+div.chart-figures {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div.sales, div.marketing, div.revenue {
+  text-align: center;
+}
+
+div.chart-figures div.title {
+  font-size: 0.65rem;
+}
