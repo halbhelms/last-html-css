@@ -1,0 +1,14 @@
+div.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--section-gap);
+  margin-left: var(--section-gap);
+  margin-right: var(--section-gap);
+  margin-top: var(--section-gap);
+  background-color: var(--details-bg);
+  color: var(--details-text);
+}
+
+.details div {
+  background-color: var(--details-section-bg);
+}

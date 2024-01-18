@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="./styles/overview-left.css">
   <link rel="stylesheet" href="./styles/overview-center.css">
   <link rel="stylesheet" href="./styles/overview-right.css">
+  <link rel="stylesheet" href="./styles/details.css">
+  <link rel="stylesheet" href="./styles/details-left.css">
+  <link rel="stylesheet" href="./styles/details-center.css">
   <title>Document</title>
 </head>
 
@@ -190,13 +193,62 @@
           </div>
         </div>
       </div>
+      <!-- #endregion -->
     </div>
     <!-- #endregion -->
     <!-- #region -- details -->
     <div class="details">
-      <div class="left">.details.left</div>
-      <div class="center">.details.center</div>
+      <!-- #region -- left -->
+      <div class="left">
+        <div class="comments-header">
+          <h3>Read below comments</h3>
+          <div class="icons">
+            <div class="collapse bi-chevron-expand"></div>
+            <div class="settings bi-wrench-adjustable"></div>
+            <div class="remove bi-x-circle"></div>
+          </div>
+        </div>
+        
+        <div class="comment">
+          <div class="comment-text"><span class="author">@DianneManny</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laudantium quo consequuntur est rerum fuga magnam similique.</div>
+          <div class="comment-time bi-clock"> 1 minute ago</div>
+        </div>
+        
+        <div class="comment">
+          <div class="comment-text"><span class="author">@SamirBashaaf</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laudantium quo consequuntur est rerum fuga magnam similique.</div>
+          <div class="comment-time bi-clock"> about 1 hour ago</div>
+        </div>
+        
+      </div>
+      <!-- #endregion -->
+      <!-- #region -- center -->
+      <div class="center">
+        <h3 class="feed-title">Your daily feed</h3>
+        
+        <div class="feed-item">
+          <div class="user-icon bi-person-circle"></div>
+          <div class="message">
+            <span class="message-author">Mark Johnson</span>
+            <span class="message-text">  added a photo to his blog</span>
+            <div class="message-time">Monday 9.12pm</div>
+          </div>
+          <div class="feed-item-time">1d ago</div>
+        </div>
+        
+        <div class="feed-item">
+          <div class="user-icon bi-person-circle"></div>
+          <div class="message">
+            <span class="message-author">Monica Smith</span>
+            <span class="message-text"> posted a new entry to her blog</span>
+            <div class="message-time">Today 5.20pm</div>
+          </div>
+          <div class="feed-item-time">4m ago</div>
+        </div>
+      </div>
+      <!-- #endregion -->
+      <!-- #region -- right -->
       <div class="right">.details.right</div>
+      <!-- #endregion -->
     </div>
     <!-- #endregion -->
   </main>

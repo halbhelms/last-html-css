@@ -1,0 +1,49 @@
+div.details > div.left {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.comments-header {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: calc(var(--section-gap) / 2);
+}
+
+.comments-header > h3 {
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.comment {
+  font-size: 0.7rem;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid silver;
+
+}
+
+div.comment-time {
+  margin-top: 10px;
+  font-size: 0.6rem;
+}
+
+span.author {
+  color: var(--highlight-green);
+  font-weight: bold;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  margin-right: 10px;
+  font-weight: 900;
+}
+
+.icons > div:hover {
+  cursor: pointer;
+  color: var(--highlight-green);
+  text-shadow: 1px 0 currentColor;
+}

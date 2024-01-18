@@ -1,0 +1,44 @@
+div.details > div.center {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.details > div.center > h3 {
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.feed-item {
+  display: grid;
+  grid-template-columns: 40px 1fr 60px;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid silver;
+}
+
+.feed-item-time {
+  font-size: 0.6rem;
+  text-align: right;
+}
+
+.message-author {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.message-text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  white-space: no-wrap;
+}
+
+.message-time {
+  font-size: 0.6rem;
+  font-weight: 300;
+}
