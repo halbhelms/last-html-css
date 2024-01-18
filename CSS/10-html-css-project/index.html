@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="./styles/details.css">
   <link rel="stylesheet" href="./styles/details-left.css">
   <link rel="stylesheet" href="./styles/details-center.css">
+  <link rel="stylesheet" href="./styles/details-right.css">
   <title>Document</title>
 </head>
 
@@ -247,7 +248,42 @@
       </div>
       <!-- #endregion -->
       <!-- #region -- right -->
-      <div class="right">.details.right</div>
+      <div class="right">
+        <div class="comments-header">
+          <h3>Project Artemis</h3>
+          <div class="icons">
+            <div class="collapse bi-chevron-expand"></div>
+            <div class="settings bi-wrench-adjustable"></div>
+            <div class="remove bi-x-circle"></div>
+          </div>
+        </div>
+
+        <div class="alert">
+          <h1>You have a meeting today</h1>
+          <p class="bi-person-workspace meeting-details"> Meeting is at 3.00pm Check your schedule to see details.</p>
+        </div>
+
+        <div class="meeting-confirmation">
+          <p>Will you be attending the meeting?</p>
+          <div class="confirmation-options">
+            <div>
+              <label>
+                <input type="radio" name="meeting-confirmation"> Yes, in-person
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="meeting-confirmation"> Yes, remotely
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="meeting-confirmation"> No
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- #endregion -->
     </div>
     <!-- #endregion -->

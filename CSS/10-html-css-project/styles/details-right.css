@@ -1,0 +1,47 @@
+div.details > div.right {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.comments-header {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: calc(var(--section-gap) / 2);
+}
+
+.comments-header>h3 {
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+div.alert {
+  background-color: var(--overview-bg);
+  margin-left: -10px;
+  margin-right: -10px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+div.alert > h1 {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  margin-bottom: 1rem;
+}
+
+div.alert > p {
+  font-size: 0.7rem;
+}
+
+div.meeting-confirmation > p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8rem;
+}
+
+div.meeting-confirmation > .confirmation-options {
+  margin-left: 4rem;
+  margin-top: 10px;
+  font-size: 0.75rem;
+}
