@@ -16,4 +16,6 @@ div.sales, div.marketing, div.revenue {
 
 div.chart-figures div.title {
   font-size: 0.65rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
 }

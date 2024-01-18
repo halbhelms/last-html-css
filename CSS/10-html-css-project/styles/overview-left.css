@@ -1,7 +1,5 @@
 div.overview > div.left {
   background-color: var(--overview-section-bg);
-  /* display: grid;
-  grid-template-rows: auto; */
   font-weight: 300;
   color: var(--overview-text);
   padding-left: calc(var(--section-gap) / 2);
