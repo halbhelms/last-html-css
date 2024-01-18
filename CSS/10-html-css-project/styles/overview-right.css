@@ -3,17 +3,13 @@ div.overview > div.right {
   text-align: center;
 }
 
-div.overview > div.right > h2, div.overview > div.right > div.milestones > h2 {
+h2 {
   font-size: 0.8rem;
   font-weight: 300;
   margin-top: 1rem;
 }
 
-div.overview > div.right > div.milestones > h2 {
-  margin-top: 0.25rem;
-}
-
-div.overview > div.right > img {
+img.progress {
   width: 150px;
 }
 
@@ -37,7 +33,7 @@ div.milestone > div.date {
 }
 
 .ontime {
-  color: green;;
+  color: green;
 }
 
 .late {
