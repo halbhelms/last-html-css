@@ -18,12 +18,12 @@ div.hamburger {
   border-radius: 3px;
 }
 
-div.left, div.right {
+header > div.left, header > div.right {
   display: flex;
   align-items: center;
 }
 
-div.right {
+header > div.right {
   justify-content: space-around;
 }
 

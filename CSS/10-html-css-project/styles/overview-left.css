@@ -1,7 +1,7 @@
 div.overview > div.left {
   background-color: var(--overview-section-bg);
-  display: grid;
-  grid-template-rows: auto;
+  /* display: grid;
+  grid-template-rows: auto; */
   font-weight: 300;
   color: var(--overview-text);
   padding-left: calc(var(--section-gap) / 2);
@@ -17,3 +17,42 @@ div.left > div.top > h1 {
 div.left > div.top > p {
   font-size: 0.5rem;
 }
+
+div.task {
+  display: grid;
+  grid-template-columns: 1rem 1fr 3rem;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+div.task-message, div.task-time {
+  font-size: 0.5rem;
+}
+
+div.task-time {
+  text-align: right;
+  margin-right: 10px;
+}
+
+div.task-number.one {
+  color:  #1D84C6;
+}
+
+div.task-number.two {
+  color:  #22C6C8;
+}
+
+div.task-number.three {
+  color:  #1AB393;
+}
+
+div.task-number.four {
+  color:  #253949;
+}
+
+div.task-number.five {
+  color:  #1AB393;
+}
+
+

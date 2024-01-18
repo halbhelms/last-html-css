@@ -3,27 +3,11 @@
   padding: 0;
 }
 
-html {
-  /* overflow-x: hidden; */
-  /* overflow-y: hidden; */
-}
-
 body {
   display: grid;
   grid-template-columns: 200px 1fr;
   background-color: var(--body-bg);
 }
-
-
-
-/* main {
-  display: grid;
-  grid-template-rows: 2rem auto 1fr;
-  height: 100vh;
-} 
-*/
-
-
 
 .overview {
   display: grid;
@@ -45,7 +29,6 @@ body {
 
 .details div {
   height: 100%;
-  ;
   background-color: var(--details-section-bg);
   color: var(--details-section-text);
 }
