@@ -24,7 +24,6 @@ input {
 
 input:focus {
   background-color: white;
-  border: 0;
 }
 
 #arrow.blank {

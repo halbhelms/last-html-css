@@ -10,32 +10,38 @@
 </head>
 <body>
   <main>
+    <!-- #region -- balances -->
     <div class="balances quadrant">
       <h2>Balances</h2>
       <section class="balances">
+        <!-- #region -- checking -->
         <div class="balance">
           <h3>Checking</h3>
           <h3 id="checking">0</h3>
         </div>
-        
+        <!-- #endregion -->
+        <!-- #region -- savings -->
         <div class="balance">
           <h3>Savings</h3>
           <h3 id="savings">0</h3>
         </div>
-        
+        <!-- #endregion -->
+        <!-- #region -- money market -->
         <div class="balance">
           <h3>Money Market</h3>
           <h3 id="moneyMarket">0</h3>
         </div>
-        
+        <!-- #endregion -->
+        <!-- #region -- total -->
         <div class="balance top-padding">
           <h3>Total</h3>
           <h3 id="total">0</h3>
         </div>
-        
+        <!-- #endregion -->
       </section>
     </div>
-    
+    <!-- #endregion -->
+    <!-- #region -- deposits -->
     <div class="deposits quadrant">
       <h2>Deposits</h2>
       <section class="deposits">
@@ -51,7 +57,8 @@
         <button onclick="processDeposit()">Deposit</button>
       </section>
     </div>
-    
+    <!-- #endregion -->
+    <!-- #region -- withdrawals -->
     <div class="withdrawals quadrant">
       <h2>Withdrawals</h2>
       <section class="withdrawals">
@@ -67,10 +74,12 @@
         <button onclick="processWithdrawal()">Withdraw</button>
       </section>
     </div>
-
+    <!-- #endregion -->
+    <!-- #region -- transfers -->
     <div class="transfers quadrant">
       <h2>Transfers</h2>
       <section class="transfers">
+        <!-- #region -- transfer from -->
         <select name="transfer-from">
           <option value="">Transfer from...</option>
           <option value="checking">Checking</option>
@@ -78,17 +87,22 @@
           <option value="moneyMarket">Money Market</option>
         </select>
         <br />
+        <!-- #endregion -->
+        <!-- #region -- transfer to -->
         <select name="transfer-to">
           <option value="">Transfer to...</option>
           <option value="checking">Checking</option>
           <option value="savings">Savings</option>
           <option value="moneyMarket">Money Market</option>
         </select>
+        <!-- #endregion -->
       
         <input type="text" name="transfer-amount" placeholder="Transfer amount">
       
         <button onclick="processTransfer()">Transfer</button>
+      </section>
     </div>
+    <!-- #endregion -->
   </main>
 
   <script src="./index.js"></script>

@@ -1,3 +1,4 @@
+// #region -- initial data setup
 const balances = {
   checking: 0,
   savings: 0,
@@ -10,14 +11,16 @@ const outputs = {
   moneyMarket: document.querySelector('#moneyMarket'),
   total: document.querySelector('#total')
 }
-
+// #endregion
+// #region -- displayBalances
 function displayBalances() {
   outputs.checking.innerHTML = formatBalance(balances.checking)
   outputs.savings.innerHTML = formatBalance(balances.savings)
   outputs.moneyMarket.innerHTML = formatBalance(balances.moneyMarket)
   outputs.total.innerHTML = formatBalance(balances.checking + balances.savings + balances.moneyMarket)
 }
-
+// #endregion
+// #region -- processDeposit
 function processDeposit() {
   // which account are we depositing into?
   let balance = document.querySelector('select[name="deposit-to"]').value
@@ -32,7 +35,8 @@ function processDeposit() {
   // reset select
   document.querySelector('select[name="deposit-to"]').selectedIndex = 0
 }
-
+// #endregion
+// #region -- processWithdrawal
 function processWithdrawal() {
   // which account are we withdrawing fromo?
   let balance = document.querySelector('select[name="withdraw-from"]').value
@@ -51,7 +55,8 @@ function processWithdrawal() {
   // reset select
   document.querySelector('select[name="withdraw-from"]').selectedIndex = 0
 }
-
+// #endregion
+// #region -- processTransfer
 function processTransfer() {
   // which account are we transferring from?
   let fromBalance = document.querySelector('select[name="transfer-from"]').value
@@ -73,7 +78,8 @@ function processTransfer() {
     alert('There are insufficient funds to transfer from this acount')
   }
 }
-
+// #endregion
+// #region -- utility functions
 function formatBalance(number) {
   return number.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
@@ -82,5 +88,7 @@ function stringToNumber(formattedString) {
   // Remove commas from the formatted string and convert it to a number
   return parseFloat(formattedString.replace(/,/g, ''));
 }
-
+// #endregion
+// #region -- start
 displayBalances()
+// #endregion

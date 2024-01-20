@@ -65,6 +65,8 @@ function checkAnswer(event) {
     } else {
       tooLow()
     }
+    document.querySelector('input[name="guess"]').value = ''
+    document.querySelector('input[name="guess"]').focus()
   } 
 }
 
