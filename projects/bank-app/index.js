@@ -1,14 +1,21 @@
 const balances = {
   checking: 0,
   savings: 0,
-  'money-market': 0
+  moneyMarket: 0
+}
+
+const outputs = {
+  checking: document.querySelector('#checking'),
+  savings: document.querySelector('#savings'),
+  moneyMarket: document.querySelector('#moneyMarket'),
+  total: document.querySelector('#total')
 }
 
 function displayBalances() {
   outputs.checking.innerHTML = formatBalance(balances.checking)
   outputs.savings.innerHTML = formatBalance(balances.savings)
-  outputs['money-market'].innerHTML = formatBalance(balances['money-market'])
-  outputs.total.innerHTML = formatBalance(balances.checking + balances.savings + balances['money-market'])
+  outputs.moneyMarket.innerHTML = formatBalance(balances.moneyMarket)
+  outputs.total.innerHTML = formatBalance(balances.checking + balances.savings + balances.moneyMarket)
 }
 
 function processDeposit() {

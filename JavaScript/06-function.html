@@ -7,8 +7,6 @@
   <title>Function</title>
 </head>
 <body>
-
-  
   <script>
   // #region -- create simple add function
     function add(num1, num2) {
@@ -16,8 +14,8 @@
     }
     
     let sum = add(5, 10)
+    console.log('sum: ', sum)
  // #endregion
-    
   // #region -- create widget object 
     let widget = {
          width: 23,
@@ -27,15 +25,13 @@
          price: 29.99
     }
  // #endregion
-    
- //  #region -- create/use calculateVolume function
+  // #region -- create/use calculateVolume function
     let volume = calculateVolume(widget.width, widget.height, widget.depth)
     
     function calculateVolume(width, height, depth) {
       return width * height * depth
     }
   // #endregion
-    
   // #region -- create/use calculateCubeVolume function
     function calculateCubeVolume(cube) {
       return cube.width * cube.height * cube.depth
@@ -43,7 +39,6 @@
     
     volume = calculateCubeVolume(widget)
 // #endregion
-
   // #region -- create determineBoxSize function
     function determineBoxSize(cube) {
       const SMALL_LIMIT = 1000
@@ -56,7 +51,6 @@
       return `You will need a ${boxSize} box`
     }
   // #endregion
-    
   // #region -- create betterDeterminBoxSize function
     function betterDetermineBoxSize(cube, smallLimit) {
       let volume = cube.width * cube.height * cube.depth
@@ -68,7 +62,6 @@
       return `You will need a ${boxSize} box`
     }
   // #endregion
-    
   // #region -- illustrate what NOT to do: worseDetermineBoxSize
     const SMALL_LIMIT = 1000
     
@@ -82,11 +75,9 @@
       return `You will need a ${boxSize} box`
     }
   // #endregion
-
   // #region -- uncomment to show error trying to read function's variable from outside
     // let boxVolume = cubeVolume
   // #endregion
-
   // #region -- create customer with function property
     let customer = {
       name: 'Richie Rich',
