@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/dev.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/sidebar.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/overview.css">
+  <link rel="stylesheet" href="./styles/overview-left.css">
+  <link rel="stylesheet" href="./styles/overview-center.css">
+  <link rel="stylesheet" href="./styles/overview-right.css">
+  <link rel="stylesheet" href="./styles/details.css">
+  <link rel="stylesheet" href="./styles/details-left.css">
+  <link rel="stylesheet" href="./styles/details-center.css">
+  <link rel="stylesheet" href="./styles/details-right.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- #region -- sidebar navigation -->
+  <aside>
+    <!-- #region -- top -->
+    <div class="top">
+      <div class="bi-person-circle user-icon"></div>
+      <div class="user-name">Hal Helms</div>
+      <div class="user-title">Programmer</div>
+    </div>
+    <!-- #endregion -->
+    <!-- #region -- bottom -->
+    <div class="bottom">
+      <div class="nav-item">
+        <a href="" data-link="sales" class="link"><span class="bi-graph-up"></span> Sales</a>
+        <div class="label">SPECIAL</div>
+      </div>
+
+      <div class="nav-item">
+        <a href="" data-link="marketing" class="link"><span class="bi-youtube"></span> Marketing</a>
+        <div></div>
+      </div>
+
+      <div class="nav-item">
+        <a href="" data-link="logistics" class="link"><span class="bi-share"></span> Logistics</a>
+        <div></div>
+      </div>
+
+      <div class="nav-item">
+        <a href="" data-link="categories" class="link"><span class="bi-clipboard"></span> Categories</a>
+        <div></div>
+      </div>
+
+      <div class="nav-item">
+        <a href="" data-link="finance" class="link"><span class="bi-currency-dollar"></span> Finance</a>
+        <div></div>
+      </div>
+
+      <div class="nav-item">
+        <a href="" data-link="it" class="link"><span class="bi-box"></span> IT</a>
+        <div class="label">NEW</div>
+      </div>
+
+      <div class="nav-item">
+        <a href="" data-link="legal" class="link"><span class="bi-journals"></span> Legal</a>
+        <div></div>
+      </div>
+    </div>
+    <!-- #endregion -->
+  </aside>
+  <!-- #endregion -->
+  <!-- #region -- main -->
+  <main>
+    <!-- #region -- header -->
+    <header>
+      <div class="left">
+        <div class="bi-list hamburger"></div>
+        <input name="search" type="text" placeholder="Search for something">
+      </div>
+      <div class="right">
+        <div class="bi-envelope-open"></div>
+        <div class="bi-bell"><span class="bell-number">2</span></div>
+        <div class="bi-file-arrow-up rotate-right-90"></div>
+        <div class="log-out">Log out</div>
+        <div class="bi-list-task rotate-180"></div>
+      </div>
+    </header>
+    <!-- #endregion -->
+    <!-- #region -- overview -->
+    <div class="overview">
+      <!-- #region -- left -->
+      <div class="left">
+        <!-- #region -- top -->
+        <div class="top">
+          <h1>Welcome</h1>
+          <p>You have 24 messages and 5 scheduled tasks.</p>
+        </div>
+        <!-- #endregion -->
+        <!-- #region -- bottom -->
+        <div class="bottom">
+          <div class="task">
+            <div class="task-number bi-1-square-fill one"></div>
+            <div class="task-message">Please contact me</div>
+            <div class="task-time">09:00 pm</div>
+          </div>
+
+          <div class="task">
+            <div class="task-number bi-2-square-fill two"></div>
+            <div class="task-message">Sign a contract</div>
+            <div class="task-time">10:15 am</div>
+          </div>
+
+          <div class="task">
+            <div class="task-number bi-3-square-fill three"></div>
+            <div class="task-message">Open new shop</div>
+            <div class="task-time">08:25 am</div>
+          </div>
+
+          <div class="task">
+            <div class="task-number bi-4-square-fill four"></div>
+            <div class="task-message">Call back to Sylvia</div>
+            <div class="task-time">01:00 pm</div>
+          </div>
+
+          <div class="task">
+            <div class="task-number bi-5-square-fill five"></div>
+            <div class="task-message">Write letter to Bob R.</div>
+            <div class="task-time">11:30 am</div>
+          </div>
+        </div>
+        <!-- #endregion -->
+      </div>
+      <!-- #endregion -->
+      <!-- #region -- center -->
+      <div class="center">
+        <img src="./images/chart.png" alt="">
+        <div class="chart-figures">
+          <div class="marketing">
+            <div class="amount">$406,100</div>
+            <div class="title">Sales marketing report</div>
+          </div>
+          <div class="sales">
+            <div class="amount">$150,401</div>
+            <div class="title">Annual sales revenue</div>
+          </div>
+          <div class="revenue">
+            <div class="amount">$16,822</div>
+            <div class="title">Half-year revenue margin</div>
+          </div>
+        </div>
+      </div>
+      <!-- #endregion -->
+      <!-- #region -- right -->
+      <div class="right">
+        <h2>Project Artemis Progress</h2>
+        <img src="./images/progress.png" class="progress">
+        <div class="milestones">
+          <h2>Milestones</h2>
+          <div class="milestone ontime">
+            <div class="percent">60%</div>
+            <div class="date">19 April</div>
+          </div>
+
+          <div class="milestone late">
+            <div class="percent">50%</div>
+            <div class="date">1 April</div>
+          </div>
+
+          <div class="milestone late">
+            <div class="percent">40%</div>
+            <div class="date">16 March</div>
+          </div>
+
+          <div class="milestone ontime">
+            <div class="percent">30%</div>
+            <div class="date">4 February</div>
+          </div>
+
+          <div class="milestone ontime">
+            <div class="percent">20%</div>
+            <div class="date">22 January</div>
+          </div>
+
+          <div class="milestone late">
+            <div class="percent">10%</div>
+            <div class="date">19 December</div>
+          </div>
+
+          <div class="milestone">
+            <div class="percent">Start</div>
+            <div class="date">8 September</div>
+          </div>
+        </div>
+      </div>
+      <!-- #endregion -->
+    </div>
+    <!-- #endregion -->
+    <!-- #region -- details -->
+    <div class="details">
+      <!-- #region -- left -->
+      <div class="left">
+        <div class="comments-header">
+          <h3>Read below comments</h3>
+          <div class="icons">
+            <div class="collapse bi-chevron-expand"></div>
+            <div class="settings bi-wrench-adjustable"></div>
+            <div class="remove bi-x-circle"></div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-text"><span class="author">@DianneManny</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laudantium quo consequuntur est rerum fuga magnam similique.</div>
+          <div class="comment-time bi-clock"> 1 minute ago</div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-text"><span class="author">@SamirBashaaf</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laudantium quo consequuntur est rerum fuga magnam similique.</div>
+          <div class="comment-time bi-clock"> about 1 hour ago</div>
+        </div>
+
+      </div>
+      <!-- #endregion -->
+      <!-- #region -- center -->
+      <div class="center">
+        <h3 class="feed-title">Your daily feed</h3>
+
+        <div class="feed-item">
+          <div class="user-icon bi-person-circle"></div>
+          <div class="message">
+            <span class="message-author">Mark Johnson</span>
+            <span class="message-text"> added a photo to his blog</span>
+            <div class="message-time">Monday 9.12pm</div>
+          </div>
+          <div class="feed-item-time">1d ago</div>
+        </div>
+
+        <div class="feed-item">
+          <div class="user-icon bi-person-circle"></div>
+          <div class="message">
+            <span class="message-author">Monica Smith</span>
+            <span class="message-text"> posted a new entry to her blog</span>
+            <div class="message-time">Today 5.20pm</div>
+          </div>
+          <div class="feed-item-time">4m ago</div>
+        </div>
+      </div>
+      <!-- #endregion -->
+      <!-- #region -- right -->
+      <div class="right">
+        <div class="comments-header">
+          <h3>Project Artemis</h3>
+          <div class="icons">
+            <div class="collapse bi-chevron-expand"></div>
+            <div class="settings bi-wrench-adjustable"></div>
+            <div class="remove bi-x-circle"></div>
+          </div>
+        </div>
+
+        <div class="alert">
+          <h1>You have a meeting today</h1>
+          <p class="bi-person-workspace meeting-details"> Meeting is at 3.00pm Check your schedule to see details.</p>
+        </div>
+
+        <div class="meeting-confirmation">
+          <p>Will you be attending the meeting?</p>
+          <div class="confirmation-options">
+            <div>
+              <label>
+                <input type="radio" name="meeting-confirmation"> Yes, in-person
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="meeting-confirmation"> Yes, remotely
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="meeting-confirmation"> No
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #endregion -->
+    </div>
+    <!-- #endregion -->
+  </main>
+  <!-- #endregion -->
+  <!-- #region -- scripts -->
+  <script src="./scripts/links.js"></script>
+  <!-- #endregion -->
+</body>
+
+</html>
