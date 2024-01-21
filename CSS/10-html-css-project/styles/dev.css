@@ -5,8 +5,10 @@
   --overview-bg: #F3F3F4;
   --overview-section-bg: white;
   --overview-text: #253949;
+  --overview-text-size: 0.75rem;
   --details-bg: #ECECEC;
   --details-text: #253949;
+  --details-text-size: 0.75rem;
   --section-gap: 20px;
   --details-section-bg: white;
   --details-section-text: #253949;

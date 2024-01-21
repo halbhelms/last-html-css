@@ -1,5 +1,6 @@
 body {
   display: grid;
   grid-template-columns: 175px 1fr;
+  grid-template-rows: auto;
   background-color: var (--body-bg);
 }

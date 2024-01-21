@@ -1,7 +1,6 @@
 aside {
   background-color: var(--aside-bg);
   color: var(--aside-text);
-  height: 100vh;
   padding-left: var(--section-gap);
   padding-top: calc(var(--section-gap) * 2);
   font-weight: 300;
@@ -33,7 +32,7 @@ div.bottom {
 }
 
 /* #region -- bottom sidebar items */
-div.nav-item {
+div.nav-item, div.nav-item-sales {
   display: grid;
   grid-template-columns: 55% 45%;
   font-size: 0.6rem;
@@ -44,7 +43,7 @@ a.link > span {
   margin-right: 8px;
 }
 
-div.nav-item > .label {
+div.nav-item > .label, div.nav-item-sales > .label {
   background-color: var(--sidebar-label);
   font-size: 0.4rem;
   display: flex;
