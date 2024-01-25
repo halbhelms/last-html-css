@@ -2,6 +2,7 @@
 document.querySelectorAll('.nav-item').forEach(el => {
   el.addEventListener('click', establishLink)
 })
+// #endregion
 // #region -- event listener callback
 function establishLink(e) {
   e.preventDefault()
