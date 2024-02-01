@@ -11,8 +11,12 @@ function establishLink(e) {
 // #endregion
 // #region -- load content into main page
 function loadContent(url) {
-  fetch(url).then(html => {
+  fetch(url)
+    .then(response => {
+      return response.text()
+    })
+    .then(html => {
       document.querySelector('div.overview > div.center').innerHTML = html;
     })
-}
+  }
 // #endregion

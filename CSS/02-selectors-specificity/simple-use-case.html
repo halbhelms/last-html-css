@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Selectors - Simple Use Case</title>
+</head>
+<body>
+  <h1>Selectors &mdash; Simple Use Case</h1>
+
+  <p>CSS (Cascading Style Sheets) selectors are the part of a CSS rule set that determines which elements in the HTML document will be styled by the declared properties and values. They are fundamental to applying CSS styles and play a crucial role in how a webpage is rendered.</p>
+  
+  <p> At its most basic, a CSSselector targets HTML elements based on their type, class, or ID. For instance, p as a selector targets all &lt;p> elements, .classname targets all elements with class="classname", and #idname targets the element with id="idname". But CSS selectors go far beyond these basics, offering a powerful set of tools for precisely targeting elements.</p>
+  
+  <p>There are various types of CSS selectors, each serving different purposes:</p>
+  
+    <p><em>Element Selectors</em>: These target HTML elements directly, like h1, div, p, etc. They are the simplest form of selectors and apply styles to all instances of the chosen element.</p>
+  
+    <p><em>Class and ID Selectors</em>: Class selectors (.) target elements with a specific class attribute, allowing for group styling. ID selectors (#) target an element with a unique ID attribute, ideal for styling a single element.</p>
+  
+    <p><em>Attribute Selectors</em>: These selectors apply styles to elements based on their attributes or attribute values. For example, [type="text"] targets all input elements with type="text".</p>
+  
+    <p><em>Pseudo-class Selectors</em>: Pseudo-classes like :hover or :focus select elements in a specific state. For example, a:hover applies styles when the mouse hovers over a link.</p>
+  
+    <p><em>Pseudo-element Selectors</em>: Pseudo-elements such as ::before and ::after allow styling specific parts of an element. For instance, p::first-line targets the first line of every paragraph.</p>
+  
+    <p><em>Combinators</em>: These include descendant ( ), child (>), adjacent sibling (+), and general sibling (~) selectors. They provide ways to select an element based on its relationship with another element.</p>
+  
+    <p><em>Grouping Selectors</em>: By grouping selectors, you can apply the same styles to multiple elements. This is done by separating selectors with a comma, as in h1, h2, .highlight.</p>
+    </ul>
+  
+    <p>CSS selectors are incredibly versatile, allowing you to apply styles conditionally, contextually, and even dynamically. Understanding and using these selectors effectively is key to mastering CSS and creating sophisticated web layouts and designs.</p>
+
+    <style>
+      body {
+        font-family: Dosis;
+      }
+
+      em {
+        font-weight: bold;
+        font-size: 1.2rem;
+        font-style: normal;
+      }
+    </style>
+</body>
+</html>
